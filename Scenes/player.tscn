@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://howgh4ym7x2t"]
+
+[ext_resource type="Script" uid="uid://c8jv5yuk8vdso" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://xd7aaudco4rq" path="res://Assets/sprites/Fisherman_idle.png" id="2_cvnsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkybt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3wgy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3smsa"]
+radius = 5.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1996369814]
+script = ExtResource("1_cvnsp")
+
+[node name="PlayerAnimate" type="AnimatedSprite2D" parent="." unique_id=1304412678]
+position = Vector2(7, -24)
+sprite_frames = SubResource("SpriteFrames_x3wgy")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.8665069
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=4444266]
+position = Vector2(0, -14)
+shape = SubResource("CapsuleShape2D_3smsa")
