@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhc1v6npb5hfm"
-path="res://.godot/imported/Fisherman_idle.png-4a19202c811054ed5369d51186847aa7.ctex"
+uid="uid://daq7hui8b722m"
+path="res://.godot/imported/background_layer_3.png-b654c40f7642d0e9e8f1d369ab03b0cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Fisherman_idle.png"
-dest_files=["res://.godot/imported/Fisherman_idle.png-4a19202c811054ed5369d51186847aa7.ctex"]
+source_file="res://Assets/sprites/background_layer_3.png"
+dest_files=["res://.godot/imported/background_layer_3.png-b654c40f7642d0e9e8f1d369ab03b0cb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhc1v6npb5hfm"
-path="res://.godot/imported/Fisherman_idle.png-4a19202c811054ed5369d51186847aa7.ctex"
+uid="uid://cyklgipcjftcg"
+path="res://.godot/imported/Fisherman_CaughtFish.png-bb704585540a6140827c3f5a40220b55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Fisherman_idle.png"
-dest_files=["res://.godot/imported/Fisherman_idle.png-4a19202c811054ed5369d51186847aa7.ctex"]
+source_file="res://Assets/sprites/Fisherman_CaughtFish.png"
+dest_files=["res://.godot/imported/Fisherman_CaughtFish.png-bb704585540a6140827c3f5a40220b55.ctex"]
 
 [params]
 
