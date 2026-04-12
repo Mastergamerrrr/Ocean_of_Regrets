@@ -199,7 +199,7 @@ scale = Vector2(0.42578128, 0.45833328)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"Walk"
 autoplay = "Idle"
-frame_progress = 0.9572506
+frame_progress = 0.7149813
 offset = Vector2(0, 0.915)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=4444266]
@@ -211,7 +211,6 @@ visible = false
 position = Vector2(6, -20)
 scale = Vector2(0.45394737, 0.45833328)
 sprite_frames = SubResource("SpriteFrames_f1ek2")
-animation = &"Fish"
-frame = 5
-frame_progress = 1.0
+animation = &"CaughtFish"
+frame = 1
 offset = Vector2(0, -0.355)

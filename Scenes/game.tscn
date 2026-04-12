@@ -1,12 +1,10 @@
 [gd_scene format=4 uid="uid://cob1ke6l6tigv"]
 
 [ext_resource type="PackedScene" uid="uid://howgh4ym7x2t" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://cnklqf4tmo5ah" path="res://Scenes/parralax_forest.tscn" id="2_i6g32"]
 [ext_resource type="Texture2D" uid="uid://bwsolekih68s3" path="res://Assets/sprites/world_tileset.png" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://bpwaol868vf4c" path="res://Assets/sprites/Water.png" id="3_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="4_3dryh"]
-[ext_resource type="Texture2D" uid="uid://c1buo2vvx8sbk" path="res://Assets/sprites/background_layer_1.png" id="5_1l0tm"]
-[ext_resource type="Texture2D" uid="uid://c2a21m7apnxoe" path="res://Assets/sprites/background_layer_2.png" id="6_v158k"]
-[ext_resource type="Texture2D" uid="uid://daq7hui8b722m" path="res://Assets/sprites/background_layer_3.png" id="7_h4fw4"]
 [ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="8_v158k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
@@ -715,39 +713,28 @@ sources/3 = SubResource("TileSetAtlasSource_h4fw4")
 
 [node name="Player" parent="." unique_id=1996369814 instance=ExtResource("1_ebmjs")]
 z_index = 1
-position = Vector2(29, 33)
+position = Vector2(586, 273)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=514395846]
-position = Vector2(0, -7)
-zoom = Vector2(4, 4)
+position = Vector2(0, -32)
+zoom = Vector2(4.005, 4.005)
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
-[node name="Forest" type="Node" parent="Player" unique_id=74747388]
-
-[node name="BackgroundLayer1" type="Sprite2D" parent="Player/Forest" unique_id=1166859432]
-position = Vector2(-18.250004, 26.499996)
-scale = Vector2(1.1953126, 0.90555555)
-texture = ExtResource("5_1l0tm")
-
-[node name="BackgroundLayer2" type="Sprite2D" parent="Player/Forest" unique_id=369984574]
-position = Vector2(-16.999994, 26.499992)
-scale = Vector2(1.19375, 0.9055556)
-texture = ExtResource("6_v158k")
-
-[node name="BackgroundLayer3" type="Sprite2D" parent="Player/Forest" unique_id=594306449]
-position = Vector2(-16.499992, 26.500006)
-scale = Vector2(1.1968751, 0.8944444)
-texture = ExtResource("7_h4fw4")
+[node name="ParralaxForest" parent="." unique_id=1223921533 instance=ExtResource("2_i6g32")]
+position = Vector2(456, 147)
+scale = Vector2(0.23, 0.23)
 
 [node name="TileMap" type="Node" parent="." unique_id=1937642040]
 
 [node name="Layer0" type="TileMapLayer" parent="TileMap" unique_id=1286857765]
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD+/wUAAwASAAwAAAD//wUAAwACAAAAAAAAAAUAAwASAAwAAAABAAUAAwACAAAAAAD9/wUAAwACAAAAAAD8/wUAAwASAAwAAAD7/wUAAwAEAAAAAAD6/wUAAwAEAAAAAAD5/wUAAwASAAwAAAACAAUAAwASAAwAAAADAAUAAwASAAwAAAAEAAUAAwASAAwAAAAFAAUAAwACAAAAAAAGAAUAAwAKAAAAAAD5/wYAAwABAAEAAAD6/wYAAwABAAEAAAD7/wYAAwABAAEAAAD8/wYAAwABAAEAAAD9/wYAAwABAAEAAAD+/wYAAwABAAEAAAD//wYAAwABAAEAAAAAAAYAAwABAAEAAAABAAYAAwABAAEAAAACAAYAAwABAAEAAAADAAYAAwABAAEAAAAEAAYAAwABAAEAAAAFAAYAAwABAAEAAAAGAAYAAwABAAEAAAAHAAYAAwABAAEAAAAHAAUAAQAAAAAAAAAIAAUAAQAAAAAAAAAJAAUAAQAAAAAAAAAKAAUAAQAAAAAAAAAIAAYAAQAAAAEAAAAJAAYAAQAAAAEAAAAKAAYAAQAAAAEAAAA=")
+position = Vector2(587, 202)
+tile_map_data = PackedByteArray("AAD+/wUAAwASAAwAAAD//wUAAwACAAAAAAAAAAUAAwASAAwAAAABAAUAAwACAAAAAAD9/wUAAwACAAAAAAD8/wUAAwASAAwAAAD7/wUAAwAEAAAAAAD6/wUAAwAEAAAAAAD5/wUAAwASAAwAAAACAAUAAwASAAwAAAADAAUAAwASAAwAAAAEAAUAAwASAAwAAAAFAAUAAwACAAAAAAAGAAUAAwAKAAAAAAD5/wYAAwABAAEAAAD6/wYAAwABAAEAAAD7/wYAAwABAAEAAAD8/wYAAwABAAEAAAD9/wYAAwABAAEAAAD+/wYAAwABAAEAAAD//wYAAwABAAEAAAAAAAYAAwABAAEAAAABAAYAAwABAAEAAAACAAYAAwABAAEAAAADAAYAAwABAAEAAAAEAAYAAwABAAEAAAAFAAYAAwABAAEAAAAGAAYAAwABAAEAAAAHAAYAAwABAAEAAAD4/wUAAwABAAAAAAD3/wUAAwABAAAAAAD2/wUAAwABAAAAAAD1/wUAAwABAAAAAAD0/wUAAwABAAAAAAAHAAUAAwABAAAAAAAIAAUAAwABAAAAAADr/wUAAwABAAAAAADs/wUAAwABAAAAAADt/wUAAwABAAAAAADu/wUAAwABAAAAAADv/wUAAwABAAAAAADw/wUAAwABAAAAAADx/wUAAwABAAAAAADy/wUAAwABAAAAAADz/wUAAwABAAAAAAAJAAUAAwABAAAAAAAKAAUAAwABAAAAAAALAAUAAwABAAAAAAAMAAUAAwABAAAAAAANAAUAAwABAAAAAAAOAAUAAwABAAAAAAAPAAUAAwABAAAAAAAQAAUAAwABAAAAAAARAAUAAwABAAAAAAASAAUAAwABAAAAAAA=")
 tile_set = SubResource("TileSet_3dryh")
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=1832244979]
 z_index = -1
 use_parent_material = true
-tile_map_data = PackedByteArray("AAADAAIAAQAAAAAAAAADAAMAAQABAAEAAAAEAAIAAQACAAAAAAAEAAMAAQACAAEAAAAFAAIAAQAAAAAAAAAGAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAFAAMAAQABAAEAAAAGAAMAAQABAAEAAAAHAAMAAQABAAEAAAA=")
+position = Vector2(587, 202)
 tile_set = SubResource("TileSet_3dryh")
