@@ -1,10 +1,12 @@
-[gd_scene format=4 uid="uid://b2ta3el7nf63x"]
+[gd_scene format=3 uid="uid://b2ta3el7nf63x"]
 
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_otwcc"]
 [ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="3_wsrqd"]
 [ext_resource type="Texture2D" uid="uid://g0pu3ctctm6l" path="res://Assets/sprites/HouseBGAssets/Gemini_Generated_Image_lwqjvlwqjvlwqjvl-removebg-preview.png" id="4_jnlsn"]
 [ext_resource type="Texture2D" uid="uid://dhi7oq6h7hidx" path="res://Assets/sprites/OceanAssets/sand_2.png" id="4_otwcc"]
 [ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="5_otwcc"]
+[ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="6_jnlsn"]
+[ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="6_wsrqd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t74e1"]
 texture = ExtResource("2_otwcc")
@@ -520,46 +522,14 @@ texture = ExtResource("4_jnlsn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnlsn"]
 texture = ExtResource("5_otwcc")
-0:0/animation_columns = 10
-0:0/animation_speed = 2.5
+0:0/size_in_atlas = Vector2i(10, 3)
+0:0/animation_columns = 1
+0:0/animation_separation = Vector2i(0, 1)
 0:0/animation_frame_0/duration = 1.0
 0:0/animation_frame_1/duration = 1.0
 0:0/animation_frame_2/duration = 1.0
-0:0/animation_frame_3/duration = 1.0
-0:0/animation_frame_4/duration = 1.0
-0:0/animation_frame_5/duration = 1.0
-0:0/animation_frame_6/duration = 1.0
-0:0/animation_frame_7/duration = 1.0
-0:0/animation_frame_8/duration = 1.0
-0:0/animation_frame_9/duration = 1.0
 0:0/0 = 0
-0:4/animation_columns = 10
-0:4/animation_speed = 2.5
-0:4/animation_mode = 1
-0:4/animation_frame_0/duration = 1.0
-0:4/animation_frame_1/duration = 1.0
-0:4/animation_frame_2/duration = 1.0
-0:4/animation_frame_3/duration = 1.0
-0:4/animation_frame_4/duration = 1.0
-0:4/animation_frame_5/duration = 1.0
-0:4/animation_frame_6/duration = 1.0
-0:4/animation_frame_7/duration = 1.0
-0:4/animation_frame_8/duration = 1.0
-0:4/animation_frame_9/duration = 1.0
-0:4/0 = 0
-0:1/animation_columns = 10
-0:1/animation_mode = 1
-0:1/animation_frame_0/duration = 1.0
-0:1/animation_frame_1/duration = 1.0
-0:1/animation_frame_2/duration = 1.0
-0:1/animation_frame_3/duration = 1.0
-0:1/animation_frame_4/duration = 1.0
-0:1/animation_frame_5/duration = 1.0
-0:1/animation_frame_6/duration = 1.0
-0:1/animation_frame_7/duration = 1.0
-0:1/animation_frame_8/duration = 1.0
-0:1/animation_frame_9/duration = 1.0
-0:1/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80.087494, -10.968504, 79.84201, -11.586571, 79.73929, 24.374454, -79.91339, 23.852146)
 
 [sub_resource type="TileSet" id="TileSet_r4544"]
 physics_layer_0/collision_layer = 1
@@ -573,16 +543,21 @@ sources/7 = SubResource("TileSetAtlasSource_jnlsn")
 
 [node name="TileMap" type="Node" parent="." unique_id=1842695449]
 
-[node name="Layer0" type="TileMapLayer" parent="TileMap" unique_id=336253335]
-z_index = 1
-use_parent_material = true
-position = Vector2(587, 202)
-tile_map_data = PackedByteArray("AAAAAAAABQACAAEAAAAAAAEABQACAAIAAAABAAEABQADAAIAAAABAAAABQADAAEAAAA=")
-tile_set = SubResource("TileSet_r4544")
-
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=1873329417]
 z_index = 1
 use_parent_material = true
-position = Vector2(587, 202)
-tile_map_data = PackedByteArray("AAAAAAAABQACAAEAAAAAAAEABQACAAIAAAABAAEABQADAAIAAAABAAAABQADAAEAAAACAAAABwAAAAAAAAADAAAABwAAAAAAAAAEAAAABwAAAAAAAAAGAAAABwAAAAAAAAAFAAAABwAAAAAAAAAHAAAABwAAAAAAAAAIAAAABwAAAAAAAAADAAEABwAAAAEAAAACAAEABwAAAAEAAAAFAAEABwAAAAEAAAAEAAEABwAAAAEAAAAGAAEABwAAAAEAAAAHAAEABwAAAAEAAAAJAAEABwAAAAEAAAAIAAEABwAAAAEAAAAKAAEABwAAAAEAAAAJAAAABwAAAAAAAAAKAAAABwAAAAAAAAA=")
+position = Vector2(589, 209)
+tile_map_data = PackedByteArray(0, 0, 3, 0, 2, 0, 7, 0, 0, 0, 0, 0, 0, 0, 13, 0, 2, 0, 7, 0, 0, 0, 0, 0, 0, 0, 23, 0, 2, 0, 7, 0, 0, 0, 0, 0, 0, 0, 33, 0, 2, 0, 7, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_r4544")
+
+[node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("6_jnlsn")]
+position = Vector2(860.00006, 73)
+scale = Vector2(0.255, 0.255)
+
+[node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("6_wsrqd")]
+position = Vector2(705, 215)
+scale = Vector2(0.6, 0.6)
+
+[node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=625819247]
+position = Vector2(9.999999, -59.999996)
+zoom = Vector2(4.005, 4.005)

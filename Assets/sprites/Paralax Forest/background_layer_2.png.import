@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2a21m7apnxoe"
-path="res://.godot/imported/background_layer_2.png-831afd773b17f9b6da6149088069debc.ctex"
+path="res://.godot/imported/background_layer_2.png-72ee57ebcc884fabf6a77a9e77d76d21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/background_layer_2.png"
-dest_files=["res://.godot/imported/background_layer_2.png-831afd773b17f9b6da6149088069debc.ctex"]
+source_file="res://Assets/sprites/Paralax Forest/background_layer_2.png"
+dest_files=["res://.godot/imported/background_layer_2.png-72ee57ebcc884fabf6a77a9e77d76d21.ctex"]
 
 [params]
 
