@@ -64,6 +64,11 @@ region = Rect2(288, 0, 96, 73)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6jarb"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"Caughtfishboat",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.2,
 "texture": SubResource("AtlasTexture_33ue6")
@@ -84,7 +89,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_havq6")
 }],
 "loop": false,
-"name": &"Fish",
+"name": &"Fishboat",
 "speed": 5.0
 }, {
 "frames": [{
@@ -137,9 +142,8 @@ texture = ExtResource("1_bh3t3")
 position = Vector2(5.5374146, -9.627909)
 scale = Vector2(0.50340134, 0.41860467)
 sprite_frames = SubResource("SpriteFrames_6jarb")
-animation = &"Row"
+animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.95364976
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257875800]
 position = Vector2(-4, -16)

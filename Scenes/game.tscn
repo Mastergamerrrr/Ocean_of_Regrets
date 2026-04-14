@@ -596,3 +596,6 @@ position = Vector2(587, 202)
 scale = Vector2(0.405, 0.405)
 tile_map_data = PackedByteArray("AAARAAUABgAPAAIAAAA=")
 tile_set = SubResource("TileSet_3dryh")
+
+[node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("8_h4fw4")]
+position = Vector2(387, 275)
