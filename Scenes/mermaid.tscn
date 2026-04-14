@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cqabqhn0cds3f"]
+
+[ext_resource type="Texture2D" uid="uid://dgeank7xtmg0f" path="res://Assets/sprites/mermaid.png" id="1_2pkki"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t641w"]
+atlas = ExtResource("1_2pkki")
+region = Rect2(0, 0, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp5vx"]
+atlas = ExtResource("1_2pkki")
+region = Rect2(250, 0, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0byvy"]
+atlas = ExtResource("1_2pkki")
+region = Rect2(0, 360, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc6n8"]
+atlas = ExtResource("1_2pkki")
+region = Rect2(250, 360, 250, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7otok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t641w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp5vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0byvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc6n8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="mermaid" type="Node2D" unique_id=1469788594]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=487449653]
+sprite_frames = SubResource("SpriteFrames_7otok")
+frame_progress = 0.103905186
