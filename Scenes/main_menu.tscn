@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://g48cqfscwrh3"]
+
+[ext_resource type="Script" uid="uid://cskp1kod501h1" path="res://Scripts/hoverIcon_main_menu.gd" id="1_opfnp"]
+[ext_resource type="VideoStream" uid="uid://bsjl0ehpc6keh" path="res://Assets/sprites/MAIN MENU/20260415_104117_UTC_0.ogv" id="2_cp0ys"]
+[ext_resource type="Shader" uid="uid://csk0m2r2ifj5t" path="res://main_menu.gdshader" id="3_yhxw7"]
+[ext_resource type="FontFile" uid="uid://b5ohybohsyrtm" path="res://Assets/fonts/PixelOperator8.ttf" id="4_trj04"]
+[ext_resource type="FontFile" uid="uid://bcdbplsv7avy4" path="res://Assets/fonts/Fisherman-Regular.otf" id="5_16hvj"]
+[ext_resource type="Texture2D" uid="uid://bqo3xgnmnpt4b" path="res://Assets/sprites/MAIN MENU/output-onlinepngtools.png" id="6_vr1f0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fu7sn"]
+shader = ExtResource("3_yhxw7")
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
+shader_parameter/intensity = 0.7
+shader_parameter/softness = 1.10000004899012
+shader_parameter/scale = 0.70000002999012
+
+[node name="MainMenu" type="Control" unique_id=87645217]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 56.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_opfnp")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=306930840]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -36.0
+offset_right = 74.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_cp0ys")
+autoplay = true
+loop = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=581576673]
+material = SubResource("ShaderMaterial_fu7sn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -8.0
+offset_right = -27.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1544689509]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 369.0
+offset_right = 616.0
+offset_bottom = 409.0
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1075849442]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_trj04")
+theme_override_font_sizes/font_size = 20
+text = "START GAME"
+
+[node name="options" type="Button" parent="VBoxContainer" unique_id=294920572]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_trj04")
+theme_override_font_sizes/font_size = 20
+text = "OPTIONS"
+
+[node name="credits" type="Button" parent="VBoxContainer" unique_id=1033291271]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_trj04")
+theme_override_font_sizes/font_size = 20
+text = "CREDITS"
+
+[node name="Label" type="Label" parent="." unique_id=862337591]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -437.0
+offset_top = 85.0
+offset_right = 396.0
+offset_bottom = 258.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.8901961, 1)
+theme_override_colors/font_shadow_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.14509805, 0.18431373, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_16hvj")
+theme_override_font_sizes/font_size = 130
+text = "SILENT CATCH"
+
+[node name="hovericon" type="TextureRect" parent="." unique_id=112284609]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_vr1f0")
+expand_mode = 1
