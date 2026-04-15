@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://l38k5fe2ss7u"]
-
-[ext_resource type="Texture2D" uid="uid://ud30nolbn5cq" path="res://Assets/sprites/Boat.png" id="1_d82p8"]
-
-[node name="Boat" type="Node2D" unique_id=1824926635]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1025845730]
-position = Vector2(0, -9)
-texture = ExtResource("1_d82p8")
