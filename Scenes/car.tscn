@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c1dpp457bxhcn"]
+
+[ext_resource type="Script" uid="uid://b8a4vis777hvy" path="res://Scripts/car.gd" id="1_1sfmx"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="1_go66d"]
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="2_yi23e"]
+[ext_resource type="Texture2D" uid="uid://g10mjhfgslme" path="res://Assets/sprites/city_cars_8 (1).png" id="3_yi23e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u41r7"]
+shader = ExtResource("2_yi23e")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go66d"]
+size = Vector2(113, 23)
+
+[node name="Car" type="Node2D" unique_id=2143306667]
+script = ExtResource("1_1sfmx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1914555174]
+material = SubResource("ShaderMaterial_u41r7")
+texture = ExtResource("3_yi23e")
+region_rect = Rect2(-0.24879456, 46.21069, 97.790726, 28.50298)
+
+[node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("1_go66d")]
+interact_name = "E to Travel"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1797388907]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_go66d")

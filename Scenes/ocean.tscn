@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b2ta3el7nf63x"]
+[gd_scene format=4 uid="uid://b2ta3el7nf63x"]
 
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_otwcc"]
 [ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="3_wsrqd"]

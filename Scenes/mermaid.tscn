@@ -42,4 +42,5 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=487449653]
 sprite_frames = SubResource("SpriteFrames_7otok")
-frame_progress = 0.103905186
+autoplay = "default"
+frame_progress = 0.35591856
