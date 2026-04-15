@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://bg0rkihkcpw8t"]
 
 [ext_resource type="Texture2D" uid="uid://b77cc4drnge5d" path="res://Assets/sprites/Paralax Pond/background_plains-Sheet1.png" id="1_vjtd4"]
-[ext_resource type="Texture2D" uid="uid://dhm0iepauh1tb" path="res://Assets/sprites/Paralax Pond/background_plains-Sheet2.png" id="2_q2u2n"]
-[ext_resource type="Texture2D" uid="uid://coyfw0oomg3qh" path="res://Assets/sprites/Paralax Pond/background_plains-Sheet3.png" id="3_shgdv"]
-[ext_resource type="Texture2D" uid="uid://b7c8utbjjpwsq" path="res://Assets/sprites/Paralax Pond/Gemini_Generated_Image_s4oh7ts4oh7ts4oh-removebg-preview-1.png (5).png" id="4_vjtd4"]
+[ext_resource type="Texture2D" uid="uid://cmt6l35oi2isn" path="res://Assets/sprites/Paralax Pond/Background.png" id="2_dqtkm"]
 
 [node name="paralax_pond" type="Node2D" unique_id=992301436]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=2047628025]
-scroll_scale = Vector2(0, 0)
-repeat_size = Vector2(1100, 0)
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1145, 0)
 repeat_times = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=961878169]
@@ -17,32 +15,62 @@ position = Vector2(578.5, 325.75)
 scale = Vector2(3.5906248, 3.5805554)
 texture = ExtResource("1_vjtd4")
 
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=400281862]
-scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(1150, 0)
-repeat_times = 8
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=659573982]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(400, 0)
+repeat_times = 24
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=919656145]
-position = Vector2(578.5, 325.75)
-scale = Vector2(3.5906248, 3.5805554)
-texture = ExtResource("2_q2u2n")
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1791955330]
+position = Vector2(578.5, 520)
+scale = Vector2(1, 0.997)
+texture = ExtResource("2_dqtkm")
+region_enabled = true
+region_rect = Rect2(463.6872, 0, 94.76721, 256)
 
-[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1230964670]
-scroll_scale = Vector2(0.4, 0.4)
-repeat_size = Vector2(1140, 0)
-repeat_times = 8
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=752973362]
+position = Vector2(578.5, 520)
+scale = Vector2(1, 0.997)
+texture = ExtResource("2_dqtkm")
+offset = Vector2(-94.67, 0)
+region_enabled = true
+region_rect = Rect2(351.36362, 0, 97.70053, 256)
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=866890287]
-position = Vector2(578.5, 325.75)
-scale = Vector2(3.5906248, 3.5805554)
-texture = ExtResource("3_shgdv")
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D2" unique_id=2101299908]
+position = Vector2(578.5, 520)
+scale = Vector2(1, 0.997)
+texture = ExtResource("2_dqtkm")
+offset = Vector2(110.77, 0)
+region_enabled = true
+region_rect = Rect2(576.83844, 0, 126.60779, 256)
 
-[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=870482434]
-scroll_scale = Vector2(0.6, 0.6)
-repeat_size = Vector2(1143, 0)
-repeat_times = 8
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1228109169]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(400, 0)
+repeat_times = 24
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D4" unique_id=933597135]
-position = Vector2(577, 326.5)
-scale = Vector2(0.4766667, 0.4711539)
-texture = ExtResource("4_vjtd4")
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=2062486314]
+position = Vector2(797, 520)
+scale = Vector2(1, 0.997)
+texture = ExtResource("2_dqtkm")
+region_enabled = true
+region_rect = Rect2(111.21611, 0, 97.3293, 256)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D3" unique_id=760433558]
+position = Vector2(796, 520.00006)
+scale = Vector2(1, 0.997)
+texture = ExtResource("2_dqtkm")
+offset = Vector2(-94.67, 0)
+region_enabled = true
+region_rect = Rect2(0.03140831, 0, 96.1683, 256)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D3" unique_id=2053455695]
+position = Vector2(798, 520)
+scale = Vector2(1, 0.997)
+texture = ExtResource("2_dqtkm")
+offset = Vector2(110.77, 0)
+region_enabled = true
+region_rect = Rect2(223.6, 0, 128.0969, 256)
+
+[node name="Node" type="Node" parent="." unique_id=2134810473]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node" unique_id=148636569]

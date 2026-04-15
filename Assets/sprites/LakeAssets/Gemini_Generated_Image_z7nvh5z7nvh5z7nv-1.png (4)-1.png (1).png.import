@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coyfw0oomg3qh"
-path="res://.godot/imported/background_plains-Sheet3.png-01c119cb1f8130899a6414540eaa656f.ctex"
+uid="uid://dw3b10l326ds2"
+path="res://.godot/imported/Gemini_Generated_Image_z7nvh5z7nvh5z7nv-1.png (4)-1.png (1).png-cb95739a6742af62bba5b7eb174e0deb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Paralax Pond/background_plains-Sheet3.png"
-dest_files=["res://.godot/imported/background_plains-Sheet3.png-01c119cb1f8130899a6414540eaa656f.ctex"]
+source_file="res://Assets/sprites/LakeAssets/Gemini_Generated_Image_z7nvh5z7nvh5z7nv-1.png (4)-1.png (1).png"
+dest_files=["res://.godot/imported/Gemini_Generated_Image_z7nvh5z7nvh5z7nv-1.png (4)-1.png (1).png-cb95739a6742af62bba5b7eb174e0deb.ctex"]
 
 [params]
 
