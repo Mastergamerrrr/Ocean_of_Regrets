@@ -146,5 +146,5 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257875800]
-position = Vector2(-3.5, -17.5)
+position = Vector2(-4, -16)
 shape = SubResource("RectangleShape2D_bh3t3")

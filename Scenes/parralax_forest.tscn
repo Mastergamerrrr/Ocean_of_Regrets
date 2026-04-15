@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cnklqf4tmo5ah"]
 
-[ext_resource type="Texture2D" uid="uid://c1buo2vvx8sbk" path="res://Assets/sprites/background_layer_1.png" id="1_vcnyb"]
-[ext_resource type="Texture2D" uid="uid://c2a21m7apnxoe" path="res://Assets/sprites/background_layer_2.png" id="2_7gb2m"]
-[ext_resource type="Texture2D" uid="uid://daq7hui8b722m" path="res://Assets/sprites/background_layer_3.png" id="3_p7t6u"]
+[ext_resource type="Texture2D" uid="uid://c1buo2vvx8sbk" path="res://Assets/sprites/Paralax Forest/background_layer_1.png" id="1_vcnyb"]
+[ext_resource type="Texture2D" uid="uid://c2a21m7apnxoe" path="res://Assets/sprites/Paralax Forest/background_layer_2.png" id="2_7gb2m"]
+[ext_resource type="Texture2D" uid="uid://daq7hui8b722m" path="res://Assets/sprites/Paralax Forest/background_layer_3.png" id="3_p7t6u"]
 
 [node name="ParralaxForest" type="Node2D" unique_id=1223921533]
 
