@@ -14,6 +14,8 @@ shader_parameter/intensity = 0.7
 shader_parameter/softness = 1.10000004899012
 shader_parameter/scale = 0.70000002999012
 
+[sub_resource type="Theme" id="Theme_opfnp"]
+
 [node name="MainMenu" type="Control" unique_id=87645217]
 layout_mode = 3
 anchors_preset = 15
@@ -55,38 +57,46 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1544689509]
 layout_mode = 0
-offset_left = 510.0
-offset_top = 369.0
-offset_right = 616.0
-offset_bottom = 409.0
+offset_left = 170.0
+offset_top = 330.0
+offset_right = 351.0
+offset_bottom = 447.0
+theme = SubResource("Theme_opfnp")
+theme_override_constants/separation = 15
 
 [node name="start" type="Button" parent="VBoxContainer" unique_id=1075849442]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_trj04")
 theme_override_font_sizes/font_size = 20
 text = "START GAME"
+flat = true
+alignment = 0
 
 [node name="options" type="Button" parent="VBoxContainer" unique_id=294920572]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_trj04")
 theme_override_font_sizes/font_size = 20
 text = "OPTIONS"
+flat = true
+alignment = 0
 
 [node name="credits" type="Button" parent="VBoxContainer" unique_id=1033291271]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_trj04")
 theme_override_font_sizes/font_size = 20
 text = "CREDITS"
+flat = true
+alignment = 0
 
 [node name="Label" type="Label" parent="." unique_id=862337591]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -437.0
-offset_top = 85.0
-offset_right = 396.0
-offset_bottom = 258.0
+offset_left = -438.0
+offset_top = 55.0
+offset_right = 395.0
+offset_bottom = 228.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.8901961, 1)
 theme_override_colors/font_shadow_color = Color(0.17254902, 0.24313726, 0.3137255, 1)
