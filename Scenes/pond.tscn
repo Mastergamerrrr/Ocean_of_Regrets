@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://crlagphlfdtcl"]
+[gd_scene format=4 uid="uid://crlagphlfdtcl"]
 
 [ext_resource type="Texture2D" uid="uid://dtv4rx0a5gg13" path="res://Assets/sprites/PondAssets/Gemini_Generated_Image_aux0eyaux0eyaux0-1.png.png" id="1_5ac8g"]
+[ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_akm2k"]
 [ext_resource type="PackedScene" uid="uid://bg0rkihkcpw8t" path="res://Scenes/paralax_pond.tscn" id="2_kku42"]
+[ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_s7ca5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kku42"]
 texture = ExtResource("1_5ac8g")
@@ -12,23 +14,103 @@ texture = ExtResource("1_5ac8g")
 0:0/animation_frame_1/duration = 1.0
 0:0/animation_frame_2/duration = 1.0
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80.073105, -9.928202, 79.929214, -9.928202, 79.73668, 24.015804, -79.94734, 23.805138)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s7ca5"]
+texture = ExtResource("1_5ac8g")
+0:2/size_in_atlas = Vector2i(10, 1)
+0:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_s7ca5"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_kku42")
+sources/1 = SubResource("TileSetAtlasSource_s7ca5")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_akm2k"]
+texture = ExtResource("2_akm2k")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+0:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_n7i7v"]
+sources/1 = SubResource("TileSetAtlasSource_akm2k")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7ca5"]
+normal = Vector2(1, 0)
+distance = 33.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_akm2k"]
+normal = Vector2(-1, 0)
+distance = 104.0
 
 [node name="Pond" type="Node2D" unique_id=615288354]
 
 [node name="Node" type="Node" parent="." unique_id=777703853]
 
 [node name="Layer1" type="TileMapLayer" parent="Node" unique_id=204798330]
+z_index = 1
 position = Vector2(137, 349)
-tile_map_data = PackedByteArray(0, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray("AAAEAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAAsAAEAAAAAAAAAAAD7/wEAAAAAAAAAAADy/wEAAAAAAAAAAADo/wEAAAAAAAAAAADe/wEAAAAAAAAAAAA2AAEAAAAAAAAAAABAAAEAAAAAAAAAAABKAAEAAAAAAAAAAADU/wEAAAAAAAAAAADK/wEAAAAAAAAAAABUAAEAAAAAAAAAAABeAAEAAAAAAAAAAABoAAEAAAAAAAAAAADN/wMAAQAAAAIAAADX/wMAAQAAAAIAAADg/wMAAQAAAAIAAADq/wMAAQAAAAIAAAD0/wMAAQAAAAIAAAD+/wMAAQAAAAIAAAAIAAMAAQAAAAIAAAASAAMAAQAAAAIAAAAcAAMAAQAAAAIAAAAmAAMAAQAAAAIAAAAwAAMAAQAAAAIAAAA6AAMAAQAAAAIAAABEAAMAAQAAAAIAAABOAAMAAQAAAAIAAABYAAMAAQAAAAIAAABiAAMAAQAAAAIAAABsAAMAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_s7ca5")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2004531750]
-position = Vector2(249, 317)
-zoom = Vector2(4, 4)
+[node name="Dock" type="TileMapLayer" parent="Node" unique_id=1320943020]
+tile_map_data = PackedByteArray("AAAKABYAAQAGAAEAAAAKABUAAQAGAAAAAAAJABUAAQAFAAAAAAAIABUAAQAFAAAAAAAHABUAAQAEAAAAAAAHABYAAQAEAAEAAAAGABUAAQADAAAAAAAFABUAAQADAAAAAAAEABUAAQACAAAAAAAEABYAAQACAAEAAAAEABcAAQACAAIAAAAEABgAAQACAAMAAAADABUAAQABAAAAAAACABUAAQABAAAAAAABABUAAQAAAAAAAAABABYAAQAAAAEAAAABABcAAQAAAAIAAAABABgAAQAAAAMAAAAAABUAAQABAAAAAAD//xUAAQABAAAAAAD+/xUAAQABAAAAAAA=")
+tile_set = SubResource("TileSet_n7i7v")
 
 [node name="paralax_pond" parent="." unique_id=992301436 instance=ExtResource("2_kku42")]
-position = Vector2(402, 233)
+position = Vector2(402, 211)
 scale = Vector2(0.25, 0.25)
+
+[node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("3_s7ca5")]
+position = Vector2(300, 359)
+scale = Vector2(0.6, 0.6)
+
+[node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=2004531750]
+position = Vector2(15.000008, -71.66664)
+zoom = Vector2(4, 4)
+limit_left = -1
+limit_right = 1721
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1841049630]
+position = Vector2(-33, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=772653024]
+position = Vector2(-1, 0)
+shape = SubResource("WorldBoundaryShape2D_s7ca5")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=617711779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1746669228]
+position = Vector2(1743, -1)
+shape = SubResource("WorldBoundaryShape2D_akm2k")

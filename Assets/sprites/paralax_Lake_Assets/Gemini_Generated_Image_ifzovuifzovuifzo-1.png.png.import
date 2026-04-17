@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3635bat3hi0r"
-path="res://.godot/imported/trees.png-51abc40a429ecd713ed5493c28cd7690.ctex"
+uid="uid://cyxo5a8kub8ie"
+path="res://.godot/imported/Gemini_Generated_Image_ifzovuifzovuifzo-1.png.png-8061008e40707f85700195da92f44c60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Paralax Mountain/trees.png"
-dest_files=["res://.godot/imported/trees.png-51abc40a429ecd713ed5493c28cd7690.ctex"]
+source_file="res://Assets/sprites/paralax_Lake_Assets/Gemini_Generated_Image_ifzovuifzovuifzo-1.png.png"
+dest_files=["res://.godot/imported/Gemini_Generated_Image_ifzovuifzovuifzo-1.png.png-8061008e40707f85700195da92f44c60.ctex"]
 
 [params]
 

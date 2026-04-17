@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx6y1286w30vb"
-path="res://.godot/imported/far-mountains.png-eb6a58fccdd968d18e8360e6f17bfe81.ctex"
+uid="uid://djesjqo8g28lq"
+path="res://.godot/imported/Gemini_Generated_Image_41l0hh41l0hh41l0-removebg-preview-1.png.png-0ebf42f2b3cad22886ac93d99c301ca2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Paralax Mountain/far-mountains.png"
-dest_files=["res://.godot/imported/far-mountains.png-eb6a58fccdd968d18e8360e6f17bfe81.ctex"]
+source_file="res://Assets/sprites/paralax_Lake_Assets/Gemini_Generated_Image_41l0hh41l0hh41l0-removebg-preview-1.png.png"
+dest_files=["res://.godot/imported/Gemini_Generated_Image_41l0hh41l0hh41l0-removebg-preview-1.png.png-0ebf42f2b3cad22886ac93d99c301ca2.ctex"]
 
 [params]
 
