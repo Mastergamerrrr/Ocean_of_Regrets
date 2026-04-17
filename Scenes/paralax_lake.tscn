@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b2ud32dro1g5n"]
+
+[ext_resource type="Texture2D" uid="uid://cyxo5a8kub8ie" path="res://Assets/sprites/paralax_Lake_Assets/Gemini_Generated_Image_ifzovuifzovuifzo-1.png.png" id="1_spjri"]
+[ext_resource type="Texture2D" uid="uid://kt4ja015eo7t" path="res://Assets/sprites/paralax_Lake_Assets/Gemini_Generated_Image_qfpc48qfpc48qfpc-removebg-preview-1.png.png" id="2_7rc51"]
+[ext_resource type="Texture2D" uid="uid://djesjqo8g28lq" path="res://Assets/sprites/paralax_Lake_Assets/Gemini_Generated_Image_41l0hh41l0hh41l0-removebg-preview-1.png.png" id="3_ko43w"]
+
+[node name="paralax_Lake" type="Node2D" unique_id=313125457]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=200729102]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(1145, 0)
+repeat_times = 9
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1508704931]
+position = Vector2(576.50006, 323.99997)
+scale = Vector2(0.96150625, 0.72098213)
+texture = ExtResource("1_spjri")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=919692381]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(1145, 0)
+repeat_times = 9
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1316192297]
+position = Vector2(578.5, 322.50003)
+scale = Vector2(2.0017333, 1.4884261)
+texture = ExtResource("2_7rc51")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=896771591]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(1145, 0)
+repeat_times = 9
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=1049963699]
+position = Vector2(578.5, 322.50003)
+scale = Vector2(2.0017333, 1.4884261)
+texture = ExtResource("3_ko43w")

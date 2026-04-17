@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccb4tedqdgpb2"
-path="res://.godot/imported/sky.png-d1642a557849453dc4c4b662448a9b04.ctex"
+uid="uid://3635bat3hi0r"
+path="res://.godot/imported/trees.png-259c3df3491f60b3597f63848a056b04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Paralax Mountain/sky.png"
-dest_files=["res://.godot/imported/sky.png-d1642a557849453dc4c4b662448a9b04.ctex"]
+source_file="res://Assets/sprites/Paralax_Mountain_Assets/trees.png"
+dest_files=["res://.godot/imported/trees.png-259c3df3491f60b3597f63848a056b04.ctex"]
 
 [params]
 
