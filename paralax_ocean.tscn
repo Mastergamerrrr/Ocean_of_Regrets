@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://b2ud32dro1g5n"]
-
-[node name="paralax_ocean" type="Node2D" unique_id=313125457]
-
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=200729102]
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1508704931]

@@ -1,33 +1,196 @@
-[gd_scene format=3 uid="uid://d1pil1ig5eji4"]
+[gd_scene format=4 uid="uid://d1pil1ig5eji4"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o3l58"]
+[ext_resource type="Texture2D" uid="uid://dw3b10l326ds2" path="res://Assets/sprites/LakeAssets/Gemini_Generated_Image_z7nvh5z7nvh5z7nv-1.png (4)-1.png (1).png" id="1_2f2cj"]
+[ext_resource type="PackedScene" uid="uid://b2ud32dro1g5n" path="res://Scenes/paralax_lake.tscn" id="2_dkth3"]
+[ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_s2rku"]
+[ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_45bj0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kku42"]
-texture = SubResource("CompressedTexture2D_o3l58")
-102:106/0 = 0
-69:100/0 = 0
-68:99/0 = 0
-68:98/0 = 0
-67:97/0 = 0
-67:96/0 = 0
-66:95/0 = 0
-66:94/0 = 0
-65:93/0 = 0
-65:92/0 = 0
-64:91/0 = 0
-63:90/0 = 0
-63:89/0 = 0
-62:88/0 = 0
-62:87/0 = 0
-61:86/0 = 0
-61:85/0 = 0
-60:84/0 = 0
-60:83/0 = 0
-59:82/0 = 0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkth3"]
+texture = ExtResource("1_2f2cj")
+0:0/size_in_atlas = Vector2i(10, 3)
+0:0/animation_columns = 1
+0:0/animation_separation = Vector2i(0, 1)
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80.000435, -12.0131235, 79.82634, -12.0131235, 79.73033, 24.36633, -79.94734, 23.594475)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45bj0"]
+texture = ExtResource("1_2f2cj")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
 6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_kku42"]
-sources/2 = SubResource("TileSetAtlasSource_kku42")
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dkth3")
+sources/1 = SubResource("TileSetAtlasSource_45bj0")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_af3l7"]
+texture = ExtResource("2_s2rku")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+0:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ee21e"]
+sources/1 = SubResource("TileSetAtlasSource_af3l7")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_45bj0"]
+normal = Vector2(1, 0)
+distance = 33.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s2rku"]
+normal = Vector2(-1, 0)
+distance = -2628.0
 
 [node name="Lake" type="Node2D" unique_id=2075080073]
 scale = Vector2(0.25, 0.25)
@@ -35,5 +198,37 @@ scale = Vector2(0.25, 0.25)
 [node name="TileMap" type="Node" parent="." unique_id=800080500]
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=1405411856]
-position = Vector2(522, 289)
+z_index = 1
+position = Vector2(521, 289)
+tile_map_data = PackedByteArray("AADj/wYAAAAAAAAAAADt/wYAAAAAAAAAAAD3/wYAAAAAAAAAAAABAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAAUAAYAAAAAAAAAAAAeAAYAAAAAAAAAAAAoAAYAAAAAAAAAAAAyAAYAAAAAAAAAAADe/wgAAQAAAAIAAADf/wgAAQAAAAIAAADg/wgAAQAAAAIAAADh/wgAAQAAAAIAAADh/wcAAQAAAAIAAADi/wcAAQAAAAIAAADj/wcAAQAAAAIAAADk/wcAAQAAAAIAAADi/wgAAQAAAAIAAADj/wgAAQAAAAIAAADk/wgAAQAAAAIAAADl/wgAAQAAAAIAAADm/wgAAQAAAAIAAADn/wgAAQAAAAIAAADo/wgAAQAAAAIAAADp/wgAAQAAAAIAAADq/wgAAQAAAAIAAADr/wgAAQAAAAIAAADs/wgAAQAAAAIAAADt/wgAAQAAAAIAAADu/wgAAQAAAAIAAADv/wgAAQAAAAIAAADw/wgAAQAAAAIAAADx/wgAAQAAAAIAAADy/wgAAQAAAAIAAADz/wgAAQAAAAIAAAD0/wgAAQAAAAIAAAD1/wgAAQAAAAIAAAD2/wgAAQAAAAIAAAD3/wgAAQAAAAIAAAD4/wgAAQAAAAIAAAD5/wgAAQAAAAIAAAD6/wgAAQAAAAIAAAD6/wcAAQAAAAIAAAD7/wcAAQAAAAIAAAD8/wcAAQAAAAIAAAD7/wgAAQAAAAIAAAD8/wgAAQAAAAIAAAD9/wgAAQAAAAIAAAD+/wgAAQAAAAIAAAD//wgAAQAAAAIAAAAAAAgAAQAAAAIAAAABAAgAAQAAAAIAAAACAAgAAQAAAAIAAAADAAgAAQAAAAIAAAAEAAgAAQAAAAIAAAAFAAgAAQAAAAIAAAAGAAgAAQAAAAIAAAAHAAgAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAgAAQAAAAIAAAAKAAgAAQAAAAIAAAALAAgAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAgAAQAAAAIAAAAOAAgAAQAAAAIAAAAPAAgAAQAAAAIAAAAQAAgAAQAAAAIAAAARAAgAAQAAAAIAAAASAAgAAQAAAAIAAAATAAgAAQAAAAIAAAAUAAgAAQAAAAIAAAAVAAgAAQAAAAIAAAAWAAgAAQAAAAIAAAAXAAgAAQAAAAIAAAAYAAgAAQAAAAIAAAAZAAgAAQAAAAIAAAAaAAgAAQAAAAIAAAAbAAgAAQAAAAIAAAAcAAgAAQAAAAIAAAAdAAgAAQAAAAIAAAAeAAgAAQAAAAIAAAAfAAgAAQAAAAIAAAAgAAgAAQAAAAIAAAAhAAgAAQAAAAIAAAAiAAgAAQAAAAIAAAAjAAgAAQAAAAIAAAAkAAgAAQAAAAIAAAAlAAgAAQAAAAIAAAAmAAgAAQAAAAIAAAAnAAgAAQAAAAIAAAAoAAgAAQAAAAIAAAApAAgAAQAAAAIAAAAqAAgAAQAAAAIAAAArAAgAAQAAAAIAAAAsAAgAAQAAAAIAAAAtAAgAAQAAAAIAAAAuAAgAAQAAAAIAAAAvAAgAAQAAAAIAAAAwAAgAAQAAAAIAAAAxAAgAAQAAAAIAAAAyAAgAAQAAAAIAAAAzAAgAAQAAAAIAAAA0AAgAAQAAAAIAAAA1AAgAAQAAAAIAAAA2AAgAAQAAAAIAAAA3AAgAAQAAAAIAAADZ/wYAAAAAAAAAAADd/wgAAQABAAIAAADc/wgAAQABAAIAAADb/wgAAQABAAIAAADa/wgAAQABAAIAAADZ/wgAAQABAAIAAADY/wgAAQABAAIAAADX/wgAAQABAAIAAADW/wgAAQABAAIAAADV/wgAAQABAAIAAADU/wgAAQABAAIAAAA=")
 tile_set = SubResource("TileSet_kku42")
+
+[node name="Dock" type="TileMapLayer" parent="TileMap" unique_id=1830564117]
+tile_map_data = PackedByteArray("AAAFABcAAQAGAAEAAAAFABYAAQAGAAAAAAAEABYAAQAFAAAAAAADABYAAQAFAAAAAAACABYAAQAEAAAAAAACABcAAQAEAAEAAAABABYAAQADAAAAAAAAABYAAQADAAAAAAD//xYAAQACAAAAAAD//xcAAQACAAEAAAD+/xYAAQABAAAAAAD9/xYAAQABAAAAAAD8/xYAAQAAAAAAAAD8/xcAAQAAAAEAAAD7/xYAAQABAAAAAAD6/xYAAQABAAAAAAD5/xYAAQABAAAAAAD4/xYAAQABAAAAAAD3/xYAAQABAAAAAAD2/xYAAQABAAAAAAD1/xYAAQAAAAAAAAD1/xcAAQAAAAEAAAA=")
+tile_set = SubResource("TileSet_ee21e")
+
+[node name="paralax_Lake" parent="." unique_id=313125457 instance=ExtResource("2_dkth3")]
+position = Vector2(2896, 847.99976)
+scale = Vector2(1.035, 1.035)
+
+[node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("3_45bj0")]
+position = Vector2(1224, 1460)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=2042601902]
+position = Vector2(12, -64)
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_right = 1150
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1959929056]
+position = Vector2(-33, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1829276775]
+shape = SubResource("WorldBoundaryShape2D_45bj0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=948814557]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=486665133]
+position = Vector2(1980, 0)
+shape = SubResource("WorldBoundaryShape2D_s2rku")

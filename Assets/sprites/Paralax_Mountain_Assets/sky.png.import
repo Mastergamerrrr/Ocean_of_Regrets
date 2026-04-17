@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b77cc4drnge5d"
-path="res://.godot/imported/background_plains-Sheet1.png-44492de5707786b46983cbf64ceed704.ctex"
+uid="uid://ccb4tedqdgpb2"
+path="res://.godot/imported/sky.png-d2cb1a62b71f04298bb2d84c15ed9da4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Paralax Pond/background_plains-Sheet1.png"
-dest_files=["res://.godot/imported/background_plains-Sheet1.png-44492de5707786b46983cbf64ceed704.ctex"]
+source_file="res://Assets/sprites/Paralax_Mountain_Assets/sky.png"
+dest_files=["res://.godot/imported/sky.png-d2cb1a62b71f04298bb2d84c15ed9da4.ctex"]
 
 [params]
 

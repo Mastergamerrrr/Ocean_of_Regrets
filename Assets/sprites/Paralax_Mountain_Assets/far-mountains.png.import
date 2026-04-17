@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmt6l35oi2isn"
-path="res://.godot/imported/Background.png-41cc3a13fa7f1aa27ba57d4cb208165b.ctex"
+uid="uid://cx6y1286w30vb"
+path="res://.godot/imported/far-mountains.png-a984c510ebf940bd948d46c2e10c74dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Paralax Pond/Background.png"
-dest_files=["res://.godot/imported/Background.png-41cc3a13fa7f1aa27ba57d4cb208165b.ctex"]
+source_file="res://Assets/sprites/Paralax_Mountain_Assets/far-mountains.png"
+dest_files=["res://.godot/imported/far-mountains.png-a984c510ebf940bd948d46c2e10c74dc.ctex"]
 
 [params]
 
