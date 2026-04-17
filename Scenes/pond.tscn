@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://crlagphlfdtcl"]
+
+[ext_resource type="Texture2D" uid="uid://dtv4rx0a5gg13" path="res://Assets/sprites/PondAssets/Gemini_Generated_Image_aux0eyaux0eyaux0-1.png.png" id="1_5ac8g"]
+[ext_resource type="PackedScene" uid="uid://bg0rkihkcpw8t" path="res://Scenes/paralax_pond.tscn" id="2_kku42"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kku42"]
+texture = ExtResource("1_5ac8g")
+0:0/size_in_atlas = Vector2i(10, 3)
+0:0/animation_columns = 1
+0:0/animation_separation = Vector2i(0, 1)
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_s7ca5"]
+sources/0 = SubResource("TileSetAtlasSource_kku42")
+
+[node name="Pond" type="Node2D" unique_id=615288354]
+
+[node name="Node" type="Node" parent="." unique_id=777703853]
+
+[node name="Layer1" type="TileMapLayer" parent="Node" unique_id=204798330]
+position = Vector2(137, 349)
+tile_map_data = PackedByteArray(0, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_s7ca5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2004531750]
+position = Vector2(249, 317)
+zoom = Vector2(4, 4)
+
+[node name="paralax_pond" parent="." unique_id=992301436 instance=ExtResource("2_kku42")]
+position = Vector2(402, 233)
+scale = Vector2(0.25, 0.25)

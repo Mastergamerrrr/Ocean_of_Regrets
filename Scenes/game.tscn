@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="4_3dryh"]
 [ext_resource type="Texture2D" uid="uid://g0pu3ctctm6l" path="res://Assets/sprites/HouseBGAssets/Gemini_Generated_Image_lwqjvlwqjvlwqjvl-removebg-preview.png" id="6_i6g32"]
 [ext_resource type="Texture2D" uid="uid://dhi7oq6h7hidx" path="res://Assets/sprites/OceanAssets/sand_2.png" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="8_h4fw4"]
 [ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="8_v158k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v158k"]
@@ -596,3 +597,6 @@ position = Vector2(587, 202)
 scale = Vector2(0.405, 0.405)
 tile_map_data = PackedByteArray("AAARAAUABgAPAAIAAAA=")
 tile_set = SubResource("TileSet_3dryh")
+
+[node name="Car" parent="." unique_id=2143306667 instance=ExtResource("8_h4fw4")]
+position = Vector2(381, 270)

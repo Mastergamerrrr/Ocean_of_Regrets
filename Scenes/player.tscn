@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cmo3w3e1wmb74" path="res://Assets/sprites/Fisherman_Fish.png" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://ct2dius86ck6q" path="res://Assets/sprites/Fisherman_walk.png" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://cyklgipcjftcg" path="res://Assets/sprites/Fisherman_CaughtFish.png" id="5_fkybt"]
+[ext_resource type="PackedScene" uid="uid://cnpml7j535tlp" path="res://Scenes/interacting_component.tscn" id="6_x3wgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
 atlas = ExtResource("2_cvnsp")
@@ -191,6 +192,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=1996369814]
+collision_mask = 3
 script = ExtResource("1_cvnsp")
 
 [node name="PlayerAnimate" type="AnimatedSprite2D" parent="." unique_id=1304412678]
@@ -215,3 +217,6 @@ animation = &"Fish"
 frame = 5
 frame_progress = 1.0
 offset = Vector2(0, -0.355)
+
+[node name="InteractingComponent" parent="." unique_id=926593740 instance=ExtResource("6_x3wgy")]
+position = Vector2(1, -17)
