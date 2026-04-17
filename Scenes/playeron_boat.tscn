@@ -88,7 +88,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_havq6")
 }],
-"loop": false,
+"loop": true,
 "name": &"Fishboat",
 "speed": 5.0
 }, {
@@ -130,6 +130,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bh3t3"]
 size = Vector2(71, 17)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fishhook"]
+radius = 14.0
+
 [node name="PlayeronBoat" type="CharacterBody2D" unique_id=1626450456]
 script = ExtResource("1_xbpdn")
 
@@ -144,6 +147,106 @@ scale = Vector2(0.50340134, 0.41860467)
 sprite_frames = SubResource("SpriteFrames_6jarb")
 animation = &"Idle"
 autoplay = "Idle"
+
+[node name="FishingHook" type="Area2D" parent="." unique_id=1169835922]
+position = Vector2(0, 10)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingHook" unique_id=1918374567]
+shape = SubResource("CircleShape2D_fishhook")
+
+[node name="FishingUI" type="CanvasLayer" parent="." unique_id=1456789123]
+layer = 1
+
+[node name="InfoLabel" type="Label" parent="FishingUI" unique_id=1156789124]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.0
+offset_top = 16.0
+offset_right = 220.0
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "Press F to cast your line"
+horizontal_alignment = 1
+
+[node name="BalanceLabel" type="Label" parent="FishingUI" unique_id=1156789125]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.0
+offset_top = 40.0
+offset_right = 220.0
+offset_bottom = 64.0
+grow_horizontal = 2
+text = "Catch Challenge"
+horizontal_alignment = 1
+
+[node name="BalanceBar" type="ProgressBar" parent="FishingUI" unique_id=1156789126]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 66.0
+offset_right = 150.0
+offset_bottom = 84.0
+grow_horizontal = 2
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+
+[node name="CatchPanel" type="Panel" parent="FishingUI" unique_id=1467123001]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -130.0
+offset_right = 100.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CatchTitle" type="Label" parent="FishingUI/CatchPanel" unique_id=1467123002]
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 190.0
+offset_bottom = 30.0
+text = "Catch Minigame"
+horizontal_alignment = 1
+
+[node name="CatchHint" type="Label" parent="FishingUI/CatchPanel" unique_id=1467123003]
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 190.0
+offset_bottom = 60.0
+text = "Use A / D to keep fish in the green zone"
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="CatchMeter" type="ProgressBar" parent="FishingUI/CatchPanel" unique_id=1467123004]
+offset_left = 88.0
+offset_top = 66.0
+offset_right = 112.0
+offset_bottom = 226.0
+show_percentage = false
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+fill_mode = 3
+
+[node name="SafeZone" type="ColorRect" parent="FishingUI/CatchPanel" unique_id=1467123005]
+offset_left = 84.0
+offset_top = 130.0
+offset_right = 116.0
+offset_bottom = 162.0
+color = Color(0.176471, 0.764706, 0.121569, 0.647059)
+
+[node name="FishMarker" type="Label" parent="FishingUI/CatchPanel" unique_id=1467123006]
+offset_left = 55.0
+offset_top = 142.0
+offset_right = 85.0
+offset_bottom = 162.0
+text = "<><"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257875800]
 position = Vector2(-4, -16)

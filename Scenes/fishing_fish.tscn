@@ -1,0 +1,23 @@
+[gd_scene format=4 uid="uid://dljrlct0ld1nu"]
+
+[ext_resource type="Texture2D" path="res://Assets/sprites/Fisherman_Fish.png" id="1_fish"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fish"]
+atlas = ExtResource("1_fish")
+region = Rect2(6, 0, 95, 96)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fish"]
+radius = 10.0
+
+[node name="FishingFish" type="Area2D" unique_id=1000000000 groups=["fish"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1000000001]
+visible = false
+texture = SubResource("AtlasTexture_fish")
+position = Vector2(0, 0)
+scale = Vector2(0.45, 0.45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1000000002]
+shape = SubResource("CircleShape2D_fish")

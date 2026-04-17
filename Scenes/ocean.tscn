@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="5_otwcc"]
 [ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="6_jnlsn"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="6_wsrqd"]
+[ext_resource type="PackedScene" uid="uid://dljrlct0ld1nu" path="res://Scenes/fishing_fish.tscn" id="7_fish"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7egog"]
 texture = ExtResource("5_otwcc")
@@ -571,6 +572,18 @@ scale = Vector2(0.255, 0.255)
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("6_wsrqd")]
 position = Vector2(705, 215)
 scale = Vector2(0.6, 0.6)
+
+[node name="FishingFish1" parent="." unique_id=2000000001 instance=ExtResource("7_fish")]
+position = Vector2(760, 230)
+scale = Vector2(0.7, 0.7)
+
+[node name="FishingFish2" parent="." unique_id=2000000002 instance=ExtResource("7_fish")]
+position = Vector2(820, 250)
+scale = Vector2(0.7, 0.7)
+
+[node name="FishingFish3" parent="." unique_id=2000000003 instance=ExtResource("7_fish")]
+position = Vector2(690, 260)
+scale = Vector2(0.7, 0.7)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=625819247]
 position = Vector2(8.333332, -91.666664)
