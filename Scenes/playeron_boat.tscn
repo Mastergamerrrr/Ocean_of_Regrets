@@ -29,7 +29,7 @@ region = Rect2(386, 0, 95, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6kcft"]
 atlas = ExtResource("3_havq6")
-region = Rect2(481, 0, 95, 96)
+region = Rect2(482, 0, 94, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33ue6"]
 atlas = ExtResource("1_33ue6")
@@ -185,8 +185,10 @@ texture = ExtResource("1_bh3t3")
 position = Vector2(5.5374146, -9.627909)
 scale = Vector2(0.50340134, 0.41860467)
 sprite_frames = SubResource("SpriteFrames_6jarb")
-animation = &"Caughtfishboat"
+animation = &"Fishboat"
 autoplay = "Idle"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257875800]
 position = Vector2(-4, -16)
