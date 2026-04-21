@@ -594,7 +594,7 @@ tile_set = SubResource("TileSet_3dryh")
 [node name="House" type="TileMapLayer" parent="TileMap" unique_id=1832244979]
 texture_filter = 1
 use_parent_material = true
-position = Vector2(587, 202)
+position = Vector2(585.99994, 202.00002)
 scale = Vector2(0.405, 0.405)
 tile_map_data = PackedByteArray("AAARAAUABgAPAAIAAAA=")
 tile_set = SubResource("TileSet_3dryh")
