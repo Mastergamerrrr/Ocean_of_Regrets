@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bdwthdvcej565"]
+
+[ext_resource type="Texture2D" uid="uid://bjtmox1pu8ejp" path="res://Assets/sprites/Land Assets/Fishing_dock.png" id="1_y7phv"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_52kpk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ooh5s"]
+size = Vector2(107, 88)
+
+[node name="LakeExit" type="Node2D" unique_id=2144046085]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=238559491]
+texture = ExtResource("1_y7phv")
+
+[node name="Interactable" parent="Sprite2D" unique_id=1636977989 instance=ExtResource("2_52kpk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Interactable" unique_id=781503077]
+position = Vector2(43.5, -18)
+shape = SubResource("RectangleShape2D_ooh5s")

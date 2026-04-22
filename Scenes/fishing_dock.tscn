@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ebd5lxc1p46c"]
+
+[ext_resource type="Texture2D" uid="uid://bjtmox1pu8ejp" path="res://Assets/sprites/Land Assets/Fishing_dock.png" id="1_jh15o"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_x8lcu"]
+[ext_resource type="Shader" path="res://Scenes/car.gdshader" id="2_xb8ri"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncxr0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7dtcf"]
+shader = ExtResource("2_xb8ri")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xb8ri"]
+size = Vector2(121.85701, 74.1288)
+
+[node name="Fishing_DockLake" type="Node2D" unique_id=1357912676]
+material = SubResource("ShaderMaterial_ncxr0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=618167760]
+material = SubResource("ShaderMaterial_7dtcf")
+texture = ExtResource("1_jh15o")
+
+[node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("2_x8lcu")]
+scale = Vector2(1.205, 1.205)
+interact_name = "Go To The Dock"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=541509067]
+position = Vector2(-21.932785, -26.131437)
+scale = Vector2(1.22, 1.22)
+shape = SubResource("RectangleShape2D_xb8ri")
+
+[connection signal="body_entered" from="Interactable" to="." method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="Interactable" to="." method="_on_interactable_body_exited"]
