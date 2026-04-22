@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://b4qcslikwge13"]
 
+[ext_resource type="Script" uid="uid://dec76vdjc3c2j" path="res://Scripts/OceanLand.gd" id="1_3meen"]
 [ext_resource type="Texture2D" uid="uid://cushbqkythto" path="res://Assets/sprites/Land Assets/oceantiles.png" id="1_jna3f"]
 [ext_resource type="Texture2D" uid="uid://d1saey4ylw3av" path="res://Assets/sprites/Land Assets/Tiles.png" id="2_cuo3a"]
 [ext_resource type="PackedScene" uid="uid://howgh4ym7x2t" path="res://Scenes/player.tscn" id="2_poxqf"]
 [ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="3_bss6u"]
-[ext_resource type="PackedScene" uid="uid://ebd5lxc1p46c" path="res://Scenes/fishing_dock.tscn" id="4_6uv43"]
 [ext_resource type="Texture2D" uid="uid://cmn00jmq8j5fd" path="res://Assets/sprites/Land Assets/Props-Rocks.png" id="5_poxqf"]
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="5_tga6d"]
+[ext_resource type="PackedScene" uid="uid://j6k6eao80mmo" path="res://Scenes/dock_ocean_Entrance.tscn" id="7_poxqf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qhn8"]
 texture = ExtResource("1_jna3f")
@@ -1171,6 +1172,7 @@ normal = Vector2(0.9998564, 0.016946718)
 normal = Vector2(-1, 0)
 
 [node name="ocean_land" type="Node2D" unique_id=1555464454]
+script = ExtResource("1_3meen")
 
 [node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("3_bss6u")]
 position = Vector2(2012.9999, 333)
@@ -1207,10 +1209,6 @@ z_index = 5
 tile_map_data = PackedByteArray("AAAsAB8AAQANAAMAAAAuACIAAQAAAAoAAAAqACQAAQANAAgAAAAuAB8AAAATABYAAAAlACMAAAAQABIAAAAeACMAAAAUABYAAAAsAB4AAAAPABcAAAAtAB4AAAAQABYAAAAqACMAAAARABcAAAAgACEAAAATABgAAAAiACQAAAATABgAAAAhACQAAAATABgAAAA=")
 tile_set = SubResource("TileSet_3meen")
 
-[node name="Fishing_Dock" parent="." unique_id=1357912676 instance=ExtResource("4_6uv43")]
-z_index = 4
-position = Vector2(1153, 567)
-
 [node name="Car" parent="." unique_id=2143306667 instance=ExtResource("5_tga6d")]
 position = Vector2(268, 571)
 
@@ -1224,3 +1222,13 @@ shape = SubResource("WorldBoundaryShape2D_tga6d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1993825945]
 position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_poxqf")
+
+[node name="dock_oceanEntrance" parent="." unique_id=282959387 instance=ExtResource("7_poxqf")]
+z_index = 1
+position = Vector2(1154, 569)
+
+[node name="CarSpawnPoint" type="Marker2D" parent="." unique_id=1422611715]
+position = Vector2(353, 561)
+
+[node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=741088719]
+position = Vector2(1043, 564)

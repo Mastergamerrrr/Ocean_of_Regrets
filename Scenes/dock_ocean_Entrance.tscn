@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://j6k6eao80mmo"]
+
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="1_lmb3w"]
+[ext_resource type="Texture2D" uid="uid://bjtmox1pu8ejp" path="res://Assets/sprites/Land Assets/Fishing_dock.png" id="1_p6ug6"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_lmb3w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3nbjf"]
+shader = ExtResource("1_lmb3w")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6f36l"]
+size = Vector2(118, 86)
+
+[node name="dock_oceanEntrance" type="Node2D" unique_id=282959387]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=967224614]
+material = SubResource("ShaderMaterial_3nbjf")
+texture = ExtResource("1_p6ug6")
+
+[node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("2_lmb3w")]
+interact_name = "Go To Ocean"
+target_scene = "res://Scenes/Ocean.tscn"
+spawn_point_name = "DockSpawnPoint"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=433207949]
+position = Vector2(-60, -21)
+shape = SubResource("RectangleShape2D_6f36l")

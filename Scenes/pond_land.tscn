@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://iswunt7b3m6s"]
 
+[ext_resource type="Script" uid="uid://c6o7djlwb5b02" path="res://Scripts/PondLand.gd" id="1_ar72j"]
 [ext_resource type="PackedScene" uid="uid://bg0rkihkcpw8t" path="res://Scenes/paralax_pond.tscn" id="1_gs7bn"]
 [ext_resource type="Texture2D" uid="uid://cmn00jmq8j5fd" path="res://Assets/sprites/Land Assets/Props-Rocks.png" id="1_mjiop"]
 [ext_resource type="Texture2D" uid="uid://d1saey4ylw3av" path="res://Assets/sprites/Land Assets/Tiles.png" id="2_gs7bn"]
 [ext_resource type="PackedScene" uid="uid://howgh4ym7x2t" path="res://Scenes/player.tscn" id="2_uedj8"]
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="4_rjckc"]
-[ext_resource type="PackedScene" uid="uid://jmcnmbyxx6ch" path="res://Scenes/fishing_dock.tscn" id="5_2sjaa"]
 [ext_resource type="PackedScene" uid="uid://bq46twepcow54" path="res://Scenes/sign.tscn" id="6_5yjkb"]
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="7_o7h3w"]
+[ext_resource type="PackedScene" uid="uid://4lwwuolixamu" path="res://Scenes/dock_pondEntrance.tscn" id="8_5yjkb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjckc"]
 texture = ExtResource("1_mjiop")
@@ -1449,6 +1450,7 @@ normal = Vector2(1, 0)
 normal = Vector2(-1, 0)
 
 [node name="pond_land" type="Node2D" unique_id=1527450596]
+script = ExtResource("1_ar72j")
 
 [node name="paralax_pond" parent="." unique_id=992301436 instance=ExtResource("1_gs7bn")]
 position = Vector2(1794, 307)
@@ -1483,10 +1485,6 @@ tile_set = SubResource("TileSet_ar72j")
 [node name="Sign" parent="Node" unique_id=1658917585 instance=ExtResource("6_5yjkb")]
 position = Vector2(856, 595)
 
-[node name="Fishing_Dock" parent="." unique_id=1357912676 instance=ExtResource("5_2sjaa")]
-z_index = 1
-position = Vector2(1125, 584)
-
 [node name="Car" parent="." unique_id=2143306667 instance=ExtResource("7_o7h3w")]
 position = Vector2(321, 593)
 
@@ -1500,3 +1498,12 @@ shape = SubResource("WorldBoundaryShape2D_5yjkb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=589948376]
 position = Vector2(1152, 1)
 shape = SubResource("WorldBoundaryShape2D_ar72j")
+
+[node name="dock_pondEntrance" parent="." unique_id=606013902 instance=ExtResource("8_5yjkb")]
+position = Vector2(1153, 585)
+
+[node name="CarSpawnPoint" type="Marker2D" parent="." unique_id=2084012097]
+position = Vector2(376, 593)
+
+[node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=1832174340]
+position = Vector2(1042, 582)

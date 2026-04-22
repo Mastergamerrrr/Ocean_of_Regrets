@@ -15,6 +15,10 @@ run/main_scene="uid://cob1ke6l6tigv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://dbl8dqc2mvpqw"
+
 [input]
 
 interact={

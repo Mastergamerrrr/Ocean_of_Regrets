@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://lq4v5mv2jtgm" path="res://Scripts/playeron_boat.gd" id="1_xbpdn"]
 [ext_resource type="Texture2D" uid="uid://83rcbubwghru" path="res://Assets/sprites/Fisherman_idleonboat.png" id="4_nwx60"]
 [ext_resource type="Texture2D" uid="uid://ckyt3a34xiqtk" path="res://Assets/sprites/Fisherman_row.png" id="5_8s5i5"]
+[ext_resource type="PackedScene" uid="uid://cnpml7j535tlp" path="res://Scenes/interacting_component.tscn" id="6_havq6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33ue6"]
 atlas = ExtResource("1_33ue6")
@@ -148,3 +149,7 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257875800]
 position = Vector2(-4, -16)
 shape = SubResource("RectangleShape2D_bh3t3")
+
+[node name="InteractingComponent" parent="." unique_id=926593740 instance=ExtResource("6_havq6")]
+position = Vector2(6.9999995, -35.999996)
+scale = Vector2(1.85, 1.85)

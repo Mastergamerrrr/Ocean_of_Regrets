@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://dlfea635xm64a"]
 
 [ext_resource type="PackedScene" uid="uid://b2ud32dro1g5n" path="res://Scenes/paralax_lake.tscn" id="1_7kv20"]
+[ext_resource type="Script" uid="uid://crhq6gtjm04x8" path="res://Scripts/LakeLand.gd" id="1_mvsn3"]
 [ext_resource type="PackedScene" uid="uid://howgh4ym7x2t" path="res://Scenes/player.tscn" id="2_jn7qv"]
 [ext_resource type="Texture2D" uid="uid://d1saey4ylw3av" path="res://Assets/sprites/Land Assets/Tiles.png" id="3_55lp2"]
-[ext_resource type="PackedScene" uid="uid://ebd5lxc1p46c" path="res://Scenes/fishing_dock.tscn" id="3_ac6fk"]
+[ext_resource type="PackedScene" uid="uid://ebd5lxc1p46c" path="res://Scenes/dock_lakeEntrance.tscn" id="3_ac6fk"]
 [ext_resource type="Texture2D" uid="uid://bcticqf72eypi" path="res://Assets/sprites/Land Assets/lamp.png" id="4_2yahn"]
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="5_ac6fk"]
 [ext_resource type="Texture2D" uid="uid://c46uqsng2avka" path="res://Assets/sprites/Land Assets/Green-Tree.png" id="5_ddrap"]
@@ -6499,14 +6500,7 @@ normal = Vector2(-1, 0)
 distance = -1.0
 
 [node name="lake_land" type="Node2D" unique_id=43357855]
-
-[node name="SpawnPoints" type="Node2D" parent="." unique_id=902229411]
-
-[node name="CarSpawn" type="Marker2D" parent="SpawnPoints" unique_id=30008771]
-position = Vector2(198, 468)
-
-[node name="DockSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1168327527]
-position = Vector2(1046, 540)
+script = ExtResource("1_mvsn3")
 
 [node name="paralax_Lake" parent="." unique_id=313125457 instance=ExtResource("1_7kv20")]
 position = Vector2(2284, 260)
@@ -6514,7 +6508,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." unique_id=1996369814 groups=["player"] instance=ExtResource("2_jn7qv")]
 z_index = 1
-position = Vector2(200, 474)
+position = Vector2(213, 474)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=695834463]
 position = Vector2(0, -27)
@@ -6534,8 +6528,8 @@ tile_set = SubResource("TileSet_2yahn")
 tile_map_data = PackedByteArray("AAAmACEAAAAJABMAAAAmACAAAAAJABIAAAAlACAAAAAIABIAAAAkACAAAAAHABIAAAAlACEAAAAIABMAAAAkACEAAAAHABMAAAAjACEAAAAGABMAAAAjACAAAAAGABIAAAAiACAAAAAJABIAAAAiACEAAAAJABMAAAAhACAAAAAIABIAAAAhACEAAAAIABMAAAAgACAAAAAHABIAAAAgACEAAAAHABMAAAAfACAAAAAGABIAAAAfACEAAAAGABMAAAAeACAAAAAJABIAAAAeACEAAAAJABMAAAAdACAAAAAIABIAAAAdACEAAAAIABMAAAAmACIAAAAHABQAAAAmACMAAAAHABQAAAAlACIAAAAHABQAAAAlACMAAAAHABQAAAAkACIAAAAHABQAAAAkACMAAAAHABQAAAAjACIAAAAHABQAAAAjACMAAAAHABQAAAAiACIAAAAHABQAAAAiACMAAAAHABQAAAAhACIAAAAHABQAAAAgACIAAAAHABQAAAAgACMAAAAHABQAAAAhACMAAAAHABQAAAAmACQAAAAHABQAAAAmACUAAAAHABQAAAAlACQAAAAHABQAAAAlACUAAAAHABQAAAAkACQAAAAHABQAAAAjACQAAAAHABQAAAAjACUAAAAHABQAAAAkACUAAAAHABQAAAAiACQAAAAHABQAAAAhACQAAAAHABQAAAAhACUAAAAHABQAAAAiACUAAAAHABQAAAAgACUAAAAHABQAAAAgACQAAAAHABQAAAAnACIAAAAHABQAAAAnACMAAAAHABQAAAAnACQAAAAHABQAAAAnACUAAAAHABQAAABAACIAAQAAAAIAAABAACEAAQAAAAEAAABAACAAAQAAAAAAAAA9ACIAAQAAAAIAAAA9ACEAAQAAAAEAAAA9ACAAAQAAAAAAAAATAB0AAAAPABAAAAAOAB0AAAAQABEAAAAzACIAAAAQABMAAAAzACEAAAAQABIAAAA0ACIAAAAQABUAAAA0ACEAAAAQABQAAABFACIAAAAUABIAAABFACEAAAASABEAAABGACEAAAATABEAAABEACIAAAASABIAAAA3ACIAAAAQABEAAAAZAB0AAAAWABEAAAAcAB0AAAAWABEAAAAUAB0AAAAWABEAAAAVAB0AAAAPAA8AAAAnAB0AAAAPAA8AAAAyABQAAAAYAAcAAAAfACIAAAAHABQAAAAeACIAAAAHABQAAAAdACIAAAAHABQAAAAdACMAAAAHABQAAAAeACMAAAAHABQAAAAfACMAAAAHABQAAAAfACQAAAAHABQAAAAeACQAAAAHABQAAAAdACQAAAAHABQAAAAdACUAAAAHABQAAAAeACUAAAAHABQAAAAfACUAAAAHABQAAAArACQAAAACAAgAAAArACMAAAACAAgAAAAqACMAAAACAAgAAAAqACQAAAACAAgAAAApACQAAAACAAgAAAApACMAAAACAAgAAAApACUAAAACAAkAAAAqACUAAAACAAkAAAArACUAAAACAAkAAAAsACUAAAAEAAkAAAAsACQAAAAEAAgAAAAsACMAAAAEAAcAAAAoACIAAAAAAAcAAAAoACMAAAAAAAgAAAAoACQAAAAAAAcAAAAoACUAAAAAAAkAAAAsACIAAAADAAcAAAArACIAAAACAAcAAAAqACIAAAACAAcAAAApACIAAAABAAcAAAAEABoAAgAQAEQAAAATABkAAgAMADsAAAA=")
 tile_set = SubResource("TileSet_ddrap")
 
-[node name="Fishing_DockLake" parent="Node/Dark Land" unique_id=1357912676 instance=ExtResource("3_ac6fk")]
-position = Vector2(1155, 538)
+[node name="dock_lakeEntrance" parent="Node/Dark Land" unique_id=1357912676 instance=ExtResource("3_ac6fk")]
+position = Vector2(1141, 535)
 
 [node name="Car" parent="." unique_id=2143306667 instance=ExtResource("5_ac6fk")]
 position = Vector2(136, 462)
@@ -6550,3 +6544,9 @@ shape = SubResource("WorldBoundaryShape2D_ac6fk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1092960573]
 position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_2yahn")
+
+[node name="CarSpawnPoint" type="Marker2D" parent="." unique_id=431274541]
+position = Vector2(214, 465)
+
+[node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=529158339]
+position = Vector2(1050, 542)
