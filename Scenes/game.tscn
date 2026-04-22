@@ -570,7 +570,7 @@ sources/7 = SubResource("TileSetAtlasSource_rku1e")
 
 [node name="Player" parent="." unique_id=1996369814 instance=ExtResource("1_ebmjs")]
 z_index = 1
-position = Vector2(586, 273)
+position = Vector2(449, 280)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=514395846]
 position = Vector2(0, -32)
@@ -603,4 +603,4 @@ tile_set = SubResource("TileSet_3dryh")
 position = Vector2(381, 270)
 
 [node name="Shop" parent="." unique_id=50082240 instance=ExtResource("9_h4fw4")]
-position = Vector2(499, 219)
+position = Vector2(532, 218)

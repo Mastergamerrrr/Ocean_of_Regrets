@@ -56,7 +56,7 @@ region_enabled = true
 region_rect = Rect2(111.21611, 0, 97.3293, 256)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D3" unique_id=760433558]
-position = Vector2(796, 520.00006)
+position = Vector2(797, 520)
 scale = Vector2(1, 0.997)
 texture = ExtResource("2_dqtkm")
 offset = Vector2(-94.67, 0)
