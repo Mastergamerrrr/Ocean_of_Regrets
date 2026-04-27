@@ -7,4 +7,4 @@ extends Area2D
 
 var interact: Callable = func():
 	Global.spawn_point = spawn_point_name
-	get_tree().change_scene_to_file(target_scene)
+	Transition.transition_to(target_scene)

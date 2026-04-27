@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://dbl8dqc2mvpqw"
+Transition="*uid://dg030vdpa3p7j"
 
 [input]
 
