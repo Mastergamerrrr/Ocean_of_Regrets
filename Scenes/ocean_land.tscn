@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cmn00jmq8j5fd" path="res://Assets/sprites/Land Assets/Props-Rocks.png" id="5_poxqf"]
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="5_tga6d"]
 [ext_resource type="PackedScene" uid="uid://j6k6eao80mmo" path="res://Scenes/dock_ocean_Entrance.tscn" id="7_poxqf"]
+[ext_resource type="PackedScene" uid="uid://l2mpx2gur65r" path="res://Scenes/GrassZone.tscn" id="9_iq2ns"]
+[ext_resource type="PackedScene" uid="uid://ds2dp8wh14uoh" path="res://Scenes/StoneZone .tscn" id="10_apc7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qhn8"]
 texture = ExtResource("1_jna3f")
@@ -1171,6 +1173,12 @@ normal = Vector2(0.9998564, 0.016946718)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_poxqf"]
 normal = Vector2(-1, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xd1vu"]
+size = Vector2(653, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iq2ns"]
+size = Vector2(452, 8)
+
 [node name="ocean_land" type="Node2D" unique_id=1555464454]
 script = ExtResource("1_3meen")
 
@@ -1232,3 +1240,18 @@ position = Vector2(353, 561)
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=741088719]
 position = Vector2(1043, 564)
+
+[node name="GrassZone" parent="." unique_id=610625576 instance=ExtResource("9_iq2ns")]
+position = Vector2(11, 587)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=1955339585]
+position = Vector2(316.5, 0)
+shape = SubResource("RectangleShape2D_xd1vu")
+
+[node name="StoneZone" parent="." unique_id=1375319520 instance=ExtResource("10_apc7o")]
+position = Vector2(-159, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StoneZone" unique_id=1152663293]
+z_index = 2
+position = Vector2(1095, 575)
+shape = SubResource("RectangleShape2D_iq2ns")

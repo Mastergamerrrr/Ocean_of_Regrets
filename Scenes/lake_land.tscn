@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bcticqf72eypi" path="res://Assets/sprites/Land Assets/lamp.png" id="4_2yahn"]
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="5_ac6fk"]
 [ext_resource type="Texture2D" uid="uid://c46uqsng2avka" path="res://Assets/sprites/Land Assets/Green-Tree.png" id="5_ddrap"]
+[ext_resource type="PackedScene" uid="uid://l2mpx2gur65r" path="res://Scenes/GrassZone.tscn" id="9_wnqrv"]
+[ext_resource type="PackedScene" uid="uid://c2bpxim3sxtl6" path="res://Scenes/WoodZone.tscn" id="10_p80nf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ac6fk"]
 texture = ExtResource("3_55lp2")
@@ -6499,6 +6501,18 @@ normal = Vector2(1, 0)
 normal = Vector2(-1, 0)
 distance = -1.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p80nf"]
+size = Vector2(352, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnqrv"]
+size = Vector2(179.55112, 17.734741)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oghyl"]
+size = Vector2(135, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmcsy"]
+size = Vector2(458, 20)
+
 [node name="lake_land" type="Node2D" unique_id=43357855]
 script = ExtResource("1_mvsn3")
 
@@ -6550,3 +6564,32 @@ position = Vector2(214, 465)
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=529158339]
 position = Vector2(1050, 542)
+
+[node name="GrassZone2" parent="." unique_id=625552305 instance=ExtResource("9_wnqrv")]
+position = Vector2(1034, 555)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone2" unique_id=1925819860]
+position = Vector2(-60, 2)
+shape = SubResource("RectangleShape2D_p80nf")
+
+[node name="GrassZone3" parent="." unique_id=709925855 instance=ExtResource("9_wnqrv")]
+position = Vector2(707, 513)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone3" unique_id=1112405176]
+position = Vector2(6.130188, 4.482422)
+rotation = 0.4660029
+shape = SubResource("RectangleShape2D_wnqrv")
+
+[node name="WoodZone" parent="." unique_id=2146713944 instance=ExtResource("10_p80nf")]
+position = Vector2(490, 482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodZone" unique_id=480202557]
+position = Vector2(55.5, 0)
+shape = SubResource("RectangleShape2D_oghyl")
+
+[node name="GrassZone" parent="." unique_id=610625576 instance=ExtResource("9_wnqrv")]
+position = Vector2(192, 482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=50547864]
+position = Vector2(38, 0)
+shape = SubResource("RectangleShape2D_xmcsy")

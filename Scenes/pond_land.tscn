@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bq46twepcow54" path="res://Scenes/sign.tscn" id="6_5yjkb"]
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="7_o7h3w"]
 [ext_resource type="PackedScene" uid="uid://4lwwuolixamu" path="res://Scenes/dock_pondEntrance.tscn" id="8_5yjkb"]
+[ext_resource type="PackedScene" uid="uid://l2mpx2gur65r" path="res://Scenes/GrassZone.tscn" id="10_2spq4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjckc"]
 texture = ExtResource("1_mjiop")
@@ -1449,6 +1450,9 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ar72j"]
 normal = Vector2(-1, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0byr"]
+size = Vector2(1154, 20)
+
 [node name="pond_land" type="Node2D" unique_id=1527450596]
 script = ExtResource("1_ar72j")
 
@@ -1507,3 +1511,11 @@ position = Vector2(376, 593)
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=1832174340]
 position = Vector2(1042, 582)
+
+[node name="GrassZone" parent="." unique_id=610625576 instance=ExtResource("10_2spq4")]
+z_index = 6
+position = Vector2(11, 609)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=1006659005]
+position = Vector2(567, 0)
+shape = SubResource("RectangleShape2D_s0byr")

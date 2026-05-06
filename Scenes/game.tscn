@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="8_h4fw4"]
 [ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="8_v158k"]
 [ext_resource type="PackedScene" uid="uid://djjwmeptl751x" path="res://Scenes/shop.tscn" id="9_h4fw4"]
+[ext_resource type="AudioStream" uid="uid://bv1r2ryvhoqcp" path="res://Sounds/Forest.mp3" id="10_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://l2mpx2gur65r" path="res://Scenes/GrassZone.tscn" id="11_o5yvi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v158k"]
 texture = ExtResource("3_wrm1d")
@@ -566,6 +568,9 @@ sources/3 = SubResource("TileSetAtlasSource_ldgsr")
 sources/6 = SubResource("TileSetAtlasSource_o5yvi")
 sources/7 = SubResource("TileSetAtlasSource_rku1e")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5yvi"]
+size = Vector2(638, 14)
+
 [node name="Game" type="Node2D" unique_id=2005452345]
 
 [node name="Player" parent="." unique_id=1996369814 instance=ExtResource("1_ebmjs")]
@@ -604,3 +609,14 @@ position = Vector2(381, 270)
 
 [node name="Shop" parent="." unique_id=50082240 instance=ExtResource("9_h4fw4")]
 position = Vector2(532, 218)
+
+[node name="Spawn Music" type="AudioStreamPlayer2D" parent="." unique_id=146282295]
+stream = ExtResource("10_ldgsr")
+autoplay = true
+bus = &"Music"
+
+[node name="GrassZone" parent="." unique_id=610625576 instance=ExtResource("11_o5yvi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=152614920]
+position = Vector2(570, 282)
+shape = SubResource("RectangleShape2D_o5yvi")
