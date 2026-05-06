@@ -571,6 +571,12 @@ sources/7 = SubResource("TileSetAtlasSource_rku1e")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5yvi"]
 size = Vector2(638, 14)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o5yvi"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rku1e"]
+normal = Vector2(-1, 0)
+
 [node name="Game" type="Node2D" unique_id=2005452345]
 
 [node name="Player" parent="." unique_id=1996369814 instance=ExtResource("1_ebmjs")]
@@ -578,8 +584,10 @@ z_index = 1
 position = Vector2(449, 280)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=514395846]
-position = Vector2(0, -32)
+position = Vector2(-1, -32)
 zoom = Vector2(4.005, 4.005)
+limit_left = 271
+limit_right = 880
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
@@ -620,3 +628,15 @@ bus = &"Music"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=152614920]
 position = Vector2(570, 282)
 shape = SubResource("RectangleShape2D_o5yvi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=170516606]
+position = Vector2(271, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1967411111]
+shape = SubResource("WorldBoundaryShape2D_o5yvi")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=321420459]
+position = Vector2(880, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1814577352]
+shape = SubResource("WorldBoundaryShape2D_rku1e")
