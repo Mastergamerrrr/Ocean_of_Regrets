@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://lukwagi7mnvl"]
+[gd_scene format=3 uid="uid://dg030vdpa3p7j"]
 
-[node name="TransitionEffect" type="CanvasLayer" unique_id=1361492636]
+[ext_resource type="Script" uid="uid://cm5htlkjkh3mr" path="res://Scenes/TransitionEffect.gd" id="1_iuklu"]
+[ext_resource type="Shader" uid="uid://dle0s0866sghx" path="res://Scenes/IrisWipe.gdshader" id="1_wte46"]
+[ext_resource type="AudioStream" uid="uid://bk3t2284qdcmi" path="res://Sounds/Spongebob Bubble Transition.mp3" id="2_2wxqi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2wxqi"]
+shader = ExtResource("1_wte46")
+shader_parameter/progress = 0.0
+
+[node name="TransitionEffect" type="CanvasLayer" unique_id=1791472996]
+script = ExtResource("1_iuklu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1702419300]
+material = SubResource("ShaderMaterial_2wxqi")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TransitionSound" type="AudioStreamPlayer" parent="." unique_id=540487661]
+stream = ExtResource("2_2wxqi")
