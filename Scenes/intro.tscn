@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bnl4gbk3tr3ee" path="res://Assets/sounds/computer-mouse-click-352734.mp3" id="6_rsiac"]
 [ext_resource type="Texture2D" uid="uid://b8nty55o3w62j" path="res://Assets/sprites/paralaxcity/cityparis12.png" id="7_nn7w8"]
 [ext_resource type="Texture2D" uid="uid://ffjjfti1hik6" path="res://Assets/sprites/paralaxcity/Ocean.png" id="8_b26wi"]
+[ext_resource type="Shader" uid="uid://cf5imlbm1o2m0" path="res://Scenes/oceanintro.gdshader" id="8_itfcf"]
 [ext_resource type="AudioStream" uid="uid://b4rgtpi1p0h2c" path="res://Assets/sounds/cut.mp3" id="9_b26wi"]
 [ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="10_pgam6"]
 [ext_resource type="Texture2D" uid="uid://g10mjhfgslme" path="res://Assets/sprites/city_cars_8 (1).png" id="11_itfcf"]
@@ -542,6 +543,12 @@ _data = {
 &"RESET": SubResource("Animation_duh1u")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g8dlr"]
+shader = ExtResource("8_itfcf")
+shader_parameter/wave_speed = 1.0
+shader_parameter/wave_strength = 0.02
+shader_parameter/wave_frequency = 8.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33jql"]
 shader = ExtResource("10_pgam6")
 shader_parameter/outline_width = 2.0
@@ -607,6 +614,7 @@ texture = ExtResource("7_nn7w8")
 
 [node name="Ocean" type="Sprite2D" parent="." unique_id=317704592]
 visible = false
+material = SubResource("ShaderMaterial_g8dlr")
 position = Vector2(637.99994, 328.99997)
 scale = Vector2(1.0868382, 1.1438804)
 texture = ExtResource("8_b26wi")
