@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://d363fc3tk7w47" path="res://Assets/sprites/shop_anim.png" id="1_a0mxf"]
 [ext_resource type="Script" uid="uid://csvay8rehmdyq" path="res://Scripts/shop.gd" id="1_io27d"]
 [ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_2shtd"]
-[ext_resource type="PackedScene" uid="uid://dplrud6m51k50" path="res://Scenes/shop_ui.tscn" id="4_fdj0q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2shtd"]
 atlas = ExtResource("1_a0mxf")
@@ -72,5 +71,3 @@ interact_name = "Shop"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1788725562]
 position = Vector2(0, 42.5)
 shape = SubResource("RectangleShape2D_io27d")
-
-[node name="ShopUI" parent="." unique_id=1331926427 instance=ExtResource("4_fdj0q")]
