@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="6_00287"]
 
 [sub_resource type="Animation" id="Animation_r08cw"]
-length = 0.001
+length = 0.033333335
 
 [sub_resource type="Animation" id="Animation_00287"]
 resource_name = "unfurl"

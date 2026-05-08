@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cskp1kod501h1" path="res://Scripts/hoverIcon_main_menu.gd" id="1_opfnp"]
 [ext_resource type="VideoStream" uid="uid://bsjl0ehpc6keh" path="res://Assets/sprites/MAIN MENU/20260415_104117_UTC_0.ogv" id="2_cp0ys"]
 [ext_resource type="Shader" uid="uid://csk0m2r2ifj5t" path="res://main_menu.gdshader" id="3_yhxw7"]
+[ext_resource type="Script" uid="uid://dtjlooqxpkvkc" path="res://Scenes/v_box_container.gd" id="4_cp0ys"]
 [ext_resource type="FontFile" uid="uid://b5ohybohsyrtm" path="res://Assets/fonts/PixelOperator8.ttf" id="4_trj04"]
 [ext_resource type="FontFile" uid="uid://bcdbplsv7avy4" path="res://Assets/fonts/Fisherman-Regular.otf" id="5_16hvj"]
 [ext_resource type="Texture2D" uid="uid://bqo3xgnmnpt4b" path="res://Assets/sprites/MAIN MENU/output-onlinepngtools.png" id="6_vr1f0"]
@@ -63,6 +64,7 @@ offset_right = 351.0
 offset_bottom = 447.0
 theme = SubResource("Theme_opfnp")
 theme_override_constants/separation = 15
+script = ExtResource("4_cp0ys")
 
 [node name="start" type="Button" parent="VBoxContainer" unique_id=1075849442]
 layout_mode = 2
