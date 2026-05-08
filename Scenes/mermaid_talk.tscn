@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://b6u3bpxhm3erw"]
+
+[ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="1_huois"]
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="2_ggew7"]
+[ext_resource type="Texture2D" uid="uid://dgeank7xtmg0f" path="res://Assets/sprites/mermaid.png" id="3_74ol3"]
+[ext_resource type="Shader" uid="uid://b5vk2kx8y3qch" path="res://Scenes/mermaid_talk.gdshader" id="3_vpulx"]
+[ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="4_74ol3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32ynr"]
+shader = ExtResource("3_vpulx")
+shader_parameter/wave_speed = 1.9470000924825
+shader_parameter/wave_strength = 0.0050000002375
+shader_parameter/wave_frequency = 10.13200048127
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hl5s3"]
+shader = ExtResource("2_ggew7")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t641w"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(0, 0, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp5vx"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(250, 0, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0byvy"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(0, 360, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc6n8"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(250, 360, 250, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32ynr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t641w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp5vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0byvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc6n8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="Animation" id="Animation_ggew7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(605, 371)]
+}
+
+[sub_resource type="Animation" id="Animation_vpulx"]
+resource_name = "talk"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.10000001, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.26666668, 1.3),
+"transitions": PackedFloat32Array(2.6214402, 1),
+"update": 0,
+"values": [Vector2(605, 610.895), Vector2(605, 371)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_74ol3"]
+_data = {
+&"RESET": SubResource("Animation_ggew7"),
+&"talk": SubResource("Animation_vpulx")
+}
+
+[node name="MermaidTalk" type="Node2D" unique_id=1704406023]
+
+[node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("1_huois")]
+position = Vector2(487.00003, -5)
+scale = Vector2(1.02, 1.02)
+
+[node name="Ocean2" type="Sprite2D" parent="." unique_id=2089533918]
+material = SubResource("ShaderMaterial_32ynr")
+position = Vector2(615.99994, 544)
+scale = Vector2(8.103165, 5.5084906)
+texture = ExtResource("4_74ol3")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 58.80004)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1356247139]
+material = SubResource("ShaderMaterial_hl5s3")
+position = Vector2(605, 371)
+sprite_frames = SubResource("SpriteFrames_32ynr")
+autoplay = "default"
+frame_progress = 0.82907724
+
+[node name="Ocean" type="Sprite2D" parent="." unique_id=1141198007]
+material = SubResource("ShaderMaterial_32ynr")
+position = Vector2(578, 526.00006)
+scale = Vector2(7.8875003, 4.3706894)
+texture = ExtResource("4_74ol3")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 58.80004)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1641980037]
+libraries/ = SubResource("AnimationLibrary_74ol3")
+autoplay = &"talk"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1074728056]
+offset_left = -44.0
+offset_top = -19.0
+offset_right = 1183.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=149277153]
