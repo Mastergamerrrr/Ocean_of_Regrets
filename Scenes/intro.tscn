@@ -543,10 +543,16 @@ _data = {
 &"RESET": SubResource("Animation_duh1u")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_itfcf"]
+shader = ExtResource("8_itfcf")
+shader_parameter/wave_speed = 0.5
+shader_parameter/wave_strength = 0.001
+shader_parameter/wave_frequency = 5.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g8dlr"]
 shader = ExtResource("8_itfcf")
 shader_parameter/wave_speed = 1.0
-shader_parameter/wave_strength = 0.02
+shader_parameter/wave_strength = 0.002000000095
 shader_parameter/wave_frequency = 8.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33jql"]
@@ -554,6 +560,12 @@ shader = ExtResource("10_pgam6")
 shader_parameter/outline_width = 2.0
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/show_outline = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iab25"]
+shader = ExtResource("8_itfcf")
+shader_parameter/wave_speed = 0.5
+shader_parameter/wave_strength = 0.001
+shader_parameter/wave_frequency = 5.0
 
 [node name="Intro" type="Node2D" unique_id=1233022365]
 
@@ -608,7 +620,8 @@ stream = ExtResource("6_rsiac")
 
 [node name="Cityparis12" type="Sprite2D" parent="." unique_id=146293341]
 z_index = -20
-position = Vector2(600, 343.00003)
+material = SubResource("ShaderMaterial_itfcf")
+position = Vector2(598, 341.00003)
 scale = Vector2(0.2160526, 0.19187498)
 texture = ExtResource("7_nn7w8")
 
@@ -635,6 +648,7 @@ region_rect = Rect2(-0.24879456, 46.21069, 97.790726, 28.50298)
 
 [node name="Frontforest" type="Sprite2D" parent="." unique_id=278503485]
 z_index = -18
+material = SubResource("ShaderMaterial_iab25")
 position = Vector2(599.5, 343.00003)
 scale = Vector2(0.21596491, 0.19)
 texture = ExtResource("12_g8dlr")
