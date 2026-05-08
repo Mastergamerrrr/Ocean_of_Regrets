@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://c46uqsng2avka" path="res://Assets/sprites/Land Assets/Green-Tree.png" id="5_ddrap"]
 [ext_resource type="PackedScene" uid="uid://l2mpx2gur65r" path="res://Scenes/GrassZone.tscn" id="9_wnqrv"]
 [ext_resource type="PackedScene" uid="uid://c2bpxim3sxtl6" path="res://Scenes/WoodZone.tscn" id="10_p80nf"]
-[ext_resource type="AudioStream" uid="uid://3882bl8y4b56" path="res://Sounds/Lake/Windmill Hut - The Legend of Zelda： Ocarina of Time OST [ms9-vyV0HNo].mp3" id="11_oghyl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ac6fk"]
 texture = ExtResource("3_55lp2")
@@ -6594,9 +6593,3 @@ position = Vector2(192, 482)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=50547864]
 position = Vector2(38, 0)
 shape = SubResource("RectangleShape2D_xmcsy")
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=840993400]
-stream = ExtResource("11_oghyl")
-volume_db = -13.0
-autoplay = true
-bus = &"Music"

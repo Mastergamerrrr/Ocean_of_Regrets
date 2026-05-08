@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_s2rku"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_45bj0"]
 [ext_resource type="PackedScene" uid="uid://bdwthdvcej565" path="res://Scenes/lake_exit.tscn" id="5_af3l7"]
-[ext_resource type="AudioStream" uid="uid://ch120vb30b0ye" path="res://Sounds/Lake/lake music.mp3" id="7_vkdbw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkth3"]
 texture = ExtResource("1_2f2cj")
@@ -244,10 +243,3 @@ shape = SubResource("WorldBoundaryShape2D_s2rku")
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=1429880582]
 position = Vector2(288, 1412)
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1243502466]
-stream = ExtResource("7_vkdbw")
-volume_db = -3.0
-pitch_scale = 1.2
-autoplay = true
-bus = &"Music"

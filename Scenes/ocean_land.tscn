@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://j6k6eao80mmo" path="res://Scenes/dock_ocean_Entrance.tscn" id="7_poxqf"]
 [ext_resource type="PackedScene" uid="uid://l2mpx2gur65r" path="res://Scenes/GrassZone.tscn" id="9_iq2ns"]
 [ext_resource type="PackedScene" uid="uid://ds2dp8wh14uoh" path="res://Scenes/StoneZone .tscn" id="10_apc7o"]
-[ext_resource type="AudioStream" uid="uid://ds2twbw48s0bs" path="res://Sounds/Ocean/Ocean on Ocean       Shop - The Legend of Zelda： Majora's Mask OST ｜ Remastered [fjmTyWwSRps].mp3" id="11_apc7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qhn8"]
 texture = ExtResource("1_jna3f")
@@ -1256,8 +1255,3 @@ position = Vector2(-159, 12)
 z_index = 2
 position = Vector2(1095, 575)
 shape = SubResource("RectangleShape2D_iq2ns")
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1542390371]
-stream = ExtResource("11_apc7o")
-autoplay = true
-bus = &"Music"
