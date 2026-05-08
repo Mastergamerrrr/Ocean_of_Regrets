@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://ibfqolnw35ux"]
-
-[ext_resource type="Texture2D" uid="uid://c5211mbl8dhbh" path="res://Assets/sprites/final hook referrence.png" id="1_jikw6"]
-
-[resource]
-atlas = ExtResource("1_jikw6")
-region = Rect2(96, 96, 304, 304)

@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://dncffjyh0h456"]
-
-[ext_resource type="Texture2D" uid="uid://c1f4p78xvs7sj" path="res://Assets/sprites/fishing_icons_sheet_16x16-removebg-preview.png" id="1_j35rt"]
-
-[resource]
-atlas = ExtResource("1_j35rt")
-region = Rect2(64, 16, 16, 16)

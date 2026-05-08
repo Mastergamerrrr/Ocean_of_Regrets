@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ocean Of Regrets"
-run/main_scene="uid://g48cqfscwrh3"
+run/main_scene="uid://cob1ke6l6tigv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

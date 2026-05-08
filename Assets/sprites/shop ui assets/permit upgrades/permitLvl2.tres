@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://hfwk0chn3a0l"]
-
-[ext_resource type="Texture2D" uid="uid://dqpnile4aqvmg" path="res://Assets/sprites/permits-removebg-preview.png" id="1_804e2"]
-
-[resource]
-atlas = ExtResource("1_804e2")
-region = Rect2(384, 84, 176, 261)
