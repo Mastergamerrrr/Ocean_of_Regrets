@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bg0rkihkcpw8t" path="res://Scenes/paralax_pond.tscn" id="2_kku42"]
 [ext_resource type="PackedScene" uid="uid://m3aukvmxmv56" path="res://Scenes/pond_exit.tscn" id="3_nm46v"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_s7ca5"]
+[ext_resource type="AudioStream" uid="uid://dx7cy77nofeuj" path="res://Sounds/Pond/Pond on Pond                Milk Bar - The Legend of Zelda： Majora's Mask OST ｜ Remastered [oIqpq_forfE].mp3" id="7_h6g1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kku42"]
 texture = ExtResource("1_5ac8g")
@@ -123,3 +124,9 @@ shape = SubResource("WorldBoundaryShape2D_akm2k")
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=233262721]
 position = Vector2(52, 335)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=78001414]
+stream = ExtResource("7_h6g1h")
+pitch_scale = 0.6
+autoplay = true
+bus = &"Music"

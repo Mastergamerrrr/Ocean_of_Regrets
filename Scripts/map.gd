@@ -125,7 +125,7 @@ func _on_close_finished():
 	map_closed.emit()
 
 func _on_close_pressed():
-	close_map()
+	map_closing.emit()
 
 func _on_store_pressed():
 	location_selected.emit(STORE_SCENE)
@@ -138,3 +138,5 @@ func _on_lake_pressed():
 
 func _on_ocean_pressed():
 	location_selected.emit(OCEAN_SCENE)
+	
+signal map_closing()

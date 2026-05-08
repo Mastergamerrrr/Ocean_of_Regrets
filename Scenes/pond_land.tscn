@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c1dpp457bxhcn" path="res://Scenes/car.tscn" id="7_o7h3w"]
 [ext_resource type="PackedScene" uid="uid://4lwwuolixamu" path="res://Scenes/dock_pondEntrance.tscn" id="8_5yjkb"]
 [ext_resource type="PackedScene" uid="uid://l2mpx2gur65r" path="res://Scenes/GrassZone.tscn" id="10_2spq4"]
+[ext_resource type="AudioStream" uid="uid://dc3bxm3uw0bfe" path="res://Sounds/Pond/Pond on land.mp3" id="11_s0byr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjckc"]
 texture = ExtResource("1_mjiop")
@@ -1519,3 +1520,8 @@ position = Vector2(11, 609)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=1006659005]
 position = Vector2(567, 0)
 shape = SubResource("RectangleShape2D_s0byr")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1970320023]
+stream = ExtResource("11_s0byr")
+autoplay = true
+bus = &"Music"

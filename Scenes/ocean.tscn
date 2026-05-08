@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="7_xah7v"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="8_p7e0n"]
 [ext_resource type="PackedScene" uid="uid://1fgxwi8thv6a" path="res://Scenes/ocean_exit.tscn" id="9_bxemn"]
+[ext_resource type="AudioStream" uid="uid://3pe3ygci1r7b" path="res://Sounds/Ocean/Ocean music.mp3" id="10_e5rty"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7egog"]
 texture = ExtResource("2_e6x6a")
@@ -606,3 +607,9 @@ position = Vector2(0, 215)
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=1075717535]
 position = Vector2(59, 213)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=239067600]
+stream = ExtResource("10_e5rty")
+pitch_scale = 0.6
+autoplay = true
+bus = &"Music"

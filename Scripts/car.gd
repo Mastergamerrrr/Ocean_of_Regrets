@@ -15,9 +15,9 @@ func _ready() -> void:
 func _on_interact():
 	if sprite_2d.frame == 0:
 		interactable.is_interactable = false
+		get_tree().current_scene.get_node("Player").lock_movement()
+		# Play door sound first then open map
 		car_door_sound.play()
-		print("car interacted!")
-		# Wait for door sound to finish then open map
 		await car_door_sound.finished
 		_open_map()
 
@@ -44,9 +44,21 @@ func _open_map():
 	map_instance.set_current_location(get_tree().current_scene.scene_file_path)
 	print("Current scene path: ", get_tree().current_scene.scene_file_path)
 	map_instance.open_map()
+	
+	if map_instance.has_signal("map_closing"):
+		map_instance.map_closing.connect(_on_map_closing)
+	map_instance.open_map()
+
+func _on_map_closing():
+	# Play door sound first
+	car_door_sound.play()	
+	# Wait for sound then close the map
+	await car_door_sound.finished
+	map_instance.close_map()
 
 func _on_map_closed():
 	interactable.is_interactable = true
+	get_tree().current_scene.get_node("Player").unlock_movement()
 	print("Map closed, car interactable again.")
 
 func _on_location_selected(scene_path: String):
