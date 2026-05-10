@@ -9,6 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://qkgdm7qnapke" path="res://Assets/music/bgmmermaid.mp3" id="6_hl5s3"]
 [ext_resource type="Texture2D" uid="uid://cadhj6clfesax" path="res://Assets/sprites/MIRMID.png" id="6_vpulx"]
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="7_74ol3"]
+[ext_resource type="FontFile" uid="uid://bcdbplsv7avy4" path="res://Assets/fonts/Fisherman-Regular.otf" id="10_a24k2"]
+[ext_resource type="Texture2D" uid="uid://c1awmnreao5b0" path="res://Assets/sprites/MAIN MENU/background2.tres" id="10_csq7u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_32ynr"]
 shader = ExtResource("3_vpulx")
@@ -335,6 +337,25 @@ _data = {
 &"talk": SubResource("Animation_vpulx")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a24k2"]
+texture = ExtResource("10_csq7u")
+region_rect = Rect2(0, 0, 480, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ak053"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_najhf"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ry8y"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5khpk"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2d2e"]
+texture = ExtResource("10_csq7u")
+
 [node name="MermaidTalk" type="Node2D" unique_id=1704406023]
 
 [node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("1_huois")]
@@ -425,7 +446,12 @@ offset_left = 90.0
 offset_top = 202.0
 offset_right = 405.0
 offset_bottom = 376.0
-text = "Heed The Warning And Go Back To Shore."
+theme_override_fonts/font = ExtResource("10_a24k2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a24k2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ak053")
+theme_override_styles/hover = SubResource("StyleBoxTexture_najhf")
+text = "Heed The Warning And Go
+Back To Shore."
 autowrap_mode = 2
 
 [node name="Button2" type="Button" parent="Buton" unique_id=948165724]
@@ -433,4 +459,9 @@ offset_left = 727.0
 offset_top = 202.0
 offset_right = 1042.0
 offset_bottom = 376.0
-text = "Ignore The Warning And Keep Fishing."
+theme_override_fonts/font = ExtResource("10_a24k2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ry8y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khpk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s2d2e")
+text = "Ignore The Warning
+And Keep Fishing."
