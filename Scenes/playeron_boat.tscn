@@ -3,8 +3,33 @@
 [ext_resource type="Texture2D" uid="uid://cjcqhlejby4b7" path="res://Assets/sprites/Fisherman_fishboat.png" id="1_33ue6"]
 [ext_resource type="Texture2D" uid="uid://ud30nolbn5cq" path="res://Assets/sprites/Boat.png" id="1_bh3t3"]
 [ext_resource type="Script" uid="uid://lq4v5mv2jtgm" path="res://Scripts/playeron_boat.gd" id="1_xbpdn"]
+[ext_resource type="Texture2D" uid="uid://c65g6hp1ltupn" path="res://Assets/sprites/Fisherman_CaughtFishboat.png" id="3_havq6"]
 [ext_resource type="Texture2D" uid="uid://83rcbubwghru" path="res://Assets/sprites/Fisherman_idleonboat.png" id="4_nwx60"]
 [ext_resource type="Texture2D" uid="uid://ckyt3a34xiqtk" path="res://Assets/sprites/Fisherman_row.png" id="5_8s5i5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqf53"]
+atlas = ExtResource("3_havq6")
+region = Rect2(6, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rogx5"]
+atlas = ExtResource("3_havq6")
+region = Rect2(101, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffdij"]
+atlas = ExtResource("3_havq6")
+region = Rect2(196, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv5lh"]
+atlas = ExtResource("3_havq6")
+region = Rect2(291, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs0nj"]
+atlas = ExtResource("3_havq6")
+region = Rect2(386, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kcft"]
+atlas = ExtResource("3_havq6")
+region = Rect2(482, 0, 94, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33ue6"]
 atlas = ExtResource("1_33ue6")
@@ -64,10 +89,28 @@ region = Rect2(288, 0, 96, 73)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6jarb"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqf53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rogx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffdij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv5lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs0nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kcft")
+}],
 "loop": true,
 "name": &"Caughtfishboat",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -142,8 +185,10 @@ texture = ExtResource("1_bh3t3")
 position = Vector2(5.5374146, -9.627909)
 scale = Vector2(0.50340134, 0.41860467)
 sprite_frames = SubResource("SpriteFrames_6jarb")
-animation = &"Idle"
+animation = &"Fishboat"
 autoplay = "Idle"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257875800]
 position = Vector2(-4, -16)
