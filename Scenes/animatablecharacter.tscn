@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://cj2lkqkygdqg8"]
+
+[ext_resource type="Shader" uid="uid://b026g42f7lril" path="res://Scenes/animatablecharacter.gdshader" id="1_12fyd"]
+[ext_resource type="Texture2D" uid="uid://ud30nolbn5cq" path="res://Assets/sprites/Boat.png" id="1_mvqa1"]
+[ext_resource type="Script" uid="uid://by1gvtm421ns5" path="res://Scripts/animatablecharacter.gd" id="1_o12m2"]
+[ext_resource type="Texture2D" uid="uid://c65g6hp1ltupn" path="res://Assets/sprites/Fisherman_CaughtFishboat.png" id="2_12fyd"]
+[ext_resource type="Shader" uid="uid://b65g8r63vx7sc" path="res://Scenes/testcharacter.gdshader" id="3_o12m2"]
+[ext_resource type="Texture2D" uid="uid://cjcqhlejby4b7" path="res://Assets/sprites/Fisherman_fishboat.png" id="3_x7uvx"]
+[ext_resource type="Texture2D" uid="uid://83rcbubwghru" path="res://Assets/sprites/Fisherman_idleonboat.png" id="4_o12m2"]
+[ext_resource type="Texture2D" uid="uid://ckyt3a34xiqtk" path="res://Assets/sprites/Fisherman_row.png" id="5_hmwhv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x7uvx"]
+shader = ExtResource("1_12fyd")
+shader_parameter/wave_speed = 1.2
+shader_parameter/wave_strength = 0.015
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hmwhv"]
+shader = ExtResource("3_o12m2")
+shader_parameter/wave_speed = 1.2
+shader_parameter/wave_strength = 0.015
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqf53"]
+atlas = ExtResource("2_12fyd")
+region = Rect2(6, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rogx5"]
+atlas = ExtResource("2_12fyd")
+region = Rect2(101, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffdij"]
+atlas = ExtResource("2_12fyd")
+region = Rect2(196, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv5lh"]
+atlas = ExtResource("2_12fyd")
+region = Rect2(291, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs0nj"]
+atlas = ExtResource("2_12fyd")
+region = Rect2(386, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kcft"]
+atlas = ExtResource("2_12fyd")
+region = Rect2(482, 0, 94, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33ue6"]
+atlas = ExtResource("3_x7uvx")
+region = Rect2(386, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh3t3"]
+atlas = ExtResource("3_x7uvx")
+region = Rect2(386, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbpdn"]
+atlas = ExtResource("3_x7uvx")
+region = Rect2(291, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwx60"]
+atlas = ExtResource("3_x7uvx")
+region = Rect2(6, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s5i5"]
+atlas = ExtResource("3_x7uvx")
+region = Rect2(101, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_havq6"]
+atlas = ExtResource("3_x7uvx")
+region = Rect2(196, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgecc"]
+atlas = ExtResource("4_o12m2")
+region = Rect2(8, 0, 84, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jarb"]
+atlas = ExtResource("4_o12m2")
+region = Rect2(105, 0, 84, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uaib"]
+atlas = ExtResource("4_o12m2")
+region = Rect2(202, 0, 84, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuemo"]
+atlas = ExtResource("4_o12m2")
+region = Rect2(299, 0, 84, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feun4"]
+atlas = ExtResource("5_hmwhv")
+region = Rect2(0, 0, 96, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7no10"]
+atlas = ExtResource("5_hmwhv")
+region = Rect2(96, 0, 96, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2las"]
+atlas = ExtResource("5_hmwhv")
+region = Rect2(192, 0, 96, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlfyl"]
+atlas = ExtResource("5_hmwhv")
+region = Rect2(288, 0, 96, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24tcf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqf53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rogx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffdij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv5lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs0nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kcft")
+}],
+"loop": true,
+"name": &"Caughtfishboat",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_33ue6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh3t3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbpdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwx60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8s5i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_havq6")
+}],
+"loop": false,
+"name": &"Fishboat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgecc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jarb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uaib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuemo")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feun4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7no10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2las")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlfyl")
+}],
+"loop": true,
+"name": &"Row",
+"speed": 2.0
+}]
+
+[sub_resource type="Animation" id="Animation_hmwhv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BOAT:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PLAYERBOATAnim:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PLAYERBOATAnim:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_24tcf"]
+resource_name = "flip"
+length = 7.866667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BOAT:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PLAYERBOATAnim:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PLAYERBOATAnim:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Row"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vax1p"]
+_data = {
+&"RESET": SubResource("Animation_hmwhv"),
+&"flip": SubResource("Animation_24tcf")
+}
+
+[node name="Animatablecharacter" type="Node2D" unique_id=1605457749]
+script = ExtResource("1_o12m2")
+
+[node name="BOAT" type="Sprite2D" parent="." unique_id=1614086498]
+material = SubResource("ShaderMaterial_x7uvx")
+position = Vector2(2, -21)
+scale = Vector2(1.9864866, 2.3888888)
+texture = ExtResource("1_mvqa1")
+
+[node name="PLAYERBOATAnim" type="AnimatedSprite2D" parent="." unique_id=26858328]
+z_index = -1
+material = SubResource("ShaderMaterial_hmwhv")
+position = Vector2(13, -41)
+sprite_frames = SubResource("SpriteFrames_24tcf")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1427112200]
+libraries/ = SubResource("AnimationLibrary_vax1p")
