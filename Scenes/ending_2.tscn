@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://rwvfm4mb13xp"]
+
+[ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="1_mu2r4"]
+[ext_resource type="Shader" uid="uid://b5vk2kx8y3qch" path="res://Scenes/mermaid_talk.gdshader" id="2_ruqw8"]
+[ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="3_vj1kt"]
+[ext_resource type="PackedScene" uid="uid://cj2lkqkygdqg8" path="res://Scenes/animatablecharacter.tscn" id="4_vj1kt"]
+[ext_resource type="PackedScene" uid="uid://b7bum433vwj1i" path="res://Scenes/poseidon.tscn" id="5_gf17q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gf17q"]
+shader = ExtResource("2_ruqw8")
+shader_parameter/wave_speed = 1.9470000924825
+shader_parameter/wave_strength = 0.0050000002375
+shader_parameter/wave_frequency = 10.13200048127
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nt8n5"]
+shader = ExtResource("2_ruqw8")
+shader_parameter/wave_speed = 1.9470000924825
+shader_parameter/wave_strength = 0.0050000002375
+shader_parameter/wave_frequency = 10.13200048127
+
+[sub_resource type="Animation" id="Animation_gf17q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animatablecharacter:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(410, 545)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Animatablecharacter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ocean:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(627, 639)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ocean2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(546, 613)]
+}
+
+[sub_resource type="Animation" id="Animation_vj1kt"]
+resource_name = "ending2"
+length = 37.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animatablecharacter:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.9),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(410, 545)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animatablecharacter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.3333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fishboat"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.46666664, 3.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ocean:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7, 7.2, 7.4333334, 7.568757, 7.768757, 8.00209, 8.116184, 8.316184, 8.549518, 8.608548, 8.808548, 9.041882),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639), Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639), Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639), Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ocean2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(7, 7.2, 7.4, 7.5550714, 7.755071, 7.9550714, 8.143556, 8.333333, 8.543556, 8.608045, 8.808044, 9.008045),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613), Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613), Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613), Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gf17q"]
+_data = {
+&"RESET": SubResource("Animation_gf17q"),
+&"ending2": SubResource("Animation_vj1kt")
+}
+
+[node name="Ending2" type="Node2D" unique_id=1036825165]
+
+[node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("1_mu2r4")]
+z_index = -9
+position = Vector2(502.00003, -27.999998)
+scale = Vector2(1.045, 1.045)
+
+[node name="Ocean2" type="Sprite2D" parent="." unique_id=1391990171]
+z_index = -3
+material = SubResource("ShaderMaterial_gf17q")
+position = Vector2(546, 613)
+scale = Vector2(7.8453307, 4.3620687)
+texture = ExtResource("3_vj1kt")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 58.80004)
+
+[node name="Animatablecharacter" parent="." unique_id=1605457749 instance=ExtResource("4_vj1kt")]
+position = Vector2(410, 545)
+scale = Vector2(1.56, 1.56)
+
+[node name="poseidon" parent="." unique_id=2014764057 instance=ExtResource("5_gf17q")]
+position = Vector2(796, 939)
+
+[node name="Ocean" type="Sprite2D" parent="." unique_id=33916602]
+material = SubResource("ShaderMaterial_nt8n5")
+position = Vector2(627, 639)
+scale = Vector2(8.242437, 4.5673704)
+texture = ExtResource("3_vj1kt")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 58.80004)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=299463105]
+offset_left = -27.0
+offset_top = -15.0
+offset_right = 1170.0
+offset_bottom = 669.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1779547679]
+libraries/ = SubResource("AnimationLibrary_gf17q")
+autoplay = &"ending2"

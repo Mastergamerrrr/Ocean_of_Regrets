@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b7bum433vwj1i"]
+
+[ext_resource type="Texture2D" uid="uid://bxcv4uojrrrvc" path="res://Assets/sprites/poseidon.png" id="1_j5d5k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jabt2"]
+atlas = ExtResource("1_j5d5k")
+region = Rect2(0, 360, 220, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06eo1"]
+atlas = ExtResource("1_j5d5k")
+region = Rect2(220, 360, 220, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3evv5"]
+atlas = ExtResource("1_j5d5k")
+region = Rect2(440, 360, 220, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jso7"]
+atlas = ExtResource("1_j5d5k")
+region = Rect2(660, 360, 220, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lyiao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jabt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06eo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3evv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jso7")
+}],
+"loop": true,
+"name": &"idle_2",
+"speed": 3.0
+}]
+
+[node name="poseidon" type="Node2D" unique_id=2014764057]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1290034907]
+sprite_frames = SubResource("SpriteFrames_lyiao")
+animation = &"idle_2"
+autoplay = "idle_2"
