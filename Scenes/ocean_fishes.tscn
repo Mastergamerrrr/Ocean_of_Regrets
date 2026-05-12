@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://coj3d7hl8c581"]
+
+[ext_resource type="Script" uid="uid://tuq2f8f7vk5n" path="res://Scripts/ocean_fishes.gd" id="1_fff2x"]
+[ext_resource type="SpriteFrames" uid="uid://rlmlpljc28sa" path="res://Assets/Tres/ocean_fish_sprite_frames.tres" id="2_d23np"]
+
+[node name="OceanFishes" type="Node2D" unique_id=1153816846]
+script = ExtResource("1_fff2x")
+
+[node name="Ocean_Fishes_Sprites" type="AnimatedSprite2D" parent="." unique_id=196837840]
+sprite_frames = ExtResource("2_d23np")

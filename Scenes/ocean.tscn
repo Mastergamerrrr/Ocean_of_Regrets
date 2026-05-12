@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="5_otwcc"]
 [ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="6_jnlsn"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="6_wsrqd"]
+[ext_resource type="PackedScene" uid="uid://coj3d7hl8c581" path="res://Scenes/ocean_fishes.tscn" id="8_7egog"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7egog"]
 texture = ExtResource("5_otwcc")
@@ -555,6 +556,9 @@ distance = 33.0
 normal = Vector2(-1, 0)
 distance = -45.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnlsn"]
+size = Vector2(2047, 72)
+
 [node name="Ocean" type="Node2D" unique_id=1445911153]
 
 [node name="TileMap" type="Node" parent="." unique_id=1842695449]
@@ -577,7 +581,7 @@ position = Vector2(591, 83)
 scale = Vector2(0.255, 0.255)
 
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("6_wsrqd")]
-position = Vector2(705, 215)
+position = Vector2(146, 234.00002)
 scale = Vector2(0.6, 0.6)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=625819247]
@@ -597,3 +601,12 @@ shape = SubResource("WorldBoundaryShape2D_jnlsn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=919624338]
 position = Vector2(1601, 1)
 shape = SubResource("WorldBoundaryShape2D_7egog")
+
+[node name="FishingSpot" type="Area2D" parent="." unique_id=1166064353]
+position = Vector2(589, 209)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=222755010]
+position = Vector2(264.5, 58)
+shape = SubResource("RectangleShape2D_jnlsn")
+
+[node name="OceanFishes" parent="." unique_id=1153816846 instance=ExtResource("8_7egog")]

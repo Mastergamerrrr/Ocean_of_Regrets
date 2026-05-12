@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bggtmshem5vsf"]
+
+[ext_resource type="Script" uid="uid://bhsk1b4qxbeo" path="res://Scripts/lake_fishes.gd" id="1_r5ud2"]
+[ext_resource type="SpriteFrames" uid="uid://b4y1hjp6sdgc5" path="res://Assets/Tres/lake_fish_sprite_frames.tres" id="2_bgxm0"]
+
+[node name="LakeFishes" type="Node2D" unique_id=1137390339]
+script = ExtResource("1_r5ud2")
+
+[node name="Lake_Fishes_Sprites" type="AnimatedSprite2D" parent="." unique_id=1085102643]
+sprite_frames = ExtResource("2_bgxm0")
