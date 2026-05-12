@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c07rok54hfjh8"]
+
+[ext_resource type="Script" uid="uid://d0yhny1t6fih0" path="res://Scripts/cancel_cast_component.gd" id="1_2pjfy"]
+[ext_resource type="FontFile" uid="uid://b5ohybohsyrtm" path="res://Assets/fonts/PixelOperator8.ttf" id="1_hs18u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2pjfy"]
+font = ExtResource("1_hs18u")
+font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CancelCastComponent" type="Node2D" unique_id=1954309516]
+script = ExtResource("1_2pjfy")
+
+[node name="CancelCastLabel" type="Label" parent="." unique_id=161374960]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -100.0
+offset_right = 130.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "X To Cancel Cast"
+label_settings = SubResource("LabelSettings_2pjfy")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -3,10 +3,36 @@
 [ext_resource type="Texture2D" uid="uid://cjcqhlejby4b7" path="res://Assets/sprites/Fisherman_fishboat.png" id="1_33ue6"]
 [ext_resource type="Texture2D" uid="uid://ud30nolbn5cq" path="res://Assets/sprites/Boat.png" id="1_bh3t3"]
 [ext_resource type="Script" uid="uid://lq4v5mv2jtgm" path="res://Scripts/playeron_boat.gd" id="1_xbpdn"]
+[ext_resource type="Texture2D" uid="uid://c65g6hp1ltupn" path="res://Assets/sprites/Fisherman_CaughtFishboat.png" id="3_havq6"]
 [ext_resource type="Texture2D" uid="uid://83rcbubwghru" path="res://Assets/sprites/Fisherman_idleonboat.png" id="4_nwx60"]
 [ext_resource type="Texture2D" uid="uid://ckyt3a34xiqtk" path="res://Assets/sprites/Fisherman_row.png" id="5_8s5i5"]
-[ext_resource type="PackedScene" uid="uid://cnpml7j535tlp" path="res://Scenes/interacting_component.tscn" id="6_havq6"]
-[ext_resource type="AudioStream" uid="uid://dn8rqb2gcofyq" path="res://Sounds/minecraft-boat-sound-effect_irHjAgzc.mp3" id="7_bgecc"]
+[ext_resource type="PackedScene" uid="uid://d4waolvg2etr" path="res://Scenes/cast_component.tscn" id="7_bgecc"]
+[ext_resource type="PackedScene" uid="uid://c07rok54hfjh8" path="res://Scenes/cancel_cast_component.tscn" id="8_6jarb"]
+[ext_resource type="Script" uid="uid://cvwnvtcjnbtyw" path="res://Scripts/fishing_rod_upgrades.gd" id="9_3uaib"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqf53"]
+atlas = ExtResource("3_havq6")
+region = Rect2(6, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rogx5"]
+atlas = ExtResource("3_havq6")
+region = Rect2(101, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffdij"]
+atlas = ExtResource("3_havq6")
+region = Rect2(196, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv5lh"]
+atlas = ExtResource("3_havq6")
+region = Rect2(291, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs0nj"]
+atlas = ExtResource("3_havq6")
+region = Rect2(386, 0, 95, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuphx"]
+atlas = ExtResource("3_havq6")
+region = Rect2(483, 0, 93, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33ue6"]
 atlas = ExtResource("1_33ue6")
@@ -40,13 +66,13 @@ region = Rect2(8, 0, 84, 82)
 atlas = ExtResource("4_nwx60")
 region = Rect2(105, 0, 84, 82)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3uaib"]
-atlas = ExtResource("4_nwx60")
-region = Rect2(202, 0, 84, 82)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_cuemo"]
 atlas = ExtResource("4_nwx60")
 region = Rect2(299, 0, 84, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uaib"]
+atlas = ExtResource("4_nwx60")
+region = Rect2(202, 0, 84, 82)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_feun4"]
 atlas = ExtResource("5_8s5i5")
@@ -66,33 +92,51 @@ region = Rect2(288, 0, 96, 73)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6jarb"]
 animations = [{
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqf53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rogx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffdij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv5lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs0nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuphx")
+}],
+"loop": false,
 "name": &"Caughtfishboat",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
-"duration": 1.2,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_33ue6")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_bh3t3")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_xbpdn")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_nwx60")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_8s5i5")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_havq6")
 }],
 "loop": false,
 "name": &"Fishboat",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -102,10 +146,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_6jarb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3uaib")
+"texture": SubResource("AtlasTexture_cuemo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cuemo")
+"texture": SubResource("AtlasTexture_3uaib")
 }],
 "loop": true,
 "name": &"Idle",
@@ -130,7 +174,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bh3t3"]
-size = Vector2(71, 17)
+size = Vector2(148, 17)
 
 [node name="PlayeronBoat" type="CharacterBody2D" unique_id=1626450456]
 script = ExtResource("1_xbpdn")
@@ -144,16 +188,22 @@ texture = ExtResource("1_bh3t3")
 position = Vector2(5.5374146, -9.627909)
 scale = Vector2(0.50340134, 0.41860467)
 sprite_frames = SubResource("SpriteFrames_6jarb")
-animation = &"Idle"
+animation = &"Fishboat"
 autoplay = "Idle"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257875800]
-position = Vector2(-4, -16)
+position = Vector2(2, -8.5)
 shape = SubResource("RectangleShape2D_bh3t3")
 
-[node name="InteractingComponent" parent="." unique_id=926593740 instance=ExtResource("6_havq6")]
-position = Vector2(6.9999995, -35.999996)
-scale = Vector2(1.85, 1.85)
+[node name="CastComponent" parent="." unique_id=498288084 instance=ExtResource("7_bgecc")]
 
-[node name="RowSound" type="AudioStreamPlayer2D" parent="." unique_id=1814628255]
-stream = ExtResource("7_bgecc")
+[node name="CancelCastComponent" parent="." unique_id=1954309516 instance=ExtResource("8_6jarb")]
+
+[node name="BiteTimer" type="Timer" parent="." unique_id=420579445]
+
+[node name="FishingRodUpgrades" type="Node2D" parent="." unique_id=952202850]
+script = ExtResource("9_3uaib")
+
+[connection signal="timeout" from="BiteTimer" to="." method="_on_bite_timer_timeout"]

@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://rlmlpljc28sa"]
+
+[ext_resource type="Texture2D" uid="uid://b4v7j84v28sij" path="res://Assets/sprites/Fish_Ocean_Sprites/Sardine-removebg-preview.png" id="1_s6fep"]
+[ext_resource type="Texture2D" uid="uid://crhlkks8sv0c3" path="res://Assets/sprites/Fish_Ocean_Sprites/Mackerel-removebg-preview.png" id="2_yuxcf"]
+[ext_resource type="Texture2D" uid="uid://po2wfnvdxhha" path="res://Assets/sprites/Fish_Ocean_Sprites/Red_Snapper-removebg-preview.png" id="3_bftwy"]
+[ext_resource type="Texture2D" uid="uid://xkpou6wlof27" path="res://Assets/sprites/Fish_Ocean_Sprites/Swordfish-removebg-preview.png" id="4_5nxj2"]
+[ext_resource type="Texture2D" uid="uid://cte26wvnyu4nt" path="res://Assets/sprites/Fish_Ocean_Sprites/Great_White_Shark-removebg-preview.png" id="5_tnxy5"]
+[ext_resource type="Texture2D" uid="uid://c6vtg6vyjwro0" path="res://Assets/sprites/Fish_Ocean_Sprites/abella.png" id="6_hqvd8"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s6fep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yuxcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bftwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5nxj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tnxy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hqvd8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

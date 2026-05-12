@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://cqabqhn0cds3f"]
 
 [ext_resource type="Texture2D" uid="uid://dgeank7xtmg0f" path="res://Assets/sprites/mermaid.png" id="1_2pkki"]
+[ext_resource type="Script" uid="uid://i8tpcqdryd41" path="res://mermaid.gd" id="1_cp5vx"]
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="2_0byvy"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="3_0byvy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rc6n8"]
+shader = ExtResource("2_0byvy")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t641w"]
 atlas = ExtResource("1_2pkki")
@@ -35,12 +44,25 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 6.0
+"speed": 3.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rc6n8"]
+size = Vector2(651, 244.5)
+
 [node name="mermaid" type="Node2D" unique_id=1469788594]
+script = ExtResource("1_cp5vx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=487449653]
+material = SubResource("ShaderMaterial_rc6n8")
+position = Vector2(33, 3)
 sprite_frames = SubResource("SpriteFrames_7otok")
 autoplay = "default"
-frame_progress = 0.35591856
+frame_progress = 0.4363606
+
+[node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("3_0byvy")]
+interact_name = "E to Interact"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=406566478]
+position = Vector2(20, -121.75)
+shape = SubResource("RectangleShape2D_rc6n8")
