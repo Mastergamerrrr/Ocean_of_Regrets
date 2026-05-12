@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://4lwwuolixamu"]
+
+[ext_resource type="Texture2D" uid="uid://bjtmox1pu8ejp" path="res://Assets/sprites/Land Assets/Fishing_dock.png" id="1_rtlt0"]
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="1_xensy"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_xensy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7lpsl"]
+shader = ExtResource("1_xensy")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v44xu"]
+size = Vector2(44.622475, 31.887665)
+
+[node name="dock_pondEntrance" type="Node2D" unique_id=606013902]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1616961862]
+material = SubResource("ShaderMaterial_7lpsl")
+position = Vector2(1, -2)
+texture = ExtResource("1_rtlt0")
+
+[node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("2_xensy")]
+position = Vector2(-61, -22)
+interact_name = "Go To Pond"
+target_scene = "res://Scenes/Pond.tscn"
+spawn_point_name = "DockSpawnPoint"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1032877656]
+position = Vector2(-4.7683716e-07, 4.7683716e-07)
+scale = Vector2(2.715, 2.715)
+shape = SubResource("RectangleShape2D_v44xu")
