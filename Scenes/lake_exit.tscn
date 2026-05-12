@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bdwthdvcej565"]
+
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="1_52kpk"]
+[ext_resource type="Texture2D" uid="uid://bjtmox1pu8ejp" path="res://Assets/sprites/Land Assets/Fishing_dock.png" id="1_y7phv"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_52kpk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_52kpk"]
+shader = ExtResource("1_52kpk")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ooh5s"]
+size = Vector2(107, 88)
+
+[node name="lake_exit" type="Node2D" unique_id=2144046085]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=238559491]
+material = SubResource("ShaderMaterial_52kpk")
+position = Vector2(-145, -39)
+texture = ExtResource("1_y7phv")
+region_enabled = true
+region_rect = Rect2(0, 0, 193.91072, 122)
+
+[node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("2_52kpk")]
+position = Vector2(-145, -39)
+interact_name = "Go To The Land"
+target_scene = "res://Scenes/lake_land.tscn"
+spawn_point_name = "DockSpawnPoint"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=781503077]
+position = Vector2(43.5, -18)
+shape = SubResource("RectangleShape2D_ooh5s")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bq46twepcow54"]
+
+[ext_resource type="Texture2D" uid="uid://bpu84481o2rl1" path="res://Assets/sprites/Land Assets/sign.png" id="1_m6mpx"]
+[ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_hqvqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6c32n"]
+size = Vector2(24, 32)
+
+[node name="Sign" type="Node2D" unique_id=1658917585]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1430910815]
+texture = ExtResource("1_m6mpx")
+
+[node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("2_hqvqy")]
+interact_name = "Head to Dock"
+
+[node name="Head to Dock" type="CollisionShape2D" parent="Interactable" unique_id=2034640023]
+position = Vector2(-14, -1)
+shape = SubResource("RectangleShape2D_6c32n")
+
+[node name="Interactable2" parent="." unique_id=305230136 instance=ExtResource("2_hqvqy")]
+interact_name = "Head to Car"
+
+[node name="Head to Car" type="CollisionShape2D" parent="Interactable2" unique_id=1861172125]
+position = Vector2(15, -1)
+shape = SubResource("RectangleShape2D_6c32n")

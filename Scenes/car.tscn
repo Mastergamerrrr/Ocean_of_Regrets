@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="1_go66d"]
 [ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="2_yi23e"]
 [ext_resource type="Texture2D" uid="uid://g10mjhfgslme" path="res://Assets/sprites/city_cars_8 (1).png" id="3_yi23e"]
+[ext_resource type="AudioStream" uid="uid://wntnepthhrrc" path="res://Sounds/door-open-and-close-qnokck1s_gqqonSf1.mp3" id="5_aqss3"]
+[ext_resource type="AudioStream" uid="uid://c1louh3f5ywwk" path="res://Sounds/driving-away_gnW0U3qq.mp3" id="6_y3wrf"]
+[ext_resource type="AudioStream" uid="uid://c7nne6b0yjttv" path="res://Sounds/drive-in-stop_FyXcBDvT.mp3" id="7_argdw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u41r7"]
 shader = ExtResource("2_yi23e")
@@ -28,3 +31,12 @@ interact_name = "E to Travel"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1797388907]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_go66d")
+
+[node name="CarDoorSound" type="AudioStreamPlayer" parent="." unique_id=1028032265]
+stream = ExtResource("5_aqss3")
+
+[node name="CarDriveSound" type="AudioStreamPlayer" parent="." unique_id=466534464]
+stream = ExtResource("6_y3wrf")
+
+[node name="CarStopSound" type="AudioStreamPlayer" parent="." unique_id=2128085557]
+stream = ExtResource("7_argdw")

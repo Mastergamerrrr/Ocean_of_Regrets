@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://dg7o0n0p1xexq"]
+
+[ext_resource type="Script" uid="uid://borym1dixi4px" path="res://Scripts/map.gd" id="1_qumfl"]
+[ext_resource type="Texture2D" uid="uid://uvbo411acc1y" path="res://Assets/sprites/map_ui/map-removebg-preview.png" id="2_qumfl"]
+[ext_resource type="Texture2D" uid="uid://cxaihrt6tu6fp" path="res://Assets/sprites/map_ui/pin 2.png" id="3_r08cw"]
+[ext_resource type="Texture2D" uid="uid://de57kpkifnxqx" path="res://Assets/sprites/map_ui/image-removebg-preview.png" id="5_r08cw"]
+[ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="6_00287"]
+
+[sub_resource type="Animation" id="Animation_r08cw"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_00287"]
+resource_name = "unfurl"
+length = 5.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5t7yc"]
+_data = {
+&"RESET": SubResource("Animation_r08cw"),
+&"unfurl": SubResource("Animation_00287")
+}
+
+[node name="Map" type="Control" unique_id=685182745]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qumfl")
+
+[node name="BackgroundDim" type="ColorRect" parent="." unique_id=1030837120]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7058824)
+
+[node name="MapContainer" type="Control" parent="." unique_id=559676319]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(400, 300)
+
+[node name="MapPaper" type="TextureRect" parent="MapContainer" unique_id=1996006928]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qumfl")
+
+[node name="StoreButton" type="TextureButton" parent="MapContainer" unique_id=2018258797]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.094000004
+offset_left = 67.0
+offset_top = 239.0
+offset_right = 133.0
+offset_bottom = 274.6
+texture_normal = ExtResource("3_r08cw")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="PondButton" type="TextureButton" parent="MapContainer" unique_id=1743501364]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 91.0
+offset_right = 673.0
+offset_bottom = 162.0
+texture_normal = ExtResource("3_r08cw")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="LakeButton" type="TextureButton" parent="MapContainer" unique_id=934027805]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 71.0
+offset_right = 246.0
+offset_bottom = 164.0
+texture_normal = ExtResource("3_r08cw")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="OceanButton" type="TextureButton" parent="MapContainer" unique_id=604344457]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 405.0
+offset_right = 430.0
+offset_bottom = 481.0
+texture_normal = ExtResource("3_r08cw")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="CloseButton" type="TextureButton" parent="MapContainer" unique_id=403805975]
+layout_mode = 0
+offset_left = 775.00006
+offset_top = 15.0
+offset_right = 931.9096
+offset_bottom = 187.6304
+scale = Vector2(0.44303206, 0.35128492)
+texture_normal = ExtResource("5_r08cw")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="LocationLabels" type="Control" parent="." unique_id=1824416013]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StoreLabel" type="Label" parent="LocationLabels" unique_id=245226339]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 6.9420004
+anchor_top = 3.0770001
+anchor_right = 6.9420004
+anchor_bottom = 3.0770001
+offset_left = 32.319977
+offset_top = 166.92
+offset_right = 141.31998
+offset_bottom = 197.92
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("6_00287")
+theme_override_font_sizes/font_size = 30
+text = "STORE"
+
+[node name="PondLabel" type="Label" parent="LocationLabels" unique_id=68434877]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 111.0
+offset_right = 918.0
+offset_bottom = 142.0
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("6_00287")
+theme_override_font_sizes/font_size = 30
+text = "POND"
+
+[node name="LakeLabel" type="Label" parent="LocationLabels" unique_id=434771610]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 106.0
+offset_right = 488.0
+offset_bottom = 137.0
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("6_00287")
+theme_override_font_sizes/font_size = 30
+text = "LAKE"
+
+[node name="OceanLabel" type="Label" parent="LocationLabels" unique_id=772287994]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 428.0
+offset_right = 709.0
+offset_bottom = 459.0
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("6_00287")
+theme_override_font_sizes/font_size = 30
+text = "OCEAN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1391703623]
+libraries/ = SubResource("AnimationLibrary_5t7yc")
