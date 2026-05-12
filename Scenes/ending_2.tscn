@@ -9,7 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://cadhj6clfesax" path="res://Assets/sprites/MIRMID.png" id="6_nt8n5"]
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="7_2ru1m"]
 [ext_resource type="Texture2D" uid="uid://b54s0jvvsyb0o" path="res://Assets/sprites/posidon.png" id="7_flrho"]
-[ext_resource type="PackedScene" uid="uid://scmw3s6qppo5" path="res://Scenes/poseidon_attack.tscn" id="10_djads"]
+[ext_resource type="Shader" uid="uid://caj1l14ix6m7v" path="res://Scenes/ending_2.gdshader" id="10_pb0vo"]
+[ext_resource type="Texture2D" uid="uid://cdsjad8or0x1q" path="res://Assets/ending2/evendeeperfirstperson (1).jpeg" id="11_n2ae4"]
+[ext_resource type="Texture2D" uid="uid://bsmjqjnxoyhi3" path="res://Assets/ending2/deeperfirstperson.jpeg" id="12_bo3o0"]
+[ext_resource type="Texture2D" uid="uid://bd1jcs8mp8bpt" path="res://Assets/ending2/deeperdown.jpeg" id="13_5rj1x"]
+[ext_resource type="Texture2D" uid="uid://cubni205cx6mp" path="res://Assets/ending2/felldown.jpeg" id="14_1vxwr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gf17q"]
 shader = ExtResource("2_ruqw8")
@@ -242,7 +246,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("PoseidonAttack:modulate")
+tracks/12/path = NodePath("poseidon:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -254,7 +258,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("poseidon:modulate")
+tracks/13/path = NodePath("Animatablecharacter:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -263,10 +267,106 @@ tracks/13/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Paralax Mountain:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Ocean:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Ocean2:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2D:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2D/Label:text")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2D/Felldown:self_modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2D/Deeperdown:self_modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2D/Deeperfirstperson:self_modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_vj1kt"]
 resource_name = "ending2"
-length = 37.5
+length = 54.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -300,10 +400,10 @@ tracks/2/path = NodePath("ColorRect:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.46666664, 3.0333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.46666664, 3.0333333, 25.066668, 26.166666, 28.3, 29.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -348,7 +448,7 @@ tracks/6/path = NodePath("TALK:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(9.9, 10.466666, 26.366667, 27.566668),
+"times": PackedFloat32Array(9.9, 10.466666, 25.066668, 26.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.00094008446)]
@@ -360,10 +460,10 @@ tracks/7/path = NodePath("Camera2D:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(5.4666667, 5.7666664, 6.0666666, 6.217654, 6.517654, 6.817654, 7.2666664, 8.233334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1.6245049, 1),
+"times": PackedFloat32Array(5.4666667, 5.7666664, 6.0666666, 6.217654, 6.517654, 6.817654, 7.2666664, 8.233334, 26.966667, 27.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1.6245049, 1, 1, 1),
 "update": 0,
-"values": [Vector2(450, 435.275), Vector2(462.395, 435.275), Vector2(445.818, 435.275), Vector2(450, 435.275), Vector2(462.395, 435.275), Vector2(445.818, 435.275), Vector2(472.327, 435.275), Vector2(800, 435.275)]
+"values": [Vector2(450, 435.275), Vector2(462.395, 435.275), Vector2(445.818, 435.275), Vector2(450, 435.275), Vector2(462.395, 435.275), Vector2(445.818, 435.275), Vector2(472.327, 435.275), Vector2(800, 435.275), Vector2(800, 435.275), Vector2(581.89, 320.425)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -372,10 +472,10 @@ tracks/8/path = NodePath("Camera2D:zoom")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(5.5666666, 7.233333, 8.233334),
-"transitions": PackedFloat32Array(1, 1.9318728, 1),
+"times": PackedFloat32Array(5.5666666, 7.233333, 8.233334, 26.933332, 27.533333),
+"transitions": PackedFloat32Array(1, 1.9318728, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1.87, 1.87), Vector2(1.87, 1.87), Vector2(1.65, 1.65)]
+"values": [Vector2(1.87, 1.87), Vector2(1.87, 1.87), Vector2(1.65, 1.65), Vector2(1.65, 1.65), Vector2(1.025, 1.025)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -396,7 +496,7 @@ tracks/10/path = NodePath("TALK/Label:text")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(10.533333, 13.633333, 16.546673, 19.569134, 23.636456),
+"times": PackedFloat32Array(10.266666, 13.633333, 16.546673, 19.569134, 23.636456),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": ["...", "You were warned.
@@ -417,23 +517,143 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("PoseidonAttack:modulate")
+tracks/12/path = NodePath("poseidon:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(27.166666, 27.466667),
+"times": PackedFloat32Array(26.533333, 27),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("poseidon:modulate")
+tracks/13/path = NodePath("Camera2D:enabled")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(26.533333, 27),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Animatablecharacter:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(26.666666, 26.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Paralax Mountain:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(26.6, 27),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Ocean:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(26.8, 27.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Ocean2:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(26.666666, 26.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2D:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(27.5, 28.233334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2D/Label:text")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(29.666666, 34.908703, 40.74203, 46.242035),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["...So this is how it ends.", "I just did not think it would feel so... quiet.", "But I do not regret a single thing.", "Not one cast. Not one wave. Not one moment."]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2D/Label:self_modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(29.691298, 30.457964, 34.333336, 34.933334, 35.7, 40.166664, 40.766666, 41.53333, 45.666668, 46.26667, 47.033333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2D/Felldown:self_modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(32.133335, 34.166668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2D/Deeperdown:self_modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(37.3, 38.566666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2D/Deeperfirstperson:self_modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(41.36667, 44.833332),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -444,6 +664,15 @@ _data = {
 &"RESET": SubResource("Animation_gf17q"),
 &"ending2": SubResource("Animation_vj1kt")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b0jye"]
+shader = ExtResource("10_pb0vo")
+shader_parameter/wave_speed = 0.506000024035
+shader_parameter/wave_strength = 0.01999999955297
+shader_parameter/wave_frequency = 1.3770000654075
+shader_parameter/underwater_tint = Color(4.0510793, 4.8564816, 5.2297173, 1)
+shader_parameter/tint_strength = 0.178000008455
+shader_parameter/vignette_strength = 0.40800001938
 
 [node name="Ending2" type="Node2D" unique_id=1036825165]
 
@@ -462,6 +691,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 160, 58.80004)
 
 [node name="Animatablecharacter" parent="." unique_id=1605457749 instance=ExtResource("4_vj1kt")]
+self_modulate = Color(1, 1, 1, 0)
 position = Vector2(410, 545)
 scale = Vector2(1.56, 1.56)
 
@@ -475,10 +705,6 @@ scale = Vector2(5.205, 5.205)
 sprite_frames = SubResource("SpriteFrames_djads")
 frame = 8
 frame_progress = 1.0
-
-[node name="PoseidonAttack" parent="." unique_id=1396863485 instance=ExtResource("10_djads")]
-position = Vector2(666.00006, 493)
-scale = Vector2(1.39, 1.3900001)
 
 [node name="Ocean" type="Sprite2D" parent="." unique_id=33916602]
 material = SubResource("ShaderMaterial_nt8n5")
@@ -531,3 +757,35 @@ autowrap_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=125960309]
 position = Vector2(576, 326)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1959865866]
+z_index = -1
+scale = Vector2(0.455, 0.455)
+
+[node name="Evendeeperfirstperson(1)" type="Sprite2D" parent="Node2D" unique_id=1504028677]
+material = SubResource("ShaderMaterial_b0jye")
+position = Vector2(1266.1099, 717.4505)
+texture = ExtResource("11_n2ae4")
+
+[node name="Deeperfirstperson" type="Sprite2D" parent="Node2D" unique_id=1754861732]
+position = Vector2(1266.1099, 717.4505)
+texture = ExtResource("12_bo3o0")
+
+[node name="Deeperdown" type="Sprite2D" parent="Node2D" unique_id=708208551]
+position = Vector2(1266.1099, 717.4505)
+texture = ExtResource("13_5rj1x")
+
+[node name="Felldown" type="Sprite2D" parent="Node2D" unique_id=856761513]
+position = Vector2(1266.1099, 717.4505)
+texture = ExtResource("14_1vxwr")
+
+[node name="Label" type="Label" parent="Node2D" unique_id=947419098]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 468.1319
+offset_top = 1219.7802
+offset_right = 2096.7031
+offset_bottom = 1367.0328
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_2ru1m")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
