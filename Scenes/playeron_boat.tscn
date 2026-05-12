@@ -7,10 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://83rcbubwghru" path="res://Assets/sprites/Fisherman_idleonboat.png" id="4_nwx60"]
 [ext_resource type="Texture2D" uid="uid://ckyt3a34xiqtk" path="res://Assets/sprites/Fisherman_row.png" id="5_8s5i5"]
 [ext_resource type="PackedScene" uid="uid://cnpml7j535tlp" path="res://Scenes/interacting_component.tscn" id="6_havq6"]
-[ext_resource type="AudioStream" uid="uid://dn8rqb2gcofyq" path="res://Sounds/minecraft-boat-sound-effect_irHjAgzc.mp3" id="7_bgecc"]
 [ext_resource type="PackedScene" uid="uid://d4waolvg2etr" path="res://Scenes/cast_component.tscn" id="7_bgecc"]
 [ext_resource type="PackedScene" uid="uid://c07rok54hfjh8" path="res://Scenes/cancel_cast_component.tscn" id="8_6jarb"]
+[ext_resource type="AudioStream" uid="uid://dn8rqb2gcofyq" path="res://Sounds/minecraft-boat-sound-effect_irHjAgzc.mp3" id="8_feun4"]
 [ext_resource type="Script" uid="uid://cvwnvtcjnbtyw" path="res://Scripts/fishing_rod_upgrades.gd" id="9_3uaib"]
+[ext_resource type="AudioStream" uid="uid://c7oqws3u3ohub" path="res://Sounds/Fishing SFX/fishing-reel-cast-and-quick-unwind_apH06Gci.mp3" id="12_e2las"]
+[ext_resource type="AudioStream" uid="uid://cvlo1i5eq6m78" path="res://Sounds/Fishing SFX/fishing-reel-sound-effect-82xrzf-ud90_XuTWuB2Y.mp3" id="13_tlfyl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rqf53"]
 atlas = ExtResource("3_havq6")
@@ -202,7 +204,8 @@ position = Vector2(6.9999995, -35.999996)
 scale = Vector2(1.85, 1.85)
 
 [node name="RowSound" type="AudioStreamPlayer2D" parent="." unique_id=1814628255]
-stream = ExtResource("7_bgecc")
+stream = ExtResource("8_feun4")
+
 [node name="CastComponent" parent="." unique_id=498288084 instance=ExtResource("7_bgecc")]
 
 [node name="CancelCastComponent" parent="." unique_id=1954309516 instance=ExtResource("8_6jarb")]
@@ -211,5 +214,11 @@ stream = ExtResource("7_bgecc")
 
 [node name="FishingRodUpgrades" type="Node2D" parent="." unique_id=952202850]
 script = ExtResource("9_3uaib")
+
+[node name="ThrowSound" type="AudioStreamPlayer2D" parent="." unique_id=2102695142]
+stream = ExtResource("12_e2las")
+
+[node name="CancelSound" type="AudioStreamPlayer2D" parent="." unique_id=117942568]
+stream = ExtResource("13_tlfyl")
 
 [connection signal="timeout" from="BiteTimer" to="." method="_on_bite_timer_timeout"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://danpb1hu2nr7c"
+path="res://.godot/imported/Rare Achievement - Minecraft Sound Effect (HD).mp3-0f88aa92a704220f82260cfb7bfca551.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Fishing SFX/Rare Achievement - Minecraft Sound Effect (HD).mp3"
+dest_files=["res://.godot/imported/Rare Achievement - Minecraft Sound Effect (HD).mp3-0f88aa92a704220f82260cfb7bfca551.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

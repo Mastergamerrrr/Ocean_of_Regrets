@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7oqws3u3ohub"
+path="res://.godot/imported/fishing-reel-cast-and-quick-unwind_apH06Gci.mp3-ef04c18de66faae693706f7e4148c536.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Fishing SFX/fishing-reel-cast-and-quick-unwind_apH06Gci.mp3"
+dest_files=["res://.godot/imported/fishing-reel-cast-and-quick-unwind_apH06Gci.mp3-ef04c18de66faae693706f7e4148c536.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

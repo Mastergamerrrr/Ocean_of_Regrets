@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bggtmshem5vsf" path="res://Scenes/lake_fishes.tscn" id="3_26bqq"]
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="3_um1fs"]
 [ext_resource type="PackedScene" uid="uid://coj3d7hl8c581" path="res://Scenes/ocean_fishes.tscn" id="4_pbxe0"]
+[ext_resource type="AudioStream" uid="uid://danpb1hu2nr7c" path="res://Sounds/Fishing SFX/Rare Achievement - Minecraft Sound Effect (HD).mp3" id="6_k3j3b"]
 
 [node name="CatchPopup" type="CanvasLayer" unique_id=67204988]
 script = ExtResource("1_bunjf")
@@ -123,3 +124,6 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_um1fs")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CatchSound" type="AudioStreamPlayer2D" parent="." unique_id=1786043329]
+stream = ExtResource("6_k3j3b")

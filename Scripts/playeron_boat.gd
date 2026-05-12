@@ -12,10 +12,11 @@ var current_water_type: String = ""
 @onready var animated_spriteboat: AnimatedSprite2D = $BOAT/PLAYERBOATAnim
 @onready var spriteb: Sprite2D = $BOAT
 @onready var row_sound: AudioStreamPlayer2D = $RowSound
+@onready var throw_sound: AudioStreamPlayer2D = $ThrowSound
+@onready var cancel_sound: AudioStreamPlayer2D = $CancelSound
 
 var footstep_timer: float = 0.0
 const ROW_INTERVAL: float = 8.91
-
 
 signal fish_caught
 
@@ -34,8 +35,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	# REMOVED jump feature (boats don't fly! 🚣)
 
 	if Input.is_action_just_pressed("Fishing") and is_on_floor():
 		_start_casting()
@@ -74,6 +74,7 @@ func _start_casting() -> void:
 	velocity = Vector2.ZERO
 	animated_spriteboat.play("Fishboat")
 	$CancelCastComponent.show()
+	throw_sound.play()
 	
 func _start_waiting() -> void:
 	fishing_state = FishingState.WAITING
@@ -120,6 +121,7 @@ func _end_fishing() -> void:
 	animated_spriteboat.play_backwards("Fishboat")
 	$CastComponent.show()
 	$CancelCastComponent.hide()
+	cancel_sound.play()
 
 func minigame_fail() -> void:
 	if fishing_state != FishingState.MINIGAME:

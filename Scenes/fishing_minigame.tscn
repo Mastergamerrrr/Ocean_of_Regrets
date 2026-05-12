@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://optmv1cks46" path="res://Assets/sprites/FishingMinigammeSprites/ProgressBarFull.png" id="6_cgipk"]
 [ext_resource type="Script" uid="uid://7diumeh4aspo" path="res://Scripts/fish.gd" id="6_l4hcg"]
 [ext_resource type="Texture2D" uid="uid://ciyeo6qtkpkqh" path="res://Assets/sprites/FishingMinigammeSprites/FishingRod.png" id="9_27c41"]
+[ext_resource type="AudioStream" uid="uid://danpb1hu2nr7c" path="res://Sounds/Fishing SFX/Rare Achievement - Minecraft Sound Effect (HD).mp3" id="10_vb7xg"]
+[ext_resource type="AudioStream" uid="uid://cvfr13kdl7gle" path="res://Sounds/Fishing SFX/fishing intense music.mp3" id="13_8rod0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1gml"]
 size = Vector2(600.00037, 8750.018)
@@ -85,6 +87,14 @@ autostart = true
 position = Vector2(-208.04126, 6.196228)
 scale = Vector2(1.5267879, 2.1995132)
 texture = ExtResource("9_27c41")
+
+[node name="MinigameBattleSound" type="AudioStreamPlayer2D" parent="FishingMinigame" unique_id=80144383]
+stream = ExtResource("13_8rod0")
+bus = &"SFX"
+
+[node name="CatchSound" type="AudioStreamPlayer2D" parent="FishingMinigame" unique_id=852797268]
+stream = ExtResource("10_vb7xg")
+bus = &"SFX"
 
 [connection signal="body_entered" from="FishingMinigame/fish/Area2D" to="FishingMinigame" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="FishingMinigame/fish/Area2D" to="FishingMinigame" method="_on_area_2d_body_exited"]

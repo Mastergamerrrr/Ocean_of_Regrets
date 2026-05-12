@@ -8,6 +8,9 @@ var current_fishing_spot: Area2D = null
 
 func reset() -> void:
 	if can_fish:
+		var interacting = get_parent().get_node("InteractingComponent")
+		if interacting and interacting.current_interactions.size() > 0:
+			return  # 👈 don't show if near an interactable
 		fish_label.show()
 
 func _ready() -> void:
@@ -29,9 +32,24 @@ func _on_area_exited(area_hit: Area2D) -> void:
 		fish_label.hide()
 
 func _process(_delta: float) -> void:
+	# Hide cast label if player is near an interactable
+	var interacting = get_parent().get_node("InteractingComponent")
+	if interacting and interacting.current_interactions.size() > 0:
+		fish_label.hide()
+		return  # 👈 stop here so it doesn't show over interact label
+
 	if can_fish and Input.is_action_just_pressed("Fishing"):
 		get_parent()._start_casting()
-		fish_label.hide()  # hide when casting
+		fish_label.hide()
+	if Input.is_action_just_pressed("cancel_cast"):
+		if can_fish:
+			fish_label.show()
+	
+	# Normal show/hide logic
+	if can_fish and not get_parent().is_fishing:
+		fish_label.show()
+	elif not can_fish:
+		fish_label.hide()
 
 	if Input.is_action_just_pressed("cancel_cast"):
 		if can_fish:
