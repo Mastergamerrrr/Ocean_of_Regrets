@@ -11,6 +11,7 @@ var is_loading: bool = false
 func _ready():
 	_set_progress(1.0)
 	travel_label.visible = false
+	color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _process(delta: float) -> void:
 	if is_loading:
