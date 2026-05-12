@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Ocean Of Regrets"
-run/main_scene="uid://cob1ke6l6tigv"
+run/main_scene="uid://g48cqfscwrh3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://cso5f301gg6i3"
 
 [input]
 

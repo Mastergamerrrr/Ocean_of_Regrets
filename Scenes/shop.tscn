@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://djjwmeptl751x"]
 
 [ext_resource type="Texture2D" uid="uid://d363fc3tk7w47" path="res://Assets/sprites/shop_anim.png" id="1_a0mxf"]
+[ext_resource type="Script" uid="uid://csvay8rehmdyq" path="res://Scripts/shop.gd" id="1_io27d"]
 [ext_resource type="PackedScene" uid="uid://d02gl43fb7woy" path="res://Interactioncomponents/interactable.tscn" id="2_2shtd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2shtd"]
@@ -57,6 +58,7 @@ animations = [{
 size = Vector2(54, 39)
 
 [node name="Shop" type="Node2D" unique_id=50082240]
+script = ExtResource("1_io27d")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=670319199]
 sprite_frames = SubResource("SpriteFrames_s8dlv")
