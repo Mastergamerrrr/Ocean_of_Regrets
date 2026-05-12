@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://borym1dixi4px" path="res://Scripts/map.gd" id="1_qumfl"]
 [ext_resource type="Texture2D" uid="uid://uvbo411acc1y" path="res://Assets/sprites/map_ui/map-removebg-preview.png" id="2_qumfl"]
+[ext_resource type="Texture2D" uid="uid://bdrtilcvhm1gj" path="res://Assets/sprites/map_ui/vertical scroll.png" id="2_r08cw"]
 [ext_resource type="Texture2D" uid="uid://cxaihrt6tu6fp" path="res://Assets/sprites/map_ui/pin 2.png" id="3_r08cw"]
 [ext_resource type="Texture2D" uid="uid://de57kpkifnxqx" path="res://Assets/sprites/map_ui/image-removebg-preview.png" id="5_r08cw"]
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="6_00287"]
@@ -12,6 +13,30 @@ length = 0.033333335
 [sub_resource type="Animation" id="Animation_00287"]
 resource_name = "unfurl"
 length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(691, -75), Vector2(0, -75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScrollLeft:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5t7yc"]
 _data = {
@@ -38,6 +63,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.7058824)
+
+[node name="ScrollLeft" type="TextureRect" parent="." unique_id=884039478]
+layout_mode = 0
+offset_right = 373.0
+offset_bottom = 669.0
+texture = ExtResource("2_r08cw")
+
+[node name="ScrollRight" type="TextureRect" parent="." unique_id=767070301]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -373.0
+offset_bottom = 669.0
+grow_horizontal = 0
+texture = ExtResource("2_r08cw")
 
 [node name="MapContainer" type="Control" parent="." unique_id=559676319]
 layout_mode = 1

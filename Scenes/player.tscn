@@ -6,9 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://ct2dius86ck6q" path="res://Assets/sprites/Fisherman_walk.png" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://cyklgipcjftcg" path="res://Assets/sprites/Fisherman_CaughtFish.png" id="5_fkybt"]
 [ext_resource type="PackedScene" uid="uid://cnpml7j535tlp" path="res://Scenes/interacting_component.tscn" id="6_x3wgy"]
-[ext_resource type="AudioStream" uid="uid://6xq4fltp7b87" path="res://Sounds/GrassWalking.mp3" id="7_3smsa"]
-[ext_resource type="AudioStream" uid="uid://d28ucetp714ei" path="res://Sounds/StoneWalking.mp3" id="8_f1ek2"]
-[ext_resource type="AudioStream" uid="uid://c37bdfpo1fiy3" path="res://Sounds/WoodWalking.mp3" id="9_tx1dd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
 atlas = ExtResource("2_cvnsp")
@@ -223,12 +220,3 @@ offset = Vector2(0, -0.355)
 
 [node name="InteractingComponent" parent="." unique_id=926593740 instance=ExtResource("6_x3wgy")]
 position = Vector2(1, -17)
-
-[node name="FootstepGrass" type="AudioStreamPlayer2D" parent="." unique_id=885659206]
-stream = ExtResource("7_3smsa")
-
-[node name="FootstepStone" type="AudioStreamPlayer2D" parent="." unique_id=1609791140]
-stream = ExtResource("8_f1ek2")
-
-[node name="FootstepWood" type="AudioStreamPlayer2D" parent="." unique_id=105970103]
-stream = ExtResource("9_tx1dd")

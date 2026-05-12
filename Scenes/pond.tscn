@@ -1,13 +1,10 @@
 [gd_scene format=4 uid="uid://crlagphlfdtcl"]
 
 [ext_resource type="Texture2D" uid="uid://dtv4rx0a5gg13" path="res://Assets/sprites/PondAssets/Gemini_Generated_Image_aux0eyaux0eyaux0-1.png.png" id="1_5ac8g"]
-[ext_resource type="Script" uid="uid://qbaoepinhalq" path="res://Scripts/Pond.gd" id="1_n7i7v"]
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_akm2k"]
 [ext_resource type="PackedScene" uid="uid://bg0rkihkcpw8t" path="res://Scenes/paralax_pond.tscn" id="2_kku42"]
-[ext_resource type="PackedScene" uid="uid://m3aukvmxmv56" path="res://Scenes/pond_exit.tscn" id="3_nm46v"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_s7ca5"]
 [ext_resource type="PackedScene" uid="uid://d3lda7onh250f" path="res://Scenes/pond_fishes.tscn" id="5_nm46v"]
-[ext_resource type="AudioStream" uid="uid://dx7cy77nofeuj" path="res://Sounds/Pond/Pond on Pond                Milk Bar - The Legend of Zelda： Majora's Mask OST ｜ Remastered [oIqpq_forfE].mp3" id="7_h6g1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kku42"]
 texture = ExtResource("1_5ac8g")
@@ -82,29 +79,25 @@ distance = 738.0
 size = Vector2(2685, 61)
 
 [node name="Pond" type="Node2D" unique_id=615288354]
-script = ExtResource("1_n7i7v")
 
 [node name="Node" type="Node" parent="." unique_id=777703853]
 
 [node name="Layer1" type="TileMapLayer" parent="Node" unique_id=204798330]
 z_index = 1
 position = Vector2(137, 349)
-tile_map_data = PackedByteArray("AAAEAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAAsAAEAAAAAAAAAAAD7/wEAAAAAAAAAAAA2AAEAAAAAAAAAAABAAAEAAAAAAAAAAABKAAEAAAAAAAAAAABUAAEAAAAAAAAAAABeAAEAAAAAAAAAAABoAAEAAAAAAAAAAAD+/wMAAQAAAAIAAAAIAAMAAQAAAAIAAAASAAMAAQAAAAIAAAAcAAMAAQAAAAIAAAAmAAMAAQAAAAIAAAAwAAMAAQAAAAIAAAA6AAMAAQAAAAIAAABEAAMAAQAAAAIAAABOAAMAAQAAAAIAAABYAAMAAQAAAAIAAABiAAMAAQAAAAIAAABsAAMAAQAAAAIAAAD7/wMAAQAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAEAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAAsAAEAAAAAAAAAAAD7/wEAAAAAAAAAAADy/wEAAAAAAAAAAADo/wEAAAAAAAAAAADe/wEAAAAAAAAAAAA2AAEAAAAAAAAAAABAAAEAAAAAAAAAAABKAAEAAAAAAAAAAADU/wEAAAAAAAAAAADK/wEAAAAAAAAAAABUAAEAAAAAAAAAAABeAAEAAAAAAAAAAABoAAEAAAAAAAAAAADN/wMAAQAAAAIAAADX/wMAAQAAAAIAAADg/wMAAQAAAAIAAADq/wMAAQAAAAIAAAD0/wMAAQAAAAIAAAD+/wMAAQAAAAIAAAAIAAMAAQAAAAIAAAASAAMAAQAAAAIAAAAcAAMAAQAAAAIAAAAmAAMAAQAAAAIAAAAwAAMAAQAAAAIAAAA6AAMAAQAAAAIAAABEAAMAAQAAAAIAAABOAAMAAQAAAAIAAABYAAMAAQAAAAIAAABiAAMAAQAAAAIAAABsAAMAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_s7ca5")
 
 [node name="Dock" type="TileMapLayer" parent="Node" unique_id=1320943020]
-tile_map_data = PackedByteArray("AAD+/xUAAQABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAKABYAAQAGAAEAAAAKABUAAQAGAAAAAAAJABUAAQAFAAAAAAAIABUAAQAFAAAAAAAHABUAAQAEAAAAAAAHABYAAQAEAAEAAAAGABUAAQADAAAAAAAFABUAAQADAAAAAAAEABUAAQACAAAAAAAEABYAAQACAAEAAAAEABcAAQACAAIAAAAEABgAAQACAAMAAAADABUAAQABAAAAAAACABUAAQABAAAAAAABABUAAQAAAAAAAAABABYAAQAAAAEAAAABABcAAQAAAAIAAAABABgAAQAAAAMAAAAAABUAAQABAAAAAAD//xUAAQABAAAAAAD+/xUAAQABAAAAAAA=")
 tile_set = SubResource("TileSet_n7i7v")
-
-[node name="pond_exit" parent="Node" unique_id=1898780749 instance=ExtResource("3_nm46v")]
-position = Vector2(1, 338)
 
 [node name="paralax_pond" parent="." unique_id=992301436 instance=ExtResource("2_kku42")]
 position = Vector2(402, 211)
 scale = Vector2(0.25, 0.25)
 
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("3_s7ca5")]
-position = Vector2(68, 361)
+position = Vector2(213, 360)
 scale = Vector2(0.6, 0.6)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=2004531750]
@@ -135,11 +128,3 @@ shape = SubResource("RectangleShape2D_akm2k")
 
 [node name="PondFishes" parent="." unique_id=14584365 instance=ExtResource("5_nm46v")]
 visible = false
-[node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=233262721]
-position = Vector2(52, 335)
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=78001414]
-stream = ExtResource("7_h6g1h")
-pitch_scale = 0.6
-autoplay = true
-bus = &"Music"

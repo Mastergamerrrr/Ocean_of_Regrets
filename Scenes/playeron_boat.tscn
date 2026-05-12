@@ -33,8 +33,6 @@ region = Rect2(386, 0, 95, 96)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cuphx"]
 atlas = ExtResource("3_havq6")
 region = Rect2(483, 0, 93, 96)
-[ext_resource type="PackedScene" uid="uid://cnpml7j535tlp" path="res://Scenes/interacting_component.tscn" id="6_havq6"]
-[ext_resource type="AudioStream" uid="uid://dn8rqb2gcofyq" path="res://Sounds/minecraft-boat-sound-effect_irHjAgzc.mp3" id="7_bgecc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33ue6"]
 atlas = ExtResource("1_33ue6")
@@ -209,9 +207,3 @@ shape = SubResource("RectangleShape2D_bh3t3")
 script = ExtResource("9_3uaib")
 
 [connection signal="timeout" from="BiteTimer" to="." method="_on_bite_timer_timeout"]
-[node name="InteractingComponent" parent="." unique_id=926593740 instance=ExtResource("6_havq6")]
-position = Vector2(6.9999995, -35.999996)
-scale = Vector2(1.85, 1.85)
-
-[node name="RowSound" type="AudioStreamPlayer2D" parent="." unique_id=1814628255]
-stream = ExtResource("7_bgecc")
