@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://dtfjlm67quptu" path="res://Scripts/Lake.gd" id="1_ee21e"]
 [ext_resource type="PackedScene" uid="uid://b2ud32dro1g5n" path="res://Scenes/paralax_lake.tscn" id="2_dkth3"]
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_s2rku"]
+[ext_resource type="PackedScene" uid="uid://bdwthdvcej565" path="res://Scenes/lake_exit.tscn" id="2_y64qi"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_45bj0"]
-[ext_resource type="PackedScene" uid="uid://bdwthdvcej565" path="res://Scenes/lake_exit.tscn" id="5_af3l7"]
-[ext_resource type="AudioStream" uid="uid://ch120vb30b0ye" path="res://Sounds/Lake/lake music.mp3" id="7_vkdbw"]
 [ext_resource type="PackedScene" uid="uid://bggtmshem5vsf" path="res://Scenes/lake_fishes.tscn" id="5_af3l7"]
+[ext_resource type="AudioStream" uid="uid://ch120vb30b0ye" path="res://Sounds/Lake/lake music.mp3" id="7_vkdbw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkth3"]
 texture = ExtResource("1_2f2cj")
@@ -203,6 +203,11 @@ size = Vector2(6320, 235)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_ee21e")
 
+[node name="lake_exit" parent="." unique_id=2144046085 instance=ExtResource("2_y64qi")]
+z_index = 1
+position = Vector2(727.99994, 1619.9999)
+scale = Vector2(5, 5)
+
 [node name="TileMap" type="Node" parent="." unique_id=800080500]
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=1405411856]
@@ -211,7 +216,7 @@ position = Vector2(521, 289)
 tile_map_data = PackedByteArray("AADj/wYAAAAAAAAAAADt/wYAAAAAAAAAAAD3/wYAAAAAAAAAAAABAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAAUAAYAAAAAAAAAAAAeAAYAAAAAAAAAAAAoAAYAAAAAAAAAAAAyAAYAAAAAAAAAAADf/wgAAQAAAAIAAADg/wgAAQAAAAIAAADh/wgAAQAAAAIAAADh/wcAAQAAAAIAAADi/wcAAQAAAAIAAADj/wcAAQAAAAIAAADk/wcAAQAAAAIAAADi/wgAAQAAAAIAAADj/wgAAQAAAAIAAADk/wgAAQAAAAIAAADl/wgAAQAAAAIAAADm/wgAAQAAAAIAAADn/wgAAQAAAAIAAADo/wgAAQAAAAIAAADp/wgAAQAAAAIAAADq/wgAAQAAAAIAAADr/wgAAQAAAAIAAADs/wgAAQAAAAIAAADt/wgAAQAAAAIAAADu/wgAAQAAAAIAAADv/wgAAQAAAAIAAADw/wgAAQAAAAIAAADx/wgAAQAAAAIAAADy/wgAAQAAAAIAAADz/wgAAQAAAAIAAAD0/wgAAQAAAAIAAAD1/wgAAQAAAAIAAAD2/wgAAQAAAAIAAAD3/wgAAQAAAAIAAAD4/wgAAQAAAAIAAAD5/wgAAQAAAAIAAAD6/wgAAQAAAAIAAAD6/wcAAQAAAAIAAAD7/wcAAQAAAAIAAAD8/wcAAQAAAAIAAAD7/wgAAQAAAAIAAAD8/wgAAQAAAAIAAAD9/wgAAQAAAAIAAAD+/wgAAQAAAAIAAAD//wgAAQAAAAIAAAAAAAgAAQAAAAIAAAABAAgAAQAAAAIAAAACAAgAAQAAAAIAAAADAAgAAQAAAAIAAAAEAAgAAQAAAAIAAAAFAAgAAQAAAAIAAAAGAAgAAQAAAAIAAAAHAAgAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAgAAQAAAAIAAAAKAAgAAQAAAAIAAAALAAgAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAgAAQAAAAIAAAAOAAgAAQAAAAIAAAAPAAgAAQAAAAIAAAAQAAgAAQAAAAIAAAARAAgAAQAAAAIAAAASAAgAAQAAAAIAAAATAAgAAQAAAAIAAAAUAAgAAQAAAAIAAAAVAAgAAQAAAAIAAAAWAAgAAQAAAAIAAAAXAAgAAQAAAAIAAAAYAAgAAQAAAAIAAAAZAAgAAQAAAAIAAAAaAAgAAQAAAAIAAAAbAAgAAQAAAAIAAAAcAAgAAQAAAAIAAAAdAAgAAQAAAAIAAAAeAAgAAQAAAAIAAAAfAAgAAQAAAAIAAAAgAAgAAQAAAAIAAAAhAAgAAQAAAAIAAAAiAAgAAQAAAAIAAAAjAAgAAQAAAAIAAAAkAAgAAQAAAAIAAAAlAAgAAQAAAAIAAAAmAAgAAQAAAAIAAAAnAAgAAQAAAAIAAAAoAAgAAQAAAAIAAAApAAgAAQAAAAIAAAAqAAgAAQAAAAIAAAArAAgAAQAAAAIAAAAsAAgAAQAAAAIAAAAtAAgAAQAAAAIAAAAuAAgAAQAAAAIAAAAvAAgAAQAAAAIAAAAwAAgAAQAAAAIAAAAxAAgAAQAAAAIAAAAyAAgAAQAAAAIAAAAzAAgAAQAAAAIAAAA0AAgAAQAAAAIAAAA1AAgAAQAAAAIAAAA2AAgAAQAAAAIAAAA3AAgAAQAAAAIAAADe/wgAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_kku42")
 
-[node name="LakeExit" parent="TileMap" unique_id=2144046085 instance=ExtResource("5_af3l7")]
+[node name="LakeExit" parent="TileMap" unique_id=1379865064 instance=ExtResource("5_af3l7")]
 position = Vector2(110, 393.99997)
 scale = Vector2(0.95125, 0.95125)
 
@@ -225,7 +230,6 @@ position = Vector2(2896, 847.99976)
 scale = Vector2(1.035, 1.035)
 
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("3_45bj0")]
-position = Vector2(280, 1496)
 position = Vector2(500, 1520)
 scale = Vector2(2, 2)
 
@@ -257,6 +261,7 @@ volume_db = -3.0
 pitch_scale = 1.2
 autoplay = true
 bus = &"Music"
+
 [node name="FishingSpot" type="Area2D" parent="." unique_id=845697715]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=146058684]

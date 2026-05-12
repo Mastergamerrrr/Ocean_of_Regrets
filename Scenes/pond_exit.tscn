@@ -18,6 +18,7 @@ size = Vector2(114.5, 90)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=621053761]
 material = SubResource("ShaderMaterial_7jxw7")
 texture = ExtResource("1_n1x5n")
+region_rect = Rect2(0, 0, 192, 122)
 
 [node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("2_uwocn")]
 interact_name = "Go Back To Land"

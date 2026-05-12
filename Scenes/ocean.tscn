@@ -1,15 +1,6 @@
 [gd_scene format=4 uid="uid://b2ta3el7nf63x"]
 
 [ext_resource type="Script" uid="uid://nkg0kmybesnj" path="res://Scripts/Ocean.gd" id="1_f3ebq"]
-[ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="2_e6x6a"]
-[ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="3_8j5el"]
-[ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="4_65bgh"]
-[ext_resource type="Texture2D" uid="uid://dhi7oq6h7hidx" path="res://Assets/sprites/OceanAssets/sand_2.png" id="5_r4fkf"]
-[ext_resource type="Texture2D" uid="uid://g0pu3ctctm6l" path="res://Assets/sprites/HouseBGAssets/Gemini_Generated_Image_lwqjvlwqjvlwqjvl-removebg-preview.png" id="6_i00ae"]
-[ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="7_xah7v"]
-[ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="8_p7e0n"]
-[ext_resource type="PackedScene" uid="uid://1fgxwi8thv6a" path="res://Scenes/ocean_exit.tscn" id="9_bxemn"]
-[ext_resource type="AudioStream" uid="uid://3pe3ygci1r7b" path="res://Sounds/Ocean/Ocean music.mp3" id="10_e5rty"]
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_otwcc"]
 [ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="3_wsrqd"]
 [ext_resource type="Texture2D" uid="uid://g0pu3ctctm6l" path="res://Assets/sprites/HouseBGAssets/Gemini_Generated_Image_lwqjvlwqjvlwqjvl-removebg-preview.png" id="4_jnlsn"]
@@ -18,15 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="6_jnlsn"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="6_wsrqd"]
 [ext_resource type="PackedScene" uid="uid://coj3d7hl8c581" path="res://Scenes/ocean_fishes.tscn" id="8_7egog"]
+[ext_resource type="PackedScene" uid="uid://1fgxwi8thv6a" path="res://Scenes/ocean_exit.tscn" id="9_bxemn"]
+[ext_resource type="AudioStream" uid="uid://3pe3ygci1r7b" path="res://Sounds/Ocean/Ocean music.mp3" id="10_e5rty"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7egog"]
-texture = ExtResource("2_e6x6a")
+texture = ExtResource("5_otwcc")
 0:2/0 = 0
 0:3/0 = 0
 1:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t74e1"]
-texture = ExtResource("3_8j5el")
+texture = ExtResource("2_otwcc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -63,7 +56,7 @@ texture = ExtResource("3_8j5el")
 6:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5rty"]
-texture = ExtResource("4_65bgh")
+texture = ExtResource("3_wsrqd")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -526,19 +519,19 @@ texture = ExtResource("4_65bgh")
 30:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsrqd"]
-texture = ExtResource("5_r4fkf")
+texture = ExtResource("4_otwcc")
 2:2/0 = 0
 2:1/0 = 0
 3:2/0 = 0
 3:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fos0n"]
-texture = ExtResource("6_i00ae")
+texture = ExtResource("4_jnlsn")
 15:2/size_in_atlas = Vector2i(17, 17)
 15:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnlsn"]
-texture = ExtResource("2_e6x6a")
+texture = ExtResource("5_otwcc")
 0:0/size_in_atlas = Vector2i(10, 3)
 0:0/animation_columns = 1
 0:0/animation_separation = Vector2i(0, 1)
@@ -587,15 +580,13 @@ position = Vector2(589, 209)
 tile_map_data = PackedByteArray("AADY/wEAAgAAAAEAAAA=")
 tile_set = SubResource("TileSet_r4544")
 
-[node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("7_xah7v")]
+[node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("6_jnlsn")]
 position = Vector2(591, 83)
 scale = Vector2(0.255, 0.255)
 
-[node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("8_p7e0n")]
-position = Vector2(66, 221)
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("6_wsrqd")]
-position = Vector2(146, 234.00002)
-scale = Vector2(0.6, 0.6)
+position = Vector2(66, 221)
+scale = Vector2(0.465, 0.465)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=625819247]
 position = Vector2(11.666665, -63.333332)
@@ -626,6 +617,7 @@ stream = ExtResource("10_e5rty")
 pitch_scale = 0.6
 autoplay = true
 bus = &"Music"
+
 [node name="FishingSpot" type="Area2D" parent="." unique_id=1166064353]
 position = Vector2(589, 209)
 
