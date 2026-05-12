@@ -5,12 +5,88 @@
 [ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="3_vj1kt"]
 [ext_resource type="PackedScene" uid="uid://cj2lkqkygdqg8" path="res://Scenes/animatablecharacter.tscn" id="4_vj1kt"]
 [ext_resource type="PackedScene" uid="uid://b7bum433vwj1i" path="res://Scenes/poseidon.tscn" id="5_gf17q"]
+[ext_resource type="Texture2D" uid="uid://cralv4vgiie6t" path="res://Assets/sprites/OceanAssets/watersplash.png" id="6_flrho"]
+[ext_resource type="Texture2D" uid="uid://cadhj6clfesax" path="res://Assets/sprites/MIRMID.png" id="6_nt8n5"]
+[ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="7_2ru1m"]
+[ext_resource type="Texture2D" uid="uid://b54s0jvvsyb0o" path="res://Assets/sprites/posidon.png" id="7_flrho"]
+[ext_resource type="PackedScene" uid="uid://scmw3s6qppo5" path="res://Scenes/poseidon_attack.tscn" id="10_djads"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gf17q"]
 shader = ExtResource("2_ruqw8")
 shader_parameter/wave_speed = 1.9470000924825
 shader_parameter/wave_strength = 0.0050000002375
 shader_parameter/wave_frequency = 10.13200048127
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csq7u"]
+atlas = ExtResource("6_flrho")
+region = Rect2(0, 54, 49, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a24k2"]
+atlas = ExtResource("6_flrho")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak053"]
+atlas = ExtResource("6_flrho")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_najhf"]
+atlas = ExtResource("6_flrho")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ry8y"]
+atlas = ExtResource("6_flrho")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5khpk"]
+atlas = ExtResource("6_flrho")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2d2e"]
+atlas = ExtResource("6_flrho")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbin3"]
+atlas = ExtResource("6_flrho")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thfpd"]
+atlas = ExtResource("6_flrho")
+region = Rect2(0, 54, 49, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djads"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csq7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a24k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak053")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_najhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ry8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5khpk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2d2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbin3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thfpd")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nt8n5"]
 shader = ExtResource("2_ruqw8")
@@ -79,6 +155,114 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(546, 613)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("poseidon:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(796, 939)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TALK:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:zoom")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Camera2D:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 326)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimatedSprite2D2:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TALK/Label:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["...You've been busy."]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TALK/Label:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PoseidonAttack:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("poseidon:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_vj1kt"]
 resource_name = "ending2"
@@ -90,10 +274,10 @@ tracks/0/path = NodePath("Animatablecharacter:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2.9),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(2.9333334, 7.233333, 9.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(410, 545)]
+"values": [Vector2(410, 545), Vector2(410, 545), Vector2(268.315, 545)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -102,7 +286,7 @@ tracks/1/path = NodePath("Animatablecharacter")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(4.3333335),
+"times": PackedFloat32Array(3.8),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -128,7 +312,7 @@ tracks/3/path = NodePath("Ocean:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(7, 7.2, 7.4333334, 7.568757, 7.768757, 8.00209, 8.116184, 8.316184, 8.549518, 8.608548, 8.808548, 9.041882),
+"times": PackedFloat32Array(7, 7.2, 7.4333334, 8.452573, 8.652573, 8.885906, 9, 9.2, 9.433333, 9.492364, 9.692364, 9.925697),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639), Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639), Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639), Vector2(627, 639), Vector2(596.435, 639), Vector2(627, 639)]
@@ -140,10 +324,119 @@ tracks/4/path = NodePath("Ocean2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(7, 7.2, 7.4, 7.5550714, 7.755071, 7.9550714, 8.143556, 8.333333, 8.543556, 8.608045, 8.808044, 9.008045),
+"times": PackedFloat32Array(7, 7.2, 8.411595, 8.566667, 8.766666, 8.966666, 9.15515, 9.344928, 9.555152, 9.619639, 9.81964, 10.019641),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613), Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613), Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613), Vector2(546, 613), Vector2(527.725, 613), Vector2(546, 613)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("poseidon:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(7.5, 9.833333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(796, 939), Vector2(796, 480)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TALK:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(9.9, 10.466666, 26.366667, 27.566668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.00094008446)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5.4666667, 5.7666664, 6.0666666, 6.217654, 6.517654, 6.817654, 7.2666664, 8.233334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1.6245049, 1),
+"update": 0,
+"values": [Vector2(450, 435.275), Vector2(462.395, 435.275), Vector2(445.818, 435.275), Vector2(450, 435.275), Vector2(462.395, 435.275), Vector2(445.818, 435.275), Vector2(472.327, 435.275), Vector2(800, 435.275)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Camera2D:zoom")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(5.5666666, 7.233333, 8.233334),
+"transitions": PackedFloat32Array(1, 1.9318728, 1),
+"update": 0,
+"values": [Vector2(1.87, 1.87), Vector2(1.87, 1.87), Vector2(1.65, 1.65)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimatedSprite2D2:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(8.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TALK/Label:text")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(10.533333, 13.633333, 16.546673, 19.569134, 23.636456),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["...", "You were warned.
+", "The sea is not cruel.", "You simply forgot...", "...that it was never yours."]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TALK/Label:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(10.266666, 13.033334, 13.633333, 14.4, 15.946673, 16.546673, 17.31334, 18.969133, 19.569134, 20.3358, 23.036455, 23.636456, 24.403122, 26.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PoseidonAttack:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(27.166666, 27.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("poseidon:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(26.533333, 27),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gf17q"]
@@ -175,6 +468,18 @@ scale = Vector2(1.56, 1.56)
 [node name="poseidon" parent="." unique_id=2014764057 instance=ExtResource("5_gf17q")]
 position = Vector2(796, 939)
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1589778536]
+position = Vector2(814, 496.00006)
+rotation = 1.5707964
+scale = Vector2(5.205, 5.205)
+sprite_frames = SubResource("SpriteFrames_djads")
+frame = 8
+frame_progress = 1.0
+
+[node name="PoseidonAttack" parent="." unique_id=1396863485 instance=ExtResource("10_djads")]
+position = Vector2(666.00006, 493)
+scale = Vector2(1.39, 1.3900001)
+
 [node name="Ocean" type="Sprite2D" parent="." unique_id=33916602]
 material = SubResource("ShaderMaterial_nt8n5")
 position = Vector2(627, 639)
@@ -193,3 +498,36 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1779547679]
 libraries/ = SubResource("AnimationLibrary_gf17q")
 autoplay = &"ending2"
+
+[node name="TALK" type="Sprite2D" parent="." unique_id=819953995]
+position = Vector2(805.00006, 569)
+scale = Vector2(0.68995905, 0.51627886)
+texture = ExtResource("6_nt8n5")
+region_enabled = true
+region_rect = Rect2(65.47363, 1428.4497, 915.0729, 215.79944)
+
+[node name="Sprite2D2" type="Sprite2D" parent="TALK" unique_id=114395699]
+position = Vector2(-351.7169, 1.8344522)
+scale = Vector2(0.13290393, 0.14409503)
+texture = ExtResource("7_flrho")
+region_enabled = true
+region_rect = Rect2(28.390991, 64.52187, 827.31726, 937.5304)
+
+[node name="Label" type="Label" parent="TALK" unique_id=410887934]
+offset_left = -248.70445
+offset_top = -33.410156
+offset_right = 392.41943
+offset_bottom = 55.163574
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("7_2ru1m")
+theme_override_font_sizes/font_size = 32
+text = "...You've been busy."
+autowrap_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=125960309]
+position = Vector2(576, 326)
