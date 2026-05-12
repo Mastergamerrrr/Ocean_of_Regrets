@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://brkf5eeukim21"]
+
+[ext_resource type="Script" uid="uid://baau7mxl8ni5l" path="res://Scripts/fishing_minigame.gd" id="1_27c41"]
+[ext_resource type="Texture2D" uid="uid://bdn62qmci5eh3" path="res://Assets/sprites/FishingMinigammeSprites/FishingMainBar.png" id="1_hcuqm"]
+[ext_resource type="Texture2D" uid="uid://d3y6lwoo3mtye" path="res://Assets/sprites/FishingMinigammeSprites/GreenBar.png" id="2_qrmsd"]
+[ext_resource type="Script" uid="uid://caskvcda8sefl" path="res://Scripts/inside_bar.gd" id="2_y8wf2"]
+[ext_resource type="Texture2D" uid="uid://bdw0ys7f0n66i" path="res://Assets/sprites/FishingMinigammeSprites/Fish.png" id="3_y8wf2"]
+[ext_resource type="Texture2D" uid="uid://gd3o5rpjm2x5" path="res://Assets/sprites/FishingMinigammeSprites/ProgressBarEmpty.png" id="5_w1gml"]
+[ext_resource type="Texture2D" uid="uid://optmv1cks46" path="res://Assets/sprites/FishingMinigammeSprites/ProgressBarFull.png" id="6_cgipk"]
+[ext_resource type="Script" uid="uid://7diumeh4aspo" path="res://Scripts/fish.gd" id="6_l4hcg"]
+[ext_resource type="Texture2D" uid="uid://ciyeo6qtkpkqh" path="res://Assets/sprites/FishingMinigammeSprites/FishingRod.png" id="9_27c41"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1gml"]
+size = Vector2(600.00037, 8750.018)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgipk"]
+size = Vector2(80.640015, 280.58118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hcg"]
+size = Vector2(82.399994, 80.84211)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1294587625]
+layer = 10
+script = ExtResource("1_27c41")
+
+[node name="FishingMinigame" type="Node2D" parent="." unique_id=1491414626]
+position = Vector2(574, 306)
+rotation = 0.0016031723
+scale = Vector2(0.2, 0.2)
+
+[node name="outside" type="Sprite2D" parent="FishingMinigame" unique_id=515041553]
+position = Vector2(-8.541199, 6.696106)
+texture = ExtResource("1_hcuqm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FishingMinigame/outside" unique_id=432770208]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingMinigame/outside/StaticBody2D" unique_id=2000193893]
+scale = Vector2(0.19999957, 0.19999957)
+shape = SubResource("RectangleShape2D_w1gml")
+
+[node name="RigidBody2D" type="Sprite2D" parent="FishingMinigame/outside" unique_id=556649815]
+script = ExtResource("2_y8wf2")
+
+[node name="inside" type="Sprite2D" parent="FishingMinigame/outside/RigidBody2D" unique_id=2062802685]
+position = Vector2(0.50026774, 0)
+scale = Vector2(1.4880937, 2.0671377)
+texture = ExtResource("2_qrmsd")
+
+[node name="Area2D" type="Area2D" parent="FishingMinigame/outside/RigidBody2D/inside" unique_id=1034431963]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingMinigame/outside/RigidBody2D/inside/Area2D" unique_id=2107692672]
+shape = SubResource("RectangleShape2D_cgipk")
+
+[node name="fish" type="Sprite2D" parent="FishingMinigame" unique_id=1923456086]
+position = Vector2(-9.976034, 15.0160885)
+scale = Vector2(1.2135912, 1.9791672)
+texture = ExtResource("3_y8wf2")
+script = ExtResource("6_l4hcg")
+
+[node name="Area2D" type="Area2D" parent="FishingMinigame/fish" unique_id=1291140093]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingMinigame/fish/Area2D" unique_id=131601692]
+visible = false
+position = Vector2(2.0600586, 0)
+shape = SubResource("RectangleShape2D_l4hcg")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="FishingMinigame" unique_id=1312663617]
+unique_name_in_owner = true
+offset_left = 101.958496
+offset_top = -899.8038
+offset_right = 142.9585
+offset_bottom = -112.80377
+scale = Vector2(2.31, 2.31)
+fill_mode = 3
+texture_under = ExtResource("5_w1gml")
+texture_progress = ExtResource("6_cgipk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="FishingMinigame" unique_id=608886889]
+wait_time = 0.2
+autostart = true
+
+[node name="FishingRod" type="Sprite2D" parent="FishingMinigame" unique_id=528961500]
+position = Vector2(-208.04126, 6.196228)
+scale = Vector2(1.5267879, 2.1995132)
+texture = ExtResource("9_27c41")
+
+[connection signal="body_entered" from="FishingMinigame/fish/Area2D" to="FishingMinigame" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="FishingMinigame/fish/Area2D" to="FishingMinigame" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="FishingMinigame/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="FishingMinigame/Timer" to="FishingMinigame/fish" method="_on_timer_timeout"]

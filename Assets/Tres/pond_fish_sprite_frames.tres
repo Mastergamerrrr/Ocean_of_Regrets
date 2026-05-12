@@ -1,0 +1,38 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cs23w425usbnb"]
+
+[ext_resource type="Texture2D" uid="uid://d0oapmqfrjwwx" path="res://Assets/sprites/Fish_Pond_Sprites/Blue_Gill.png" id="1_sdkyx"]
+[ext_resource type="Texture2D" uid="uid://dc1wlwt7ms8ho" path="res://Assets/sprites/Fish_Pond_Sprites/Gold_Fish.png" id="2_60fd4"]
+[ext_resource type="Texture2D" uid="uid://dvjlra3yinuul" path="res://Assets/sprites/Fish_Pond_Sprites/Standard_Sturgeon.png" id="3_vi4km"]
+[ext_resource type="Texture2D" uid="uid://eulag236jiyt" path="res://Assets/sprites/Fish_Pond_Sprites/Butterfly_Koi.png" id="4_mt8kn"]
+[ext_resource type="Texture2D" uid="uid://cn54egay3e3cb" path="res://Assets/sprites/Fish_Pond_Sprites/Beluga_Sturgeon.png" id="5_echsb"]
+[ext_resource type="Texture2D" uid="uid://2qtwel0upnr7" path="res://Assets/sprites/Fish_Pond_Sprites/abella.png" id="6_8ffu3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmkl1"]
+atlas = ExtResource("1_sdkyx")
+region = Rect2(0, 0, 552, 452)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmkl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_60fd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vi4km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mt8kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_echsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8ffu3")
+}],
+"loop": false,
+"name": &"0",
+"speed": 5.0
+}]

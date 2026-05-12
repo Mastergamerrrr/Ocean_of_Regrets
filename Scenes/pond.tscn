@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://m3aukvmxmv56" path="res://Scenes/pond_exit.tscn" id="3_nm46v"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_s7ca5"]
 [ext_resource type="AudioStream" uid="uid://dx7cy77nofeuj" path="res://Sounds/Pond/Pond on Pond                Milk Bar - The Legend of Zelda： Majora's Mask OST ｜ Remastered [oIqpq_forfE].mp3" id="7_h6g1h"]
+[ext_resource type="PackedScene" uid="uid://d3lda7onh250f" path="res://Scenes/pond_fishes.tscn" id="5_nm46v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kku42"]
 texture = ExtResource("1_5ac8g")
@@ -75,7 +76,10 @@ distance = 33.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_akm2k"]
 normal = Vector2(-1, 0)
-distance = 104.0
+distance = 738.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akm2k"]
+size = Vector2(2685, 61)
 
 [node name="Pond" type="Node2D" unique_id=615288354]
 script = ExtResource("1_n7i7v")
@@ -101,6 +105,7 @@ scale = Vector2(0.25, 0.25)
 
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("3_s7ca5")]
 position = Vector2(68, 361)
+position = Vector2(213, 360)
 scale = Vector2(0.6, 0.6)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=2004531750]
@@ -110,7 +115,7 @@ limit_left = -1
 limit_right = 1721
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1841049630]
-position = Vector2(-33, -3)
+position = Vector2(-31, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=772653024]
 position = Vector2(-1, 0)
@@ -119,7 +124,7 @@ shape = SubResource("WorldBoundaryShape2D_s7ca5")
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=617711779]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1746669228]
-position = Vector2(1743, -1)
+position = Vector2(1892, 271)
 shape = SubResource("WorldBoundaryShape2D_akm2k")
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=233262721]
@@ -130,3 +135,12 @@ stream = ExtResource("7_h6g1h")
 pitch_scale = 0.6
 autoplay = true
 bus = &"Music"
+[node name="FishingSpot" type="Area2D" parent="." unique_id=690817498]
+position = Vector2(137, 349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=927508701]
+position = Vector2(409.5, 35.5)
+shape = SubResource("RectangleShape2D_akm2k")
+
+[node name="PondFishes" parent="." unique_id=14584365 instance=ExtResource("5_nm46v")]
+visible = false

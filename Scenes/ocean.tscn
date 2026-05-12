@@ -10,6 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="8_p7e0n"]
 [ext_resource type="PackedScene" uid="uid://1fgxwi8thv6a" path="res://Scenes/ocean_exit.tscn" id="9_bxemn"]
 [ext_resource type="AudioStream" uid="uid://3pe3ygci1r7b" path="res://Sounds/Ocean/Ocean music.mp3" id="10_e5rty"]
+[ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_otwcc"]
+[ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="3_wsrqd"]
+[ext_resource type="Texture2D" uid="uid://g0pu3ctctm6l" path="res://Assets/sprites/HouseBGAssets/Gemini_Generated_Image_lwqjvlwqjvlwqjvl-removebg-preview.png" id="4_jnlsn"]
+[ext_resource type="Texture2D" uid="uid://dhi7oq6h7hidx" path="res://Assets/sprites/OceanAssets/sand_2.png" id="4_otwcc"]
+[ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="5_otwcc"]
+[ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="6_jnlsn"]
+[ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="6_wsrqd"]
+[ext_resource type="PackedScene" uid="uid://coj3d7hl8c581" path="res://Scenes/ocean_fishes.tscn" id="8_7egog"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7egog"]
 texture = ExtResource("2_e6x6a")
@@ -558,6 +566,9 @@ distance = 33.0
 normal = Vector2(-1, 0)
 distance = -45.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnlsn"]
+size = Vector2(2047, 72)
+
 [node name="Ocean" type="Node2D" unique_id=1445911153]
 script = ExtResource("1_f3ebq")
 
@@ -582,6 +593,8 @@ scale = Vector2(0.255, 0.255)
 
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("8_p7e0n")]
 position = Vector2(66, 221)
+[node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("6_wsrqd")]
+position = Vector2(146, 234.00002)
 scale = Vector2(0.6, 0.6)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=625819247]
@@ -613,3 +626,11 @@ stream = ExtResource("10_e5rty")
 pitch_scale = 0.6
 autoplay = true
 bus = &"Music"
+[node name="FishingSpot" type="Area2D" parent="." unique_id=1166064353]
+position = Vector2(589, 209)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=222755010]
+position = Vector2(264.5, 58)
+shape = SubResource("RectangleShape2D_jnlsn")
+
+[node name="OceanFishes" parent="." unique_id=1153816846 instance=ExtResource("8_7egog")]
