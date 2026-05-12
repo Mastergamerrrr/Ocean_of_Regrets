@@ -1,0 +1,654 @@
+[gd_scene format=3 uid="uid://blgidrmgsm68"]
+
+[ext_resource type="Texture2D" uid="uid://1803nw2rexjt" path="res://Assets/sprites/BUILDING RIL.png" id="1_duh1u"]
+[ext_resource type="Texture2D" uid="uid://dubq6huehq7qd" path="res://Assets/sprites/OFFICEREAL.png" id="2_alxvg"]
+[ext_resource type="AudioStream" uid="uid://fi8hqsksodf2" path="res://Assets/sounds/yuk1to-street-ambience-traffic-410714.mp3" id="3_hwjxs"]
+[ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="4_rsiac"]
+[ext_resource type="AudioStream" uid="uid://b8i7y5peyfl7l" path="res://Assets/sounds/freesound_community-office-ambience-6322.mp3" id="5_3bmuq"]
+[ext_resource type="AudioStream" uid="uid://bnl4gbk3tr3ee" path="res://Assets/sounds/computer-mouse-click-352734.mp3" id="6_rsiac"]
+[ext_resource type="Texture2D" uid="uid://b8nty55o3w62j" path="res://Assets/sprites/paralaxcity/cityparis12.png" id="7_nn7w8"]
+[ext_resource type="Texture2D" uid="uid://ffjjfti1hik6" path="res://Assets/sprites/paralaxcity/Ocean.png" id="8_b26wi"]
+[ext_resource type="Shader" uid="uid://cf5imlbm1o2m0" path="res://Scenes/oceanintro.gdshader" id="8_itfcf"]
+[ext_resource type="AudioStream" uid="uid://b4rgtpi1p0h2c" path="res://Assets/sounds/cut.mp3" id="9_b26wi"]
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="10_pgam6"]
+[ext_resource type="Texture2D" uid="uid://g10mjhfgslme" path="res://Assets/sprites/city_cars_8 (1).png" id="11_itfcf"]
+[ext_resource type="Texture2D" uid="uid://crvoh0or4wckp" path="res://Assets/sprites/paralaxcity/frontforest.png" id="12_g8dlr"]
+
+[sub_resource type="Animation" id="Animation_b226h"]
+resource_name = "Fade"
+length = 47.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.23333333, 1.9666667, 4.5, 4.9666667, 5.7, 10.266666, 10.566667, 11.866667, 12.7, 24.2, 25.233334, 32.133335, 32.2, 40.433334, 42.466667),
+"transitions": PackedFloat32Array(1, 0, 6.2766814, 2.5491211, 11.31371, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0.45490196, 0.45490196, 0.45490196, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BUILDING:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.1, 3.6, 4.5, 4.9333334),
+"transitions": PackedFloat32Array(2.5491147, 2.7320805, 3.1383355, 4),
+"update": 0,
+"values": [Vector2(1.2226563, 1.1701388), Vector2(5.623, 5.379), Vector2(5.623, 5.379), Vector2(9.308, 8.904)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BUILDING:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.1, 3.6, 4.5, 4.9333334),
+"transitions": PackedFloat32Array(2.732081, 2.828428, 3.13, 4.2870927),
+"update": 0,
+"values": [Vector2(604, 314.625), Vector2(1700, 550), Vector2(1700, 550), Vector2(2450, 550)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BUILDING:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.9, 5.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Streetsound:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.033333335, 4.766667),
+"transitions": PackedFloat32Array(1, 3.6050022),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Streetsound:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.36666667, 4.133333, 4.8333335),
+"transitions": PackedFloat32Array(0.26454192, 1, 1.1812885),
+"update": 0,
+"values": [0.0, -6.656000000000006, -29.119999999999997]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.16666667, 3.8, 5.5333333, 7.5, 8.033334, 10.433333, 11.766666, 14.367708, 16.8, 19.31911, 21.366667, 24.6, 28.3, 32.233334, 37.56465),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I Have Always Hated This Life...
+
+
+", "I Have Always Hated This Life...
+
+
+", "Work. Home. Sleep. Bills.
+", "Work. Home. Sleep. Bills.
+", "...Same thing. Every single day.
+", "Then Something Clicked In Me
+", "I thought about the ocean.", "The breeze. The water. The quiet", "Something I've always wanted.", "Something I gave up ", "without even realizing it.", "So I stopped thinking.", "And I just left....", "And for the first time in years", "it felt right.
+"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.8666667, 2.4666667, 4.0333333, 4.9, 6.0333333, 6.266667, 7.6, 8.033334, 8.333333, 9.466666, 10.433333, 10.8, 11.466666, 11.766666, 12.033334, 14.101042, 14.367708, 14.634375, 16.533333, 16.8, 17.066666, 19.052444, 19.31911, 19.585777, 21.1, 21.366667, 21.633333, 23.466667, 23.833334, 24.6, 25.133333, 28.033333, 28.3, 28.566666, 31.1, 32.233334, 33.233334, 36.431316, 37.56465, 38.56465, 42.666668, 45.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.9835921), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OFffice:volume_db")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(5.0666666, 5.366667, 5.733333, 8.766666, 10.066667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-80.0, -19.0, 0.0, 0.0, -46.5]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OFffice:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(4.4666667, 10.066667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Click:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(10.333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label:z_index")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(10.2, 10.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 8]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Ocean:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(10.9, 11, 25.1, 25.566668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DescoladoInstrumental:volume_db")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(10.233334, 12.266666, 45.499996, 46.6, 46.666664),
+"transitions": PackedFloat32Array(1, 1, 0.59460354, 1, 1),
+"update": 0,
+"values": [-80.0, -25.08, -25.08, -51.415, -80.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Label:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1, 4.1, 5.366667, 8.266666, 10.333333, 24.433332, 24.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-110, 559), Vector2(-110, 559), Vector2(20.275, 559), Vector2(-110, 559), Vector2(-110, 559), Vector2(-110, 559), Vector2(-110, 295.85)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("DescoladoInstrumental:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(10.466666),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Label:visible_characters")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(24.166666, 24.566668, 26.166666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [-1, 0, 40]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Office:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.5, 10.733334, 11.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Label:theme_override_colors/font_color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(30.466667, 31.433332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.88453114, 0.88453114, 0.88453114, 1), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Car:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(32, 45.766666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-87, 430), Vector2(1400, 430)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Car:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(27.7, 32.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_duh1u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BUILDING:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2226563, 1.1701388)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BUILDING:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(604.00006, 332)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BUILDING:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Streetsound:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Streetsound:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Work. Home. Sleep. Bills.
+"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OFffice:volume_db")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OFffice:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Click:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label:z_index")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Ocean:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DescoladoInstrumental:volume_db")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-21.518]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Label:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-110, 559)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("DescoladoInstrumental:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Label:visible_characters")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Office:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Label:theme_override_colors/font_color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.88453114, 0.88453114, 0.88453114, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Car:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Car:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-87, 430)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alxvg"]
+_data = {
+&"Fade": SubResource("Animation_b226h"),
+&"RESET": SubResource("Animation_duh1u")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_itfcf"]
+shader = ExtResource("8_itfcf")
+shader_parameter/wave_speed = 0.5
+shader_parameter/wave_strength = 0.001
+shader_parameter/wave_frequency = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g8dlr"]
+shader = ExtResource("8_itfcf")
+shader_parameter/wave_speed = 1.0
+shader_parameter/wave_strength = 0.002000000095
+shader_parameter/wave_frequency = 8.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33jql"]
+shader = ExtResource("10_pgam6")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iab25"]
+shader = ExtResource("8_itfcf")
+shader_parameter/wave_speed = 0.5
+shader_parameter/wave_strength = 0.001
+shader_parameter/wave_frequency = 5.0
+
+[node name="Intro" type="Node2D" unique_id=1233022365]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1624067285]
+libraries/ = SubResource("AnimationLibrary_alxvg")
+autoplay = &"Fade"
+
+[node name="Sprites" type="Node" parent="." unique_id=1010839779]
+
+[node name="ColorRect" type="ColorRect" parent="Sprites" unique_id=174868894]
+offset_left = -12.000061
+offset_top = -6.0000305
+offset_right = 1169.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 1)
+
+[node name="Office" type="Sprite2D" parent="." unique_id=1680745094]
+position = Vector2(606, 327.49997)
+scale = Vector2(1.2050781, 1.7930107)
+texture = ExtResource("2_alxvg")
+
+[node name="BUILDING" type="Sprite2D" parent="." unique_id=1827548861]
+position = Vector2(604.00006, 332)
+scale = Vector2(1.2226563, 1.1701388)
+texture = ExtResource("1_duh1u")
+
+[node name="Streetsound" type="AudioStreamPlayer2D" parent="." unique_id=2056378802]
+stream = ExtResource("3_hwjxs")
+
+[node name="Label" type="Label" parent="." unique_id=635565861]
+offset_left = -110.0
+offset_top = 559.0
+offset_right = 1282.0
+offset_bottom = 824.0001
+theme_override_colors/font_color = Color(0.88453114, 0.88453114, 0.88453114, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_rsiac")
+theme_override_font_sizes/font_size = 64
+text = "Work. Home. Sleep. Bills.
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="OFffice" type="AudioStreamPlayer2D" parent="." unique_id=1415292747]
+stream = ExtResource("5_3bmuq")
+pitch_scale = 1.34
+
+[node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=409614366]
+stream = ExtResource("6_rsiac")
+
+[node name="Cityparis12" type="Sprite2D" parent="." unique_id=146293341]
+z_index = -20
+material = SubResource("ShaderMaterial_itfcf")
+position = Vector2(598, 341.00003)
+scale = Vector2(0.2160526, 0.19187498)
+texture = ExtResource("7_nn7w8")
+
+[node name="Ocean" type="Sprite2D" parent="." unique_id=317704592]
+visible = false
+material = SubResource("ShaderMaterial_g8dlr")
+position = Vector2(637.99994, 328.99997)
+scale = Vector2(1.0868382, 1.1438804)
+texture = ExtResource("8_b26wi")
+
+[node name="DescoladoInstrumental" type="AudioStreamPlayer2D" parent="." unique_id=2084754166]
+stream = ExtResource("9_b26wi")
+volume_db = -21.518
+autoplay = true
+
+[node name="Car" type="Sprite2D" parent="." unique_id=850249755]
+z_index = -19
+material = SubResource("ShaderMaterial_33jql")
+position = Vector2(-87, 430)
+scale = Vector2(0.41236815, 0.5487805)
+texture = ExtResource("11_itfcf")
+flip_h = true
+region_rect = Rect2(-0.24879456, 46.21069, 97.790726, 28.50298)
+
+[node name="Frontforest" type="Sprite2D" parent="." unique_id=278503485]
+z_index = -18
+material = SubResource("ShaderMaterial_iab25")
+position = Vector2(599.5, 343.00003)
+scale = Vector2(0.21596491, 0.19)
+texture = ExtResource("12_g8dlr")

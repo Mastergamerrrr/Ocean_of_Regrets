@@ -558,6 +558,9 @@ distance = 33.0
 normal = Vector2(-1, 0)
 distance = -45.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnlsn"]
+size = Vector2(2047, 72)
+
 [node name="Ocean" type="Node2D" unique_id=1445911153]
 script = ExtResource("1_f3ebq")
 
@@ -613,3 +616,11 @@ stream = ExtResource("10_e5rty")
 pitch_scale = 0.6
 autoplay = true
 bus = &"Music"
+[node name="FishingSpot" type="Area2D" parent="." unique_id=1166064353]
+position = Vector2(589, 209)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=222755010]
+position = Vector2(264.5, 58)
+shape = SubResource("RectangleShape2D_jnlsn")
+
+[node name="OceanFishes" parent="." unique_id=1153816846 instance=ExtResource("8_7egog")]

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://d4waolvg2etr"]
+
+[ext_resource type="FontFile" uid="uid://b5ohybohsyrtm" path="res://Assets/fonts/PixelOperator8.ttf" id="1_6xywb"]
+[ext_resource type="Script" uid="uid://dd8wt5cedr0co" path="res://Scripts/cast_component.gd" id="1_s8x56"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1jj3n"]
+font = ExtResource("1_6xywb")
+font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xywb"]
+size = Vector2(20, 94)
+
+[node name="CastComponent" type="Node2D" unique_id=498288084]
+script = ExtResource("1_s8x56")
+
+[node name="CastLabel" type="Label" parent="." unique_id=663848459]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -100.0
+offset_right = 130.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "F To Cast Rod"
+label_settings = SubResource("LabelSettings_1jj3n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cast_range" type="Area2D" parent="." unique_id=1473993734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cast_range" unique_id=545498281]
+position = Vector2(0, 47)
+shape = SubResource("RectangleShape2D_6xywb")

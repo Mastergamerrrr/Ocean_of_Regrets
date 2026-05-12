@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wvkeky8ptukw"
+path="res://.godot/imported/NAPA - Deslocado (Instrumental)  #Eurovision2025  Portugal.mp3-dc4a5336e742de2be74b31f5f2c04b4c.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/NAPA - Deslocado (Instrumental)  #Eurovision2025  Portugal.mp3"
+dest_files=["res://.godot/imported/NAPA - Deslocado (Instrumental)  #Eurovision2025  Portugal.mp3-dc4a5336e742de2be74b31f5f2c04b4c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=28.0
+bpm=0.0
+beat_count=0
+bar_beats=4

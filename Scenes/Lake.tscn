@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_45bj0"]
 [ext_resource type="PackedScene" uid="uid://bdwthdvcej565" path="res://Scenes/lake_exit.tscn" id="5_af3l7"]
 [ext_resource type="AudioStream" uid="uid://ch120vb30b0ye" path="res://Sounds/Lake/lake music.mp3" id="7_vkdbw"]
+[ext_resource type="PackedScene" uid="uid://bggtmshem5vsf" path="res://Scenes/lake_fishes.tscn" id="5_af3l7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkth3"]
 texture = ExtResource("1_2f2cj")
@@ -195,6 +196,9 @@ distance = 33.0
 normal = Vector2(-1, 0)
 distance = -2628.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2rku"]
+size = Vector2(6320, 235)
+
 [node name="Lake" type="Node2D" unique_id=2075080073]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_ee21e")
@@ -239,6 +243,7 @@ shape = SubResource("WorldBoundaryShape2D_45bj0")
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=948814557]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=486665133]
+visible = false
 position = Vector2(1980, 0)
 shape = SubResource("WorldBoundaryShape2D_s2rku")
 
@@ -251,3 +256,10 @@ volume_db = -3.0
 pitch_scale = 1.2
 autoplay = true
 bus = &"Music"
+[node name="FishingSpot" type="Area2D" parent="." unique_id=845697715]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=146058684]
+position = Vector2(2472, 1618.5)
+shape = SubResource("RectangleShape2D_s2rku")
+
+[node name="LakeFishes" parent="." unique_id=1137390339 instance=ExtResource("5_af3l7")]

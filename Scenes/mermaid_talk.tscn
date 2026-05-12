@@ -1,0 +1,467 @@
+[gd_scene format=3 uid="uid://blmma6x6lhnkc"]
+
+[ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="1_huois"]
+[ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="2_ggew7"]
+[ext_resource type="Texture2D" uid="uid://dgeank7xtmg0f" path="res://Assets/sprites/mermaid.png" id="3_74ol3"]
+[ext_resource type="Shader" uid="uid://b5vk2kx8y3qch" path="res://Scenes/mermaid_talk.gdshader" id="3_vpulx"]
+[ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="4_74ol3"]
+[ext_resource type="Texture2D" uid="uid://cralv4vgiie6t" path="res://Assets/sprites/OceanAssets/watersplash.png" id="6_32ynr"]
+[ext_resource type="AudioStream" uid="uid://qkgdm7qnapke" path="res://Assets/music/bgmmermaid.mp3" id="6_hl5s3"]
+[ext_resource type="Texture2D" uid="uid://cadhj6clfesax" path="res://Assets/sprites/MIRMID.png" id="6_vpulx"]
+[ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="7_74ol3"]
+[ext_resource type="FontFile" uid="uid://bcdbplsv7avy4" path="res://Assets/fonts/Fisherman-Regular.otf" id="10_a24k2"]
+[ext_resource type="Texture2D" uid="uid://c1awmnreao5b0" path="res://Assets/sprites/MAIN MENU/background2.tres" id="10_csq7u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32ynr"]
+shader = ExtResource("3_vpulx")
+shader_parameter/wave_speed = 1.9470000924825
+shader_parameter/wave_strength = 0.0050000002375
+shader_parameter/wave_frequency = 10.13200048127
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hl5s3"]
+shader = ExtResource("2_ggew7")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/show_outline = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t641w"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(0, 0, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp5vx"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(250, 0, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0byvy"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(0, 360, 250, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc6n8"]
+atlas = ExtResource("3_74ol3")
+region = Rect2(250, 360, 250, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32ynr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t641w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp5vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0byvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc6n8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csq7u"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(0, 54, 49, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a24k2"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak053"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_najhf"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ry8y"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5khpk"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2d2e"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbin3"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thfpd"]
+atlas = ExtResource("6_32ynr")
+region = Rect2(0, 54, 49, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vbvdu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csq7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a24k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak053")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_najhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ry8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5khpk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2d2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbin3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thfpd")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_ggew7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(605, 371)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TALK:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TALK/Label:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TALK/Label:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["...You've been busy."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D2:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Buton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite2D2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(555, 400)]
+}
+
+[sub_resource type="Animation" id="Animation_vpulx"]
+resource_name = "talk"
+length = 35.266666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.10000001, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.26666668, 1.3, 17.457262, 18.9192),
+"transitions": PackedFloat32Array(2.6214402, 1, 3.363585, 2.6214402),
+"update": 0,
+"values": [Vector2(605, 610.895), Vector2(605, 371), Vector2(605, 371), Vector2(605, 610.895)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TALK:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6333332, 2.6333334, 18.466667, 19.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TALK/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.9, 4.666782, 7.9333334, 11.380237, 14.31231, 17.65797),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["...You've been busy.", "But be warned...", "The sea does not forget what is taken   
+from it....", "It keeps count.", "Return to shore.", "While it is still your choice to do so."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TALK/Label:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.1000001, 2.0666666, 4.3667817, 4.700115, 5.0334487, 7.633333, 7.9666667, 8.3, 11.080236, 11.41357, 11.746903, 14.01231, 14.345644, 14.678977, 17.357971, 17.691305, 18.02464),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D2:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.8666667, 1.2, 1.2333333, 1.3, 1.3666667, 1.4666667, 1.5, 1.6, 18.698368, 19.031702, 19.065035, 19.1317, 19.198368, 19.298368, 19.331701, 19.431702),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 6, 7, 8, 0, 1, 2, 3, 4, 6, 7, 8]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Buton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(20.466667, 21.933332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimatedSprite2D2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.2333333, 3.7666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(579.155, 400), Vector2(555, 400)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_74ol3"]
+_data = {
+&"RESET": SubResource("Animation_ggew7"),
+&"talk": SubResource("Animation_vpulx")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a24k2"]
+texture = ExtResource("10_csq7u")
+region_rect = Rect2(0, 0, 480, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ak053"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_najhf"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ry8y"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5khpk"]
+texture = ExtResource("10_csq7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2d2e"]
+texture = ExtResource("10_csq7u")
+
+[node name="MermaidTalk" type="Node2D" unique_id=1704406023]
+
+[node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("1_huois")]
+position = Vector2(487.00003, -5)
+scale = Vector2(1.02, 1.02)
+
+[node name="Ocean2" type="Sprite2D" parent="." unique_id=2089533918]
+material = SubResource("ShaderMaterial_32ynr")
+position = Vector2(615.99994, 544)
+scale = Vector2(8.103165, 5.5084906)
+texture = ExtResource("4_74ol3")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 58.80004)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1356247139]
+material = SubResource("ShaderMaterial_hl5s3")
+position = Vector2(605, 371)
+sprite_frames = SubResource("SpriteFrames_32ynr")
+autoplay = "default"
+frame_progress = 0.82907724
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=749623668]
+position = Vector2(555, 400)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_vbvdu")
+autoplay = "default"
+frame = 8
+
+[node name="Ocean" type="Sprite2D" parent="." unique_id=1141198007]
+material = SubResource("ShaderMaterial_32ynr")
+position = Vector2(578, 526.00006)
+scale = Vector2(7.8875003, 4.3706894)
+texture = ExtResource("4_74ol3")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 58.80004)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1641980037]
+libraries/ = SubResource("AnimationLibrary_74ol3")
+autoplay = &"talk"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1074728056]
+offset_left = -44.0
+offset_top = -19.0
+offset_right = 1183.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1446284184]
+stream = ExtResource("6_hl5s3")
+volume_db = -10.84
+autoplay = true
+
+[node name="TALK" type="Sprite2D" parent="." unique_id=149277153]
+position = Vector2(580.00006, 545.28125)
+scale = Vector2(1.1657103, 0.93691844)
+texture = ExtResource("6_vpulx")
+region_enabled = true
+region_rect = Rect2(65.47363, 1428.4497, 915.0729, 215.79944)
+
+[node name="Sprite2D2" type="Sprite2D" parent="TALK" unique_id=2119098077]
+position = Vector2(-343.367, 1.237349)
+scale = Vector2(1.0294893, 1.174)
+texture = ExtResource("6_vpulx")
+region_enabled = true
+region_rect = Rect2(488.74225, 1221.7318, 112.44293, 105.41516)
+
+[node name="Label" type="Label" parent="TALK" unique_id=823569946]
+offset_left = -248.70445
+offset_top = -33.410156
+offset_right = 392.41943
+offset_bottom = 55.163574
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("7_74ol3")
+theme_override_font_sizes/font_size = 32
+text = "...You've been busy."
+autowrap_mode = 1
+
+[node name="Buton" type="Node2D" parent="." unique_id=1363876385]
+
+[node name="Button" type="Button" parent="Buton" unique_id=1838808293]
+offset_left = 90.0
+offset_top = 202.0
+offset_right = 405.0
+offset_bottom = 376.0
+theme_override_fonts/font = ExtResource("10_a24k2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a24k2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ak053")
+theme_override_styles/hover = SubResource("StyleBoxTexture_najhf")
+text = "Heed The Warning And Go
+Back To Shore."
+autowrap_mode = 2
+
+[node name="Button2" type="Button" parent="Buton" unique_id=948165724]
+offset_left = 727.0
+offset_top = 202.0
+offset_right = 1042.0
+offset_bottom = 376.0
+theme_override_fonts/font = ExtResource("10_a24k2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ry8y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khpk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s2d2e")
+text = "Ignore The Warning
+And Keep Fishing."
