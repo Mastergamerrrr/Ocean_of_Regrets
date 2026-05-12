@@ -41,6 +41,8 @@ animations = [{
 [node name="mermaid" type="Node2D" unique_id=1469788594]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=487449653]
+position = Vector2(508, 253)
 sprite_frames = SubResource("SpriteFrames_7otok")
 autoplay = "default"
-frame_progress = 0.35591856
+frame = 2
+frame_progress = 0.49765626

@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://cbbd1ffjd8pyg"]
+
+[ext_resource type="Script" uid="uid://drnunlri8a7mf" path="res://Scripts/catch_popup.gd" id="1_bunjf"]
+[ext_resource type="PackedScene" uid="uid://d3lda7onh250f" path="res://Scenes/pond_fishes.tscn" id="1_ykbkj"]
+[ext_resource type="PackedScene" uid="uid://bggtmshem5vsf" path="res://Scenes/lake_fishes.tscn" id="3_26bqq"]
+[ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="3_um1fs"]
+[ext_resource type="PackedScene" uid="uid://coj3d7hl8c581" path="res://Scenes/ocean_fishes.tscn" id="4_pbxe0"]
+
+[node name="CatchPopup" type="CanvasLayer" unique_id=67204988]
+script = ExtResource("1_bunjf")
+
+[node name="Panel" type="Panel" parent="." unique_id=404013028]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FishDisplay" type="Control" parent="Panel" unique_id=1672771740]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PondFishes" parent="Panel/FishDisplay" unique_id=14584365 instance=ExtResource("1_ykbkj")]
+position = Vector2(200, 100)
+scale = Vector2(0.5, 0.5)
+
+[node name="LakeFishes" parent="Panel/FishDisplay" unique_id=1137390339 instance=ExtResource("3_26bqq")]
+position = Vector2(200, 100)
+
+[node name="OceanFishes" parent="Panel/FishDisplay" unique_id=1153816846 instance=ExtResource("4_pbxe0")]
+position = Vector2(200, 100)
+scale = Vector2(0.5, 0.5)
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=1889141863]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.5
+offset_top = -31.0
+offset_right = 200.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_um1fs")
+text = "Collect & Sell"
+
+[node name="FishName" type="Label" parent="Panel" unique_id=2115077499]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.526
+anchor_right = 0.5
+anchor_bottom = 0.526
+offset_left = -199.8
+offset_top = -11.400009
+offset_right = 199.0
+offset_bottom = 11.599991
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_um1fs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rarity" type="Label" parent="Panel" unique_id=1470132231]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.609
+anchor_right = 0.5
+anchor_bottom = 0.609
+offset_left = -201.0
+offset_top = -11.600006
+offset_right = 199.0
+offset_bottom = 11.399994
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_um1fs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Weight" type="Label" parent="Panel" unique_id=1501682055]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.69100004
+anchor_right = 0.5
+anchor_bottom = 0.69100004
+offset_left = -201.0
+offset_top = -11.400024
+offset_right = 199.0
+offset_bottom = 11.599976
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_um1fs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="Panel" unique_id=596779848]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.77400005
+anchor_right = 0.5
+anchor_bottom = 0.77400005
+offset_left = -200.0
+offset_top = -11.600006
+offset_right = 200.0
+offset_bottom = 11.399994
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_um1fs")
+horizontal_alignment = 1
+vertical_alignment = 1

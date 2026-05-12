@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b4y1hjp6sdgc5"]
+
+[ext_resource type="Texture2D" uid="uid://cw4kd32dv1dov" path="res://Assets/sprites/Fish_Lake_Sprites/Lake Sturgeon.png" id="1_mq7g6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bgxm0"]
+load_path = "res://.godot/imported/Perch.png-52daab3c8ed28810b6c2d2a48169498c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wj7gb"]
+load_path = "res://.godot/imported/Largemouth Bass.png-9b392b1b0a09c32444a60c840106c511.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u1ers"]
+load_path = "res://.godot/imported/Pike.png-35f2d2f6f78b576edfb95490e4feee0e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wt8jq"]
+load_path = "res://.godot/imported/Lake Trout.png-4f47b7b9d9435b2b3eba05f082a16a30.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bemfl"]
+load_path = "res://.godot/imported/abella.png-f9f9f036d18ebc68e463c9d9c077a72d.ctex"
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bgxm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_wj7gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_u1ers")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_wt8jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_mq7g6")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bemfl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]

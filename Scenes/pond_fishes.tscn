@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d3lda7onh250f"]
+
+[ext_resource type="Script" uid="uid://44mhoja7a8tj" path="res://Scripts/pond_fishes.gd" id="1_o8tx5"]
+[ext_resource type="SpriteFrames" uid="uid://cs23w425usbnb" path="res://Assets/Tres/pond_fish_sprite_frames.tres" id="2_psrlv"]
+
+[node name="PondFishes" type="Node2D" unique_id=14584365]
+script = ExtResource("1_o8tx5")
+
+[node name="Pond_Fishes_Sprites" type="AnimatedSprite2D" parent="." unique_id=1515811337]
+position = Vector2(-1.0000049, 4.000001)
+sprite_frames = ExtResource("2_psrlv")
+animation = &"0"
+frame = 3
+frame_progress = 0.41431412

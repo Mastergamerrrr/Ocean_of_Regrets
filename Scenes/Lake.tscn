@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b2ud32dro1g5n" path="res://Scenes/paralax_lake.tscn" id="2_dkth3"]
 [ext_resource type="Texture2D" uid="uid://bxlfpir03ewud" path="res://Assets/sprites/Pier_Tiles.png" id="2_s2rku"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="3_45bj0"]
+[ext_resource type="PackedScene" uid="uid://bggtmshem5vsf" path="res://Scenes/lake_fishes.tscn" id="5_af3l7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkth3"]
 texture = ExtResource("1_2f2cj")
@@ -192,6 +193,9 @@ distance = 33.0
 normal = Vector2(-1, 0)
 distance = -2628.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2rku"]
+size = Vector2(6320, 235)
+
 [node name="Lake" type="Node2D" unique_id=2075080073]
 scale = Vector2(0.25, 0.25)
 
@@ -212,7 +216,7 @@ position = Vector2(2896, 847.99976)
 scale = Vector2(1.035, 1.035)
 
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("3_45bj0")]
-position = Vector2(1224, 1460)
+position = Vector2(500, 1520)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=2042601902]
@@ -230,5 +234,14 @@ shape = SubResource("WorldBoundaryShape2D_45bj0")
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=948814557]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=486665133]
+visible = false
 position = Vector2(1980, 0)
 shape = SubResource("WorldBoundaryShape2D_s2rku")
+
+[node name="FishingSpot" type="Area2D" parent="." unique_id=845697715]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=146058684]
+position = Vector2(2472, 1618.5)
+shape = SubResource("RectangleShape2D_s2rku")
+
+[node name="LakeFishes" parent="." unique_id=1137390339 instance=ExtResource("5_af3l7")]
