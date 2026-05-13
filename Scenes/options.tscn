@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bkp0pqs081py"]
+
+[ext_resource type="Script" uid="uid://options_gd" path="res://Scenes/options.gd" id="1_options"]
+[ext_resource type="FontFile" uid="uid://b5ohybohsyrtm" path="res://Assets/fonts/PixelOperator8.ttf" id="2_trj04"]
+
+[sub_resource type="Theme" id="Theme_options"]
+
+[node name="Options" type="Control" unique_id=87645217]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_options")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=581576673]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.1, 0.1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1544689509]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 150.0
+offset_right = 600.0
+offset_bottom = 550.0
+theme = SubResource("Theme_options")
+theme_override_constants/separation = 25
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1000000001]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_trj04")
+theme_override_font_sizes/font_size = 32
+text = "OPTIONS"
+horizontal_alignment = 1
+
+[node name="MusicContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1000000002]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MusicLabel" type="Label" parent="VBoxContainer/MusicContainer" unique_id=1000000003]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 0)
+theme_override_fonts/font = ExtResource("2_trj04")
+theme_override_font_sizes/font_size = 16
+text = "MUSIC:"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/MusicContainer" unique_id=1000000004]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -80.0
+max_value = 0.0
+value = -14.0
+step = 1.0
+
+[node name="MusicValue" type="Label" parent="VBoxContainer/MusicContainer" unique_id=1000000005]
+layout_mode = 2
+custom_minimum_size = Vector2(50, 0)
+theme_override_fonts/font = ExtResource("2_trj04")
+theme_override_font_sizes/font_size = 16
+text = "-14"
+horizontal_alignment = 1
+
+[node name="SFXContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1000000006]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="SFXLabel" type="Label" parent="VBoxContainer/SFXContainer" unique_id=1000000007]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 0)
+theme_override_fonts/font = ExtResource("2_trj04")
+theme_override_font_sizes/font_size = 16
+text = "SFX:"
+
+[node name="SFXSlider" type="HSlider" parent="VBoxContainer/SFXContainer" unique_id=1000000008]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -80.0
+max_value = 0.0
+value = -3.0
+step = 1.0
+
+[node name="SFXValue" type="Label" parent="VBoxContainer/SFXContainer" unique_id=1000000009]
+layout_mode = 2
+custom_minimum_size = Vector2(50, 0)
+theme_override_fonts/font = ExtResource("2_trj04")
+theme_override_font_sizes/font_size = 16
+text = "-3"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1000000010]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1000000011]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_trj04")
+theme_override_font_sizes/font_size = 20
+text = "BACK"
+flat = true

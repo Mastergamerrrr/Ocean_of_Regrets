@@ -8,9 +8,8 @@ extends Control
 func _ready():
 	$VBoxContainer/start.mouse_entered.connect(_on_start_hovered)
 	$VBoxContainer/options.mouse_entered.connect(_on_options_hovered)
-	$VBoxContainer/credits.mouse_entered.connect(_on_quit_hovered)
 	
-	for button in [$VBoxContainer/start, $VBoxContainer/options, $VBoxContainer/credits]:
+	for button in [$VBoxContainer/start, $VBoxContainer/options]:
 		button.mouse_exited.connect(_on_button_unhovered)
 	
 	hover_icon.visible = false
@@ -22,10 +21,6 @@ func _on_start_hovered():
 func _on_options_hovered():
 	hover_icon.texture = options_icon_texture
 	show_icon_at($VBoxContainer/options)
-
-func _on_quit_hovered():
-	hover_icon.texture = quit_icon_texture
-	show_icon_at($VBoxContainer/credits)
 
 func show_icon_at(button: Button):
 	hover_icon.visible = true
