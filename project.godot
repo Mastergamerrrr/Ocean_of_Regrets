@@ -23,8 +23,6 @@ buses/default_bus_layout="uid://dwfyevrot72u5"
 
 Global="*uid://dbl8dqc2mvpqw"
 Transition="*uid://dg030vdpa3p7j"
-[autoload]
-
 GameManager="*uid://cso5f301gg6i3"
 
 [input]

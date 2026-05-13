@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://coj3d7hl8c581" path="res://Scenes/ocean_fishes.tscn" id="8_7egog"]
 [ext_resource type="PackedScene" uid="uid://1fgxwi8thv6a" path="res://Scenes/ocean_exit.tscn" id="9_bxemn"]
 [ext_resource type="AudioStream" uid="uid://3pe3ygci1r7b" path="res://Sounds/Ocean/Ocean music.mp3" id="10_e5rty"]
+[ext_resource type="PackedScene" uid="uid://cqabqhn0cds3f" path="res://Scenes/mermaid.tscn" id="12_r4544"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7egog"]
 texture = ExtResource("5_otwcc")
@@ -626,3 +627,7 @@ position = Vector2(264.5, 58)
 shape = SubResource("RectangleShape2D_jnlsn")
 
 [node name="OceanFishes" parent="." unique_id=1153816846 instance=ExtResource("8_7egog")]
+
+[node name="mermaid" parent="." unique_id=1469788594 instance=ExtResource("12_r4544")]
+position = Vector2(274, 230)
+scale = Vector2(0.15, 0.15)

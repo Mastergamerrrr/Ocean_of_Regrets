@@ -56,7 +56,7 @@ func _on_timer_timeout() -> void:
 
 	var fill_speed = 0.0
 	if player_ref != null:
-		fill_speed = player_ref.get_node("FishingRodUpgrades").get_fill_speed()
+		fill_speed = GameManager.get_fill_speed()
 
 	print("Bar value: ", $FishingMinigame/TextureProgressBar.value)
 
