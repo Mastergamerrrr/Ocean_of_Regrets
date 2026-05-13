@@ -41,9 +41,9 @@ color = Color(0.1, 0.1, 0.1, 1)
 z_index = 1
 layout_mode = 0
 offset_left = 376.0
-offset_top = 157.0
+offset_top = 144.0
 offset_right = 776.0
-offset_bottom = 557.0
+offset_bottom = 544.0
 theme = SubResource("Theme_options")
 theme_override_constants/separation = 25
 
