@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://bkp0pqs081py"]
 
-[ext_resource type="Script" uid="uid://options_gd" path="res://Scenes/options.gd" id="1_options"]
+[ext_resource type="Script" uid="uid://c8l0kg52ha4rt" path="res://Scenes/options.gd" id="1_options"]
+[ext_resource type="Shader" uid="uid://x0x2n81y1j3n" path="res://Scenes/options.gdshader" id="2_kftxf"]
 [ext_resource type="FontFile" uid="uid://b5ohybohsyrtm" path="res://Assets/fonts/PixelOperator8.ttf" id="2_trj04"]
+[ext_resource type="FontFile" uid="uid://bcdbplsv7avy4" path="res://Assets/fonts/Fisherman-Regular.otf" id="2_ww8vx"]
+[ext_resource type="AudioStream" uid="uid://bfi6kmxcmltrb" path="res://Assets/sounds/Cartoon, Jéja - On & On (feat. Daniel Levi)  Electronic Pop  NCS - Copyright Free Music.mp3" id="5_kftxf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_663nc"]
+shader = ExtResource("2_kftxf")
+shader_parameter/glow_color = Color(0, 1, 0.87, 1)
+shader_parameter/glow_intensity = 2.8
+shader_parameter/edge_width = 0.06
+shader_parameter/speed = 1.0
 
 [sub_resource type="Theme" id="Theme_options"]
 
@@ -10,31 +20,36 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_options")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=581576673]
+material = SubResource("ShaderMaterial_663nc")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -3.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.1, 0.1, 0.1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1544689509]
+z_index = 1
 layout_mode = 0
-offset_left = 200.0
-offset_top = 150.0
-offset_right = 600.0
-offset_bottom = 550.0
+offset_left = 376.0
+offset_top = 157.0
+offset_right = 776.0
+offset_bottom = 557.0
 theme = SubResource("Theme_options")
 theme_override_constants/separation = 25
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1000000001]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_trj04")
+theme_override_fonts/font = ExtResource("2_ww8vx")
 theme_override_font_sizes/font_size = 32
 text = "OPTIONS"
 horizontal_alignment = 1
@@ -44,9 +59,9 @@ layout_mode = 2
 theme_override_constants/separation = 15
 
 [node name="MusicLabel" type="Label" parent="VBoxContainer/MusicContainer" unique_id=1000000003]
-layout_mode = 2
 custom_minimum_size = Vector2(150, 0)
-theme_override_fonts/font = ExtResource("2_trj04")
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ww8vx")
 theme_override_font_sizes/font_size = 16
 text = "MUSIC:"
 
@@ -56,11 +71,10 @@ size_flags_horizontal = 3
 min_value = -80.0
 max_value = 0.0
 value = -14.0
-step = 1.0
 
 [node name="MusicValue" type="Label" parent="VBoxContainer/MusicContainer" unique_id=1000000005]
-layout_mode = 2
 custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_trj04")
 theme_override_font_sizes/font_size = 16
 text = "-14"
@@ -71,9 +85,9 @@ layout_mode = 2
 theme_override_constants/separation = 15
 
 [node name="SFXLabel" type="Label" parent="VBoxContainer/SFXContainer" unique_id=1000000007]
-layout_mode = 2
 custom_minimum_size = Vector2(150, 0)
-theme_override_fonts/font = ExtResource("2_trj04")
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ww8vx")
 theme_override_font_sizes/font_size = 16
 text = "SFX:"
 
@@ -83,11 +97,10 @@ size_flags_horizontal = 3
 min_value = -80.0
 max_value = 0.0
 value = -3.0
-step = 1.0
 
 [node name="SFXValue" type="Label" parent="VBoxContainer/SFXContainer" unique_id=1000000009]
-layout_mode = 2
 custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_trj04")
 theme_override_font_sizes/font_size = 16
 text = "-3"
@@ -103,3 +116,11 @@ theme_override_fonts/font = ExtResource("2_trj04")
 theme_override_font_sizes/font_size = 20
 text = "BACK"
 flat = true
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=396798759]
+position = Vector2(576, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1641586256]
+stream = ExtResource("5_kftxf")
+autoplay = true
+bus = &"Music"

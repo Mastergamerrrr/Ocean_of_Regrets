@@ -6,6 +6,7 @@ extends Control
 @onready var sfx_value_label: Label = $VBoxContainer/SFXContainer/SFXValue
 @onready var back_button: Button = $VBoxContainer/BackButton
 
+
 var music_bus_index: int
 var sfx_bus_index: int
 
