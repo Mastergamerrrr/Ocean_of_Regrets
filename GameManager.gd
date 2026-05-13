@@ -1,7 +1,9 @@
 extends Node
 
 # Player data
-var coins: int = 2000
+var coins: int = 0
+
+signal coins_changed
 
 var owned_upgrades: Dictionary = {
 	"rod": 1,
@@ -62,6 +64,13 @@ func upgrade(item_key: String) -> bool:
 		return false
 
 	coins -= price
+	coins_changed.emit()
 	owned_upgrades[item_key] = next_lvl
 	print("Upgraded %s to level %d" % [item_key, next_lvl])
 	return true
+	
+func sell_fish(fish_data: Dictionary) -> int:
+	var value = int(fish_data["weight"] * fish_data["multiplier"] * 10.0)
+	coins += value
+	coins_changed.emit()
+	return value

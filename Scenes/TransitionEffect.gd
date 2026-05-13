@@ -26,12 +26,18 @@ func show_loading():
 	travel_label.visible = true
 	travel_label.text = "Travelling"
 	_set_progress(0.0)
+	var currency = get_node("/root/Currency")
+	for child in currency.get_children():
+		child.hide()
 
 func hide_loading():
 	is_loading = false
 	travel_label.visible = false
 	_set_progress(1.0)
-
+	var currency = get_node("/root/Currency")
+	for child in currency.get_children():
+		child.show()
+	
 func transition_to(target_scene: String):
 	if tween:
 		tween.kill()

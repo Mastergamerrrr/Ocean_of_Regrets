@@ -8,7 +8,8 @@ extends CanvasLayer
 @onready var weight_label: Label = $Panel/Weight
 @onready var value_label: Label = $Panel/Value
 @onready var close_button: Button = $Panel/CloseButton
-@onready var catch_sound: AudioStreamPlayer2D = $CatchSound  # 👈 make sure this is here
+@onready var catch_sound: AudioStreamPlayer2D = $CatchSound 
+var current_fish_data: Dictionary = {}
 
 func _ready() -> void:
 	close_button.pressed.connect(_on_close_pressed)
@@ -17,6 +18,7 @@ func _ready() -> void:
 	$Panel/FishDisplay/OceanFishes.hide()
 
 func show_result(fish_data: Dictionary, water_type: String) -> void:
+	current_fish_data = fish_data
 	catch_sound.play()
 	$Panel/FishDisplay/PondFishes.hide()
 	$Panel/FishDisplay/LakeFishes.hide()
@@ -44,4 +46,6 @@ func show_result(fish_data: Dictionary, water_type: String) -> void:
 	value_label.text = "Value:  $%.2f" % value
 
 func _on_close_pressed() -> void:
+	GameManager.sell_fish(current_fish_data)
+	get_tree().current_scene.get_node("CanvasLayer/Currency").update_display()
 	queue_free()
