@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="7_2ru1m"]
 [ext_resource type="Texture2D" uid="uid://b54s0jvvsyb0o" path="res://Assets/sprites/posidon.png" id="7_flrho"]
 [ext_resource type="AudioStream" uid="uid://cs512g34rh48a" path="res://Assets/Ending2music/Horror ambience sound effect.mp3" id="7_n2ae4"]
-[ext_resource type="Shader" uid="uid://caj1l14ix6m7v" path="res://Scenes/ending_2.gdshader" id="10_pb0vo"]
+[ext_resource type="Shader" uid="uid://cf5imlbm1o2m0" path="res://Scenes/oceanintro.gdshader" id="10_yw62w"]
 [ext_resource type="Texture2D" uid="uid://cdsjad8or0x1q" path="res://Assets/ending2/evendeeperfirstperson (1).jpeg" id="11_n2ae4"]
 [ext_resource type="Texture2D" uid="uid://bsmjqjnxoyhi3" path="res://Assets/ending2/deeperfirstperson.jpeg" id="12_bo3o0"]
 [ext_resource type="Texture2D" uid="uid://bd1jcs8mp8bpt" path="res://Assets/ending2/deeperdown.jpeg" id="13_5rj1x"]
@@ -876,13 +876,10 @@ _data = {
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b0jye"]
-shader = ExtResource("10_pb0vo")
-shader_parameter/wave_speed = 0.7450000353875
-shader_parameter/wave_strength = 0.014000000665
-shader_parameter/wave_frequency = 7.7150003664625
-shader_parameter/underwater_tint = Color(4.0510793, 4.8564816, 5.2297173, 1)
-shader_parameter/tint_strength = 0.4810000228475
-shader_parameter/vignette_strength = 1.06000005035
+shader = ExtResource("10_yw62w")
+shader_parameter/wave_speed = 0.562000026695
+shader_parameter/wave_strength = 0.0050000002375
+shader_parameter/wave_frequency = 10.7430005102925
 
 [node name="Ending2" type="Node2D" unique_id=1036825165]
 
