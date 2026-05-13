@@ -154,23 +154,25 @@ text = "POND"
 layout_mode = 0
 offset_left = 411.0
 offset_top = 106.0
-offset_right = 488.0
+offset_right = 605.0
 offset_bottom = 137.0
 theme_override_constants/shadow_offset_y = 9
 theme_override_fonts/font = ExtResource("6_00287")
 theme_override_font_sizes/font_size = 30
 text = "LAKE"
+autowrap_mode = 2
 
 [node name="OceanLabel" type="Label" parent="LocationLabels" unique_id=772287994]
 layout_mode = 0
 offset_left = 602.0
 offset_top = 428.0
-offset_right = 709.0
+offset_right = 800.0
 offset_bottom = 459.0
 theme_override_constants/shadow_offset_y = 9
 theme_override_fonts/font = ExtResource("6_00287")
 theme_override_font_sizes/font_size = 30
 text = "OCEAN"
+autowrap_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1391703623]
 libraries/ = SubResource("AnimationLibrary_5t7yc")

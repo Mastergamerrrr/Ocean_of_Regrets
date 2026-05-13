@@ -78,7 +78,7 @@ func _start_casting() -> void:
 	
 func _start_waiting() -> void:
 	fishing_state = FishingState.WAITING
-	var wait_time = $FishingRodUpgrades.get_wait_time()
+	var wait_time = GameManager.get_wait_time()
 	$BiteTimer.wait_time = wait_time
 	$BiteTimer.start()
 	print("Waiting %.1f seconds for a bite..." % wait_time)

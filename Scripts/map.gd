@@ -61,6 +61,9 @@ func _update_button_states():
 	pond_button.disabled = false
 	lake_button.disabled = false
 	ocean_button.disabled = false
+	
+	lake_label.text = "Lake"
+	ocean_label.text = "Ocean"
 
 	match current_location:
 		STORE_SCENE:
@@ -75,7 +78,16 @@ func _update_button_states():
 		OCEAN_SCENE:
 			ocean_button.modulate.a = 0.4
 			ocean_button.disabled = true
+	if GameManager.owned_upgrades["area"] < 2:
+		lake_button.modulate.a = 0.4
+		lake_button.disabled = true
+		lake_label.text = "🔒 Lake (Buy Lake Permit)"
 
+	if GameManager.owned_upgrades["area"] < 3:
+		ocean_button.modulate.a = 0.4
+		ocean_button.disabled = true
+		ocean_label.text = "🔒 Ocean (Buy Ocean Permit)"
+		
 func _hide_labels():
 	store_label.visible = false
 	pond_label.visible = false
