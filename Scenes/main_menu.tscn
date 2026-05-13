@@ -82,14 +82,6 @@ text = "OPTIONS"
 flat = true
 alignment = 0
 
-[node name="credits" type="Button" parent="VBoxContainer" unique_id=1033291271]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_trj04")
-theme_override_font_sizes/font_size = 20
-text = "CREDITS"
-flat = true
-alignment = 0
-
 [node name="Label" type="Label" parent="." unique_id=862337591]
 layout_mode = 1
 anchors_preset = 5
