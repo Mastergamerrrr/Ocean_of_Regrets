@@ -514,7 +514,7 @@ tracks/2/path = NodePath("Player/Camera2D/Label:text")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1.6666666, 9.133333),
+"times": PackedFloat32Array(1.6666666, 8.866666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": ["Left Arrow Key to Go Left
@@ -529,10 +529,10 @@ tracks/3/path = NodePath("Player/Camera2D/Label:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.5666667, 2.4666667, 8.6, 9.2, 10.133333, 10.933333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(1.5666667, 2.4666667, 8.333333, 8.933332, 9.466666, 10.533334, 10.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.7764254), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.7764254), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cwa6x"]
