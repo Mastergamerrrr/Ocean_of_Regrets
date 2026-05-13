@@ -655,3 +655,13 @@ material = SubResource("ShaderMaterial_iab25")
 position = Vector2(599.5, 343.00003)
 scale = Vector2(0.21596491, 0.19)
 texture = ExtResource("12_g8dlr")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2000000001]
+
+[node name="SkipButton" type="Button" parent="UI" unique_id=2000000002]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 50.0
+text = "Skip"
+
