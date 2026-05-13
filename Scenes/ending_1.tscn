@@ -50,10 +50,10 @@ tracks/1/path = NodePath("ColorRect:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 2.5666666, 9.466666, 12.433333, 13.833333, 15.166667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.2, 2.5666666, 9.466666, 12.433333, 13.833333, 15.166667, 51.133335, 52.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -501,8 +501,8 @@ texture = ExtResource("1_m1wad")
 z_index = 5
 offset_left = 143.0
 offset_top = 562.0
-offset_right = 1024.0024
-offset_bottom = 636.9994
+offset_right = 1024.0022
+offset_bottom = 636.9993
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("6_xnt1y")
 theme_override_font_sizes/font_size = 32
@@ -516,6 +516,7 @@ position = Vector2(494.99997, 543)
 scale = Vector2(1.56, 1.56)
 
 [node name="Ocean2" type="Sprite2D" parent="." unique_id=1440809415]
+modulate = Color(1, 1, 1, 0)
 z_index = -3
 material = SubResource("ShaderMaterial_m1wad")
 position = Vector2(588.00006, 620.99994)
@@ -525,6 +526,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 160, 58.80004)
 
 [node name="Ocean" type="Sprite2D" parent="." unique_id=1872280222]
+modulate = Color(1, 1, 1, 0)
 material = SubResource("ShaderMaterial_m1wad")
 position = Vector2(550.99994, 628)
 scale = Vector2(7.8875003, 4.3706894)

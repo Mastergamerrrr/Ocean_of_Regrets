@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://blmma6x6lhnkc"]
 
+[ext_resource type="Script" uid="uid://bbrahqvreihyt" path="res://Scripts/mermaid_talk.gd" id="1_ak053"]
 [ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="1_huois"]
 [ext_resource type="Shader" uid="uid://pjserhm0hlwp" path="res://Scenes/car.gdshader" id="2_ggew7"]
 [ext_resource type="Texture2D" uid="uid://dgeank7xtmg0f" path="res://Assets/sprites/mermaid.png" id="3_74ol3"]
@@ -348,6 +349,7 @@ texture = ExtResource("10_csq7u")
 texture = ExtResource("10_csq7u")
 
 [node name="MermaidTalk" type="Node2D" unique_id=1704406023]
+script = ExtResource("1_ak053")
 
 [node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("1_huois")]
 position = Vector2(487.00003, -5)
@@ -457,3 +459,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_najhf")
 text = "Ignore The Warning
 And Keep Fishing."
 autowrap_mode = 2
+
+[connection signal="pressed" from="Buton/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Buton/Button3" to="." method="_on_button_3_pressed"]
