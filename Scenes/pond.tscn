@@ -100,7 +100,6 @@ tile_set = SubResource("TileSet_n7i7v")
 position = Vector2(1, 338)
 
 [node name="paralax_pond" parent="." unique_id=992301436 instance=ExtResource("2_kku42")]
-visible = false
 position = Vector2(402, 211)
 scale = Vector2(0.25, 0.25)
 
@@ -117,24 +116,19 @@ limit_right = 1720
 limit_bottom = 10000001
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1841049630]
-visible = false
 position = Vector2(-31, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=772653024]
-visible = false
 position = Vector2(-1, 0)
 shape = SubResource("WorldBoundaryShape2D_s7ca5")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=617711779]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1746669228]
-visible = false
 position = Vector2(1719, 126)
 shape = SubResource("WorldBoundaryShape2D_akm2k")
 
 [node name="DockSpawnPoint" type="Marker2D" parent="." unique_id=233262721]
-visible = false
 position = Vector2(52, 335)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=78001414]
@@ -144,13 +138,10 @@ autoplay = true
 bus = &"Music"
 
 [node name="FishingSpot" type="Area2D" parent="." unique_id=690817498]
-visible = false
 position = Vector2(137, 349)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=927508701]
-visible = false
 position = Vector2(409.5, 35.5)
 shape = SubResource("RectangleShape2D_akm2k")
 
 [node name="PondFishes" parent="." unique_id=14584365 instance=ExtResource("5_nm46v")]
-visible = false

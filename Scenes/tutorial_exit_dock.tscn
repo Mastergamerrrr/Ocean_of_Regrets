@@ -22,7 +22,7 @@ texture = ExtResource("1_w3qvq")
 offset = Vector2(-491, -479)
 
 [node name="Interactable" parent="." unique_id=1636977989 instance=ExtResource("2_lbofj")]
-target_scene = "C:/Users/labor/Documents/bracke-ys/Scenes/game.tscn"
+target_scene = "res://Scenes/game.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=195242716]
 position = Vector2(56, -20)
