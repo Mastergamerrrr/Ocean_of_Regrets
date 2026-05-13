@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dw3b10l326ds2" path="res://Assets/sprites/LakeAssets/Gemini_Generated_Image_z7nvh5z7nvh5z7nv-1.png (4)-1.png (1).png" id="2_gjaxk"]
 [ext_resource type="PackedScene" uid="uid://ci4vh6ilv1fwl" path="res://Scenes/tutorial_exit_dock.tscn" id="3_ccwba"]
 [ext_resource type="PackedScene" uid="uid://db60eqss5jpuu" path="res://Scenes/playeron_boat.tscn" id="4_y18cd"]
+[ext_resource type="FontFile" uid="uid://c43wba6vy7i73" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="5_62f66"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ccwba"]
 texture = ExtResource("2_gjaxk")
@@ -31,6 +32,70 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_62f66"]
 normal = Vector2(-1, 0)
 
+[sub_resource type="Animation" id="Animation_i3duj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileMap/PlayeronBoat/Camera2D/Label2:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Now Go Right"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TileMap/PlayeronBoat/Camera2D/Label2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rd2he"]
+resource_name = "intro2"
+length = 8.066667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileMap/PlayeronBoat/Camera2D/Label2:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333, 1.0666667, 4.5666666, 7.3333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Later On You are Going to Fish", "Later On You are Going to Fish", "In Order To Fish Press F
+To Cancel Press X
+In the Minigame LMB to control
+", "Now Go Left"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TileMap/PlayeronBoat/Camera2D/Label2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.76666677, 1.2, 4.2, 4.5333333, 4.8333335, 7, 7.3333335, 7.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oja5n"]
+_data = {
+&"RESET": SubResource("Animation_i3duj"),
+&"intro2": SubResource("Animation_rd2he")
+}
+
 [node name="tutorial_2" type="Node2D" unique_id=872126228]
 
 [node name="ParralaxForest" parent="." unique_id=1223921533 instance=ExtResource("1_te16x")]
@@ -54,9 +119,26 @@ position = Vector2(150, 626)
 scale = Vector2(0.465, 0.465)
 
 [node name="Camera2D" type="Camera2D" parent="TileMap/PlayeronBoat" unique_id=557907888]
+position = Vector2(0, -79.56989)
 zoom = Vector2(4, 4)
 limit_left = 0
+limit_top = -10000005
 limit_right = 866
+limit_bottom = 9999995
+
+[node name="Label2" type="Label" parent="TileMap/PlayeronBoat/Camera2D" unique_id=1785613255]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -202.15054
+offset_top = -139.78499
+offset_right = 212.90323
+offset_bottom = -79.5699
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_62f66")
+theme_override_font_sizes/font_size = 8
+text = "Now Go Right"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=659088686]
 
@@ -68,3 +150,7 @@ position = Vector2(866, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1719710624]
 shape = SubResource("WorldBoundaryShape2D_62f66")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1854222704]
+libraries/ = SubResource("AnimationLibrary_oja5n")
+autoplay = &"intro2"

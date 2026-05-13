@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blgidrmgsm68"]
 
 [ext_resource type="Texture2D" uid="uid://1803nw2rexjt" path="res://Assets/sprites/BUILDING RIL.png" id="1_duh1u"]
+[ext_resource type="Script" uid="uid://yff5ch25d6do" path="res://Scenes/intro.gd" id="1_g8dlr"]
 [ext_resource type="Texture2D" uid="uid://dubq6huehq7qd" path="res://Assets/sprites/OFFICEREAL.png" id="2_alxvg"]
 [ext_resource type="AudioStream" uid="uid://fi8hqsksodf2" path="res://Assets/sounds/yuk1to-street-ambience-traffic-410714.mp3" id="3_hwjxs"]
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="4_rsiac"]
@@ -568,6 +569,7 @@ shader_parameter/wave_strength = 0.001
 shader_parameter/wave_frequency = 5.0
 
 [node name="Intro" type="Node2D" unique_id=1233022365]
+script = ExtResource("1_g8dlr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1624067285]
 libraries/ = SubResource("AnimationLibrary_alxvg")
@@ -594,6 +596,7 @@ texture = ExtResource("1_duh1u")
 
 [node name="Streetsound" type="AudioStreamPlayer2D" parent="." unique_id=2056378802]
 stream = ExtResource("3_hwjxs")
+stream_paused = true
 
 [node name="Label" type="Label" parent="." unique_id=635565861]
 offset_left = -110.0

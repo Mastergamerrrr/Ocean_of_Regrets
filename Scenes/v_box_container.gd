@@ -8,4 +8,4 @@ func _ready():
 
 func _on_start_pressed():
 	# Change to the game scene
-	get_tree().change_scene_to_file("res://Scenes/game.tscn")
+	get_tree().change_scene_to_file("res://Scenes/intro.tscn")
