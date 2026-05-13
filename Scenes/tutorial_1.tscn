@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgiucet1p0uwj" path="res://Assets/sprites/oak_woods_tileset.png" id="2_fr34y"]
 [ext_resource type="PackedScene" uid="uid://csm6rhieya8pq" path="res://Scenes/tutorial_entry_dock.tscn" id="3_cfwh2"]
 [ext_resource type="PackedScene" uid="uid://howgh4ym7x2t" path="res://Scenes/player.tscn" id="3_fr34y"]
+[ext_resource type="FontFile" uid="uid://c43wba6vy7i73" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="5_a5wdr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfwh2"]
 texture = ExtResource("2_fr34y")
@@ -425,6 +426,145 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a5wdr"]
 normal = Vector2(-1, 0)
 
+[sub_resource type="Animation" id="Animation_cfwh2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -27)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Camera2D/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Left Arrow Key to Go Left
+Right Arrow Key to Go Right
+E to Interact to Any Interactable
+"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/Camera2D/Label:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a5wdr"]
+resource_name = "toturial1"
+length = 11.133333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -27)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.36666667, 1.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Camera2D/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6666666, 8.866666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Left Arrow Key to Go Left
+Right Arrow Key to Go Right
+E to Interact to Any Interactable
+", "Now Go Right"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/Camera2D/Label:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5666667, 2.4666667, 8.333333, 8.933332, 9.466666, 10.533334, 10.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.7764254), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cwa6x"]
+_data = {
+&"RESET": SubResource("Animation_cfwh2"),
+&"toturial1": SubResource("Animation_a5wdr")
+}
+
 [node name="tutorial1" type="Node2D" unique_id=1293738877]
 
 [node name="ParralaxForest" parent="." unique_id=1223921533 instance=ExtResource("1_sk1uf")]
@@ -443,6 +583,7 @@ tile_set = SubResource("TileSet_a5wdr")
 [node name="TileMapLayer2" type="TileMapLayer" parent="TileMap" unique_id=55110006]
 
 [node name="Player" parent="." unique_id=1996369814 instance=ExtResource("3_fr34y")]
+self_modulate = Color(1, 1, 1, 0)
 position = Vector2(154, 431)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2074596400]
@@ -450,6 +591,19 @@ position = Vector2(0, -27)
 zoom = Vector2(4, 4)
 limit_left = 0
 limit_right = 626
+
+[node name="Label" type="Label" parent="Player/Camera2D" unique_id=4503849]
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 13.0
+offset_bottom = 20.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_a5wdr")
+theme_override_font_sizes/font_size = 8
+text = "Left Arrow Key to Go Left
+Right Arrow Key to Go Right
+E to Interact to Any Interactable
+"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=285120604]
 
@@ -462,3 +616,13 @@ position = Vector2(626, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1405766266]
 position = Vector2(0, -1)
 shape = SubResource("WorldBoundaryShape2D_a5wdr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1533139121]
+libraries/ = SubResource("AnimationLibrary_cwa6x")
+autoplay = &"toturial1"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=532082372]
+z_index = 3
+offset_right = 1151.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
