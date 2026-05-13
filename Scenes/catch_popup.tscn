@@ -127,3 +127,4 @@ vertical_alignment = 1
 
 [node name="CatchSound" type="AudioStreamPlayer2D" parent="." unique_id=1786043329]
 stream = ExtResource("6_k3j3b")
+bus = &"SFX"

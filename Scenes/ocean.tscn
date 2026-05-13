@@ -615,9 +615,10 @@ position = Vector2(59, 213)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=239067600]
 stream = ExtResource("10_e5rty")
+volume_db = -25.0
 pitch_scale = 0.6
 autoplay = true
-bus = &"Music"
+bus = &"SFX"
 
 [node name="FishingSpot" type="Area2D" parent="." unique_id=1166064353]
 position = Vector2(589, 209)

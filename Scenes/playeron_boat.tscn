@@ -219,8 +219,10 @@ script = ExtResource("9_3uaib")
 
 [node name="ThrowSound" type="AudioStreamPlayer2D" parent="." unique_id=2102695142]
 stream = ExtResource("12_e2las")
+volume_db = -10.0
 
 [node name="CancelSound" type="AudioStreamPlayer2D" parent="." unique_id=117942568]
 stream = ExtResource("13_tlfyl")
+volume_db = -5.0
 
 [connection signal="timeout" from="BiteTimer" to="." method="_on_bite_timer_timeout"]
