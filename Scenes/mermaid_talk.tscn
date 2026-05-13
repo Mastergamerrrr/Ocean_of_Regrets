@@ -347,15 +347,6 @@ texture = ExtResource("10_csq7u")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_najhf"]
 texture = ExtResource("10_csq7u")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ry8y"]
-texture = ExtResource("10_csq7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5khpk"]
-texture = ExtResource("10_csq7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2d2e"]
-texture = ExtResource("10_csq7u")
-
 [node name="MermaidTalk" type="Node2D" unique_id=1704406023]
 
 [node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("1_huois")]
@@ -454,14 +445,15 @@ text = "Heed The Warning And Go
 Back To Shore."
 autowrap_mode = 2
 
-[node name="Button2" type="Button" parent="Buton" unique_id=948165724]
+[node name="Button3" type="Button" parent="Buton" unique_id=1938197282]
 offset_left = 727.0
 offset_top = 202.0
 offset_right = 1042.0
 offset_bottom = 376.0
 theme_override_fonts/font = ExtResource("10_a24k2")
-theme_override_styles/normal = SubResource("StyleBoxTexture_1ry8y")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_5khpk")
-theme_override_styles/hover = SubResource("StyleBoxTexture_s2d2e")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a24k2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ak053")
+theme_override_styles/hover = SubResource("StyleBoxTexture_najhf")
 text = "Ignore The Warning
 And Keep Fishing."
+autowrap_mode = 2
