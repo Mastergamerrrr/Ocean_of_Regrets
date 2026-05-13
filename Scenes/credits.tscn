@@ -1,0 +1,394 @@
+[gd_scene format=3 uid="uid://b1unatlqabxtp"]
+
+[ext_resource type="Script" uid="uid://b6gmhhheb31vd" path="res://Scenes/credits.gd" id="1_1wbrc"]
+[ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="1_gryuy"]
+[ext_resource type="AudioStream" uid="uid://df1cfq02gphif" path="res://Assets/sounds/cutending1.mp3" id="1_r18jl"]
+[ext_resource type="Texture2D" uid="uid://tufvl366n6ur" path="res://Assets/devs/MAX.png" id="3_1bamb"]
+[ext_resource type="Texture2D" uid="uid://clq8a5corvtkn" path="res://Assets/devs/joshua.jpg" id="3_ccovl"]
+[ext_resource type="Texture2D" uid="uid://bh5774owbckw1" path="res://Assets/devs/BEJONA.jpg" id="4_xelri"]
+[ext_resource type="Texture2D" uid="uid://wutxga61omvw" path="res://Assets/devs/JIAN.jpg" id="5_uah1q"]
+[ext_resource type="Texture2D" uid="uid://c252rel5armox" path="res://Assets/devs/KIM.jpg" id="6_7emq5"]
+[ext_resource type="AudioStream" uid="uid://bfi6kmxcmltrb" path="res://Assets/sounds/Cartoon, Jéja - On & On (feat. Daniel Levi)  Electronic Pop  NCS - Copyright Free Music.mp3" id="8_803yc"]
+
+[sub_resource type="Animation" id="Animation_gryuy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WHITE:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sfx&music:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(244, 185)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect2/ColorRect:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PRESS:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e4ad4"]
+resource_name = "credeeeet"
+length = 42.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WHITE:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.16666667, 1.0666667, 27.4, 33.333332),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.2666667, 2.5, 20.166666, 20.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.0333333, 3.7666667, 6, 7.6641006, 10.033334, 11.716003, 14.040509, 15.723179, 17.991827, 19.674496),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-1074.9, 0), Vector2(-1074.9, 0), Vector2(-2148.9, 0), Vector2(-2148.9, 0), Vector2(-3222.9, 0), Vector2(-3222.9, 0), Vector2(-4296.9, 0), Vector2(-4296.9, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sfx&music:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(21.466667, 27.733334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(244, 674), Vector2(244, -900)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(20.9, 21.366667, 28.333334, 29.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect2/ColorRect:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(21.3, 21.9, 22.575218, 23.175219, 23.887476, 24.487476, 25.199736, 25.799736, 26.366669, 26.96667, 27.636786, 28.236786),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PRESS:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(30.333334, 31.533333, 31.983139, 33.183136, 34.01089, 35.21089, 36.03864, 37.23864, 37.69771, 38.897705, 39.06667, 40.26667, 40.92367, 42.123672, 42.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r18jl"]
+_data = {
+&"RESET": SubResource("Animation_gryuy"),
+&"credeeeet": SubResource("Animation_e4ad4")
+}
+
+[node name="credits" type="Node2D" unique_id=944179787]
+script = ExtResource("1_1wbrc")
+
+[node name="WHITE" type="ColorRect" parent="." unique_id=582665555]
+z_index = 1
+offset_left = -46.0
+offset_top = -47.0
+offset_right = 1199.0
+offset_bottom = 691.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=64495291]
+offset_left = -41.0
+offset_top = -46.0
+offset_right = 1204.0
+offset_bottom = 692.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=465899527]
+libraries/ = SubResource("AnimationLibrary_r18jl")
+autoplay = &"credeeeet"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1945878258]
+stream = ExtResource("1_r18jl")
+volume_db = -80.0
+autoplay = true
+
+[node name="Node2D" type="Node2D" parent="." unique_id=78102858]
+
+[node name="Joshua" type="Sprite2D" parent="Node2D" unique_id=226311384]
+position = Vector2(578, 274)
+scale = Vector2(0.54835165, 0.5232068)
+texture = ExtResource("3_ccovl")
+region_enabled = true
+region_rect = Rect2(157.11597, 295.64978, 455.02393, 474.59485)
+
+[node name="Max" type="Sprite2D" parent="Node2D" unique_id=582854949]
+position = Vector2(1643, 273.25)
+scale = Vector2(0.56122446, 0.55617976)
+texture = ExtResource("3_1bamb")
+
+[node name="Bejona" type="Sprite2D" parent="Node2D" unique_id=1279577013]
+position = Vector2(2728.9, 273)
+scale = Vector2(2.4313724, 2.48)
+texture = ExtResource("4_xelri")
+
+[node name="Jian" type="Sprite2D" parent="Node2D" unique_id=1933134683]
+position = Vector2(3806.9, 273.25)
+scale = Vector2(1.54375, 1.6610738)
+texture = ExtResource("5_uah1q")
+
+[node name="Kim" type="Sprite2D" parent="Node2D" unique_id=1552575326]
+position = Vector2(4875.9, 273.5)
+scale = Vector2(3.788461, 3.5285718)
+texture = ExtResource("6_7emq5")
+
+[node name="max" type="Label" parent="Node2D" unique_id=1738749392]
+offset_left = 1298.0
+offset_top = 415.0
+offset_right = 1966.0
+offset_bottom = 596.0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 32
+text = "Gameplay Programmer Mechanics & Systems Developer
+Max Laurence Leceña
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="bejona" type="Label" parent="Node2D" unique_id=866599794]
+offset_left = 2392.9
+offset_top = 414.0
+offset_right = 3060.9
+offset_bottom = 595.0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 32
+text = "Sound Designer SFX Artist & Audio Engineer
+Michael Angelo A. Bejona"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="kim" type="Label" parent="Node2D" unique_id=1128139603]
+offset_left = 4538.9
+offset_top = 414.0
+offset_right = 5206.9
+offset_bottom = 595.0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 32
+text = "Map Designing, Associate Developer & Support
+Kim Navaja"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="jian" type="Label" parent="Node2D" unique_id=1112783788]
+offset_left = 3474.9
+offset_top = 414.0
+offset_right = 4142.9
+offset_bottom = 595.0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 32
+text = "Story, Art & Programming Creative Lead (Story, Sprites, Code)
+Jian Laborte"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="josh" type="Label" parent="Node2D" unique_id=1524143087]
+offset_left = 258.0
+offset_top = 416.0
+offset_right = 926.0
+offset_bottom = 597.0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 32
+text = "UI/UX Designer Menu & Interface Designer
+Joshua Potot"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1225537066]
+position = Vector2(576, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=79712020]
+position = Vector2(-497, 0)
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=1038062285]
+position = Vector2(1649, 0)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1909365886]
+stream = ExtResource("8_803yc")
+autoplay = true
+
+[node name="Sfx&music" type="Label" parent="." unique_id=1815145615]
+offset_left = 244.0
+offset_top = 185.0
+offset_right = 912.0
+offset_bottom = 1017.0093
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 32
+text = "Ordon Village - The Legend of Zelda Twilight Princess OST
+
+Milk Bar - The Legend of Zelda： Majora's Mask OST ｜ Remastered
+
+Opening Demo - The Legend of Zelda Twilight Princess OST
+
+ Shop - The Legend of Zelda： Majora's Mask OST ｜ Remastered
+
+ Windmill Hut - The Legend of Zelda： Ocarina of Time OST
+
+Feeding Frenzy - Menu Ost
+
+ The Legend of Zelda Breath of the Wild Korok Forest (Night)
+
+Napa - Deslocado"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=664361562]
+offset_top = -44.0
+offset_right = 1152.0
+offset_bottom = 136.0
+color = Color(0, 0, 0, 1)
+
+[node name="innercredit" type="Label" parent="ColorRect2" unique_id=1710043364]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 119.0
+offset_right = 911.0
+offset_bottom = 300.0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 64
+text = "Credits
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2" unique_id=1941315848]
+layout_mode = 0
+offset_left = 510.885
+offset_top = 177.0
+offset_right = 646.85004
+offset_bottom = 180.0
+
+[node name="PRESS" type="Label" parent="." unique_id=1463798902]
+z_index = 3
+offset_left = 239.0
+offset_top = 231.0
+offset_right = 907.0
+offset_bottom = 412.0
+theme_override_constants/line_spacing = 5
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("1_gryuy")
+theme_override_font_sizes/font_size = 64
+text = "PRESS ESC TO GO BACK TO MAIN MENU
+"
+horizontal_alignment = 1
+autowrap_mode = 2
