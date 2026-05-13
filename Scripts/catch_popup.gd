@@ -47,5 +47,7 @@ func show_result(fish_data: Dictionary, water_type: String) -> void:
 
 func _on_close_pressed() -> void:
 	GameManager.sell_fish(current_fish_data)
-	get_tree().current_scene.get_node("CanvasLayer/Currency").update_display()
+	var currency = get_tree().current_scene.get_node_or_null("CanvasLayer/Currency")
+	if currency:
+		currency.update_display()
 	queue_free()

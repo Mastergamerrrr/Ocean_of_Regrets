@@ -35,8 +35,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# REMOVED jump feature (boats don't fly! 🚣)
-
 	if Input.is_action_just_pressed("Fishing") and is_on_floor():
 		_start_casting()
 		return
@@ -67,7 +65,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _start_casting() -> void:
-	if fishing_state != FishingState.IDLE: 
+	if fishing_state != FishingState.IDLE:
 		return
 	fishing_state = FishingState.CASTING
 	is_fishing = true
@@ -75,7 +73,7 @@ func _start_casting() -> void:
 	animated_spriteboat.play("Fishboat")
 	$CancelCastComponent.show()
 	throw_sound.play()
-	
+
 func _start_waiting() -> void:
 	fishing_state = FishingState.WAITING
 	var wait_time = GameManager.get_wait_time()
@@ -88,16 +86,29 @@ func _start_minigame() -> void:
 		return
 	fishing_state = FishingState.MINIGAME
 	$BiteTimer.stop()
-	
-	var fishing_spot = $CastComponent.current_fishing_spot
+
 	var fish_node_name = current_water_type.capitalize() + "Fishes"
-	var fish_node = fishing_spot.get_parent().get_node(fish_node_name)
-	current_fish_data = fish_node.roll_fish()
-	
-	var minigame = load("res://Scenes/fishing_minigame.tscn").instantiate()
-	get_tree().current_scene.add_child(minigame)
-	minigame.player_ref = self
-	minigame.fish_data = current_fish_data
+	var fish_node = get_tree().current_scene.get_node_or_null(fish_node_name)
+	current_fish_data = fish_node.roll_fish() if fish_node else {}
+
+	# Only skip minigame in tutorial, all other scenes play normally
+	var is_tutorial = get_tree().current_scene.name.to_lower().begins_with("tutorial")
+	if is_tutorial:
+		if current_fish_data.is_empty():
+			current_fish_data = {
+				"name": "Small Fish",
+				"rarity": "Common",
+				"weight": 0.5,
+				"multiplier": 1.0,
+				"index": 0
+			}
+		minigame_success()
+	else:
+		# Normal flow — launch the minigame scene
+		var minigame = load("res://Scenes/fishing_minigame.tscn").instantiate()
+		get_tree().current_scene.add_child(minigame)
+		minigame.player_ref = self
+		minigame.fish_data = current_fish_data
 
 func minigame_success() -> void:
 	if fishing_state != FishingState.MINIGAME:
@@ -105,37 +116,36 @@ func minigame_success() -> void:
 	$BiteTimer.stop()
 	fishing_state = FishingState.CAUGHT
 	animated_spriteboat.play("Caughtfishboat")
-	
+
 	await animated_spriteboat.animation_finished
-	
+
 	var popup = load("res://Scenes/catch_popup.tscn").instantiate()
 	get_tree().current_scene.add_child(popup)
 	popup.show_result(current_fish_data, current_water_type)
 	print("current_fish_data: ", current_fish_data)
 
-
-func _end_fishing() -> void:
-	fishing_state = FishingState.REELING
-	is_fishing = true 
-	$BiteTimer.stop() 
-	animated_spriteboat.play_backwards("Fishboat")
-	$CastComponent.show()
-	$CancelCastComponent.hide()
-	cancel_sound.play()
-
 func minigame_fail() -> void:
 	if fishing_state != FishingState.MINIGAME:
 		return
 	$BiteTimer.stop()
-	$CastComponent.reset() 
+	$CastComponent.reset()
 	_end_fishing()
-	
+
 	var anim_length = animated_spriteboat.sprite_frames.get_frame_count("Fishboat") / 6.0
 	await get_tree().create_timer(anim_length).timeout
 	if fishing_state == FishingState.REELING:
 		fishing_state = FishingState.IDLE
-		is_fishing = false  
+		is_fishing = false
 		animated_spriteboat.play("Idle")
+
+func _end_fishing() -> void:
+	fishing_state = FishingState.REELING
+	is_fishing = true
+	$BiteTimer.stop()
+	animated_spriteboat.play_backwards("Fishboat")
+	$CastComponent.show()
+	$CancelCastComponent.hide()
+	cancel_sound.play()
 
 func _on_animation_finished() -> void:
 	match fishing_state:
@@ -146,15 +156,14 @@ func _on_animation_finished() -> void:
 			fishing_state = FishingState.IDLE
 			is_fishing = false
 			animated_spriteboat.play("Idle")
-			$CastComponent.reset() 
+			$CastComponent.reset()
 			$CancelCastComponent.hide()
 		FishingState.REELING:
 			fishing_state = FishingState.IDLE
 			is_fishing = false
 			animated_spriteboat.play("Idle")
-			$CastComponent.reset() 
+			$CastComponent.reset()
 			$CancelCastComponent.hide()
 
 func _on_bite_timer_timeout() -> void:
 	_start_minigame()
-	
