@@ -99,7 +99,7 @@ tracks/6/keys = {
 
 [sub_resource type="Animation" id="Animation_e4ad4"]
 resource_name = "credeeeet"
-length = 42.9
+length = 41.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -329,7 +329,7 @@ autoplay = true
 offset_left = 244.0
 offset_top = 185.0
 offset_right = 912.0
-offset_bottom = 1017.0093
+offset_bottom = 1017.0073
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("1_gryuy")
 theme_override_font_sizes/font_size = 32
@@ -373,9 +373,9 @@ autowrap_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect2" unique_id=1941315848]
 layout_mode = 0
-offset_left = 510.885
+offset_left = 247.0
 offset_top = 177.0
-offset_right = 646.85004
+offset_right = 918.0
 offset_bottom = 180.0
 
 [node name="PRESS" type="Label" parent="." unique_id=1463798902]

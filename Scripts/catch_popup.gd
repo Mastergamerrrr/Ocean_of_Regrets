@@ -12,6 +12,13 @@ extends CanvasLayer
 var current_fish_data: Dictionary = {}
 
 func _ready() -> void:
+	var material = $Panel.material
+	# Start fully transparent and fade in
+	material.set_shader_parameter("panel_opacity", 0.0)
+	
+	var tween = create_tween()
+	tween.tween_method(func(x): 
+		material.set_shader_parameter("panel_opacity", x), 0.0, 0.7, 0.3)
 	close_button.pressed.connect(_on_close_pressed)
 	$Panel/FishDisplay/PondFishes.hide()
 	$Panel/FishDisplay/LakeFishes.hide()

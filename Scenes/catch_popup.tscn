@@ -2,15 +2,30 @@
 
 [ext_resource type="Script" uid="uid://drnunlri8a7mf" path="res://Scripts/catch_popup.gd" id="1_bunjf"]
 [ext_resource type="PackedScene" uid="uid://d3lda7onh250f" path="res://Scenes/pond_fishes.tscn" id="1_ykbkj"]
+[ext_resource type="Shader" uid="uid://bnocx7vstv6ps" path="res://Scenes/catch_popup.gdshader" id="2_6tl56"]
 [ext_resource type="PackedScene" uid="uid://bggtmshem5vsf" path="res://Scenes/lake_fishes.tscn" id="3_26bqq"]
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="3_um1fs"]
 [ext_resource type="PackedScene" uid="uid://coj3d7hl8c581" path="res://Scenes/ocean_fishes.tscn" id="4_pbxe0"]
 [ext_resource type="AudioStream" uid="uid://danpb1hu2nr7c" path="res://Sounds/Fishing SFX/Rare Achievement - Minecraft Sound Effect (HD).mp3" id="6_k3j3b"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_noklf"]
+shader = ExtResource("2_6tl56")
+shader_parameter/time_speed = -0.305
+shader_parameter/glow_intensity = 2.93
+shader_parameter/wave_density = 3.045
+shader_parameter/blur_amount = 16.685
+shader_parameter/panel_opacity = 0.33
+shader_parameter/darkness_intensity = -0.87
+shader_parameter/color_cyan = Vector3(-0.645, 0.695, 4.555)
+shader_parameter/color_teal = Vector3(1.655, 4.4, 13.785)
+shader_parameter/color_deep = Vector3(-0.31, 0.99, 3.11)
+shader_parameter/color_sparkle = Vector3(20.315, -1.385, -202.785)
+
 [node name="CatchPopup" type="CanvasLayer" unique_id=67204988]
 script = ExtResource("1_bunjf")
 
 [node name="Panel" type="Panel" parent="." unique_id=404013028]
+material = SubResource("ShaderMaterial_noklf")
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -31,6 +46,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="Panel/FishDisplay" unique_id=1191171492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.32915825, 0.32915843, 0.3291583, 0.5882353)
+
+[node name="Panel" type="Panel" parent="Panel/FishDisplay" unique_id=948619749]
+self_modulate = Color(1, 1, 1, 0.78039217)
+layout_mode = 0
+offset_left = 41.0
+offset_top = 24.0
+offset_right = 360.0
+offset_bottom = 187.0
+
 [node name="PondFishes" parent="Panel/FishDisplay" unique_id=14584365 instance=ExtResource("1_ykbkj")]
 position = Vector2(200, 100)
 scale = Vector2(0.5, 0.5)
@@ -49,9 +83,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -200.5
-offset_top = -31.0
-offset_right = 200.5
+offset_left = -201.0
+offset_top = -32.0
+offset_right = 201.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_um1fs")
@@ -70,6 +105,7 @@ offset_right = 199.0
 offset_bottom = 11.599991
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("3_um1fs")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -87,6 +123,7 @@ offset_right = 199.0
 offset_bottom = 11.399994
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("3_um1fs")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -104,6 +141,7 @@ offset_right = 199.0
 offset_bottom = 11.599976
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("3_um1fs")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -121,6 +159,7 @@ offset_right = 200.0
 offset_bottom = 11.399994
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("3_um1fs")
 horizontal_alignment = 1
 vertical_alignment = 1

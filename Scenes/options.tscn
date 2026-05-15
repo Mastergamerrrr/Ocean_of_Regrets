@@ -9,9 +9,9 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_663nc"]
 shader = ExtResource("2_kftxf")
 shader_parameter/glow_color = Color(0, 1, 0.87, 1)
-shader_parameter/glow_intensity = 2.8
-shader_parameter/edge_width = 0.06
-shader_parameter/speed = 1.0
+shader_parameter/glow_intensity = 0.5
+shader_parameter/edge_width = 0.09000000357648
+shader_parameter/speed = 0.65900002804262
 
 [sub_resource type="Theme" id="Theme_options"]
 
