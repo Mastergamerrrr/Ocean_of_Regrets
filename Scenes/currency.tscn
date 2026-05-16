@@ -129,4 +129,4 @@ offset_bottom = 1018.0
 scale = Vector2(0.048, 0.048)
 texture_normal = ExtResource("4_1su5i")
 
-[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_button_pressed"]

@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 @onready var label: Label = $MONEY_KWARTA
+@onready var settings: TextureButton = $Settings
+
 
 var force_hidden: bool = false
 
@@ -31,3 +33,6 @@ func _check_visibility() -> void:
 
 func update_display() -> void:
 	label.text = str(GameManager.coins) + "G"
+
+func _on_settings_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Settings.tscn")
