@@ -586,7 +586,7 @@ position = Vector2(591, 83)
 scale = Vector2(0.255, 0.255)
 
 [node name="PlayeronBoat" parent="." unique_id=1626450456 instance=ExtResource("6_wsrqd")]
-position = Vector2(66, 221)
+position = Vector2(139, 233)
 scale = Vector2(0.465, 0.465)
 
 [node name="Camera2D" type="Camera2D" parent="PlayeronBoat" unique_id=625819247]
@@ -622,6 +622,8 @@ bus = &"SFX"
 
 [node name="FishingSpot" type="Area2D" parent="." unique_id=1166064353]
 position = Vector2(589, 209)
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishingSpot" unique_id=222755010]
 position = Vector2(264.5, 58)

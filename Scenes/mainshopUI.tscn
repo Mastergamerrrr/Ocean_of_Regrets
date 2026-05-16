@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ddyl7xe5q54y4"]
 
 [ext_resource type="Texture2D" uid="uid://mhm5d0pklde7" path="res://Assets/sprites/shop ui assets/background_shop.png" id="1_7hgcu"]
+[ext_resource type="AudioStream" uid="uid://mgr176rvaayi" path="res://Sounds/Shop SFX Upgrade/envil2.mp3" id="4_tyjdb"]
+[ext_resource type="AudioStream" uid="uid://c7qpnytsnndku" path="res://Sounds/Shop SFX Upgrade/Anvil (mp3cut.net).mp3" id="5_8xrb7"]
 [ext_resource type="FontFile" uid="uid://c43wba6vy7i73" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="5_tyjdb"]
 [ext_resource type="Script" uid="uid://vp1mxmg5toyn" path="res://Scripts/mainshopUI.gd" id="6_8xrb7"]
 
@@ -423,3 +425,11 @@ offset_right = 501.0
 offset_bottom = 511.99997
 scale = Vector2(0.58305687, 0.36013597)
 color = Color(0.14117648, 0.10980392, 0.05882353, 1)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=525461655]
+stream = ExtResource("4_tyjdb")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=194796178]
+stream = ExtResource("5_8xrb7")
+bus = &"SFX"

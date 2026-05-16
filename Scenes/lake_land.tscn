@@ -6568,6 +6568,8 @@ position = Vector2(1050, 542)
 
 [node name="GrassZone2" parent="." unique_id=625552305 instance=ExtResource("9_wnqrv")]
 position = Vector2(1034, 555)
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone2" unique_id=1925819860]
 position = Vector2(-60, 2)
@@ -6575,6 +6577,8 @@ shape = SubResource("RectangleShape2D_p80nf")
 
 [node name="GrassZone3" parent="." unique_id=709925855 instance=ExtResource("9_wnqrv")]
 position = Vector2(707, 513)
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone3" unique_id=1112405176]
 position = Vector2(6.130188, 4.482422)
@@ -6583,6 +6587,8 @@ shape = SubResource("RectangleShape2D_wnqrv")
 
 [node name="WoodZone" parent="." unique_id=2146713944 instance=ExtResource("10_p80nf")]
 position = Vector2(490, 482)
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WoodZone" unique_id=480202557]
 position = Vector2(55.5, 0)
@@ -6590,6 +6596,8 @@ shape = SubResource("RectangleShape2D_oghyl")
 
 [node name="GrassZone" parent="." unique_id=610625576 instance=ExtResource("9_wnqrv")]
 position = Vector2(192, 482)
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=50547864]
 position = Vector2(38, 0)

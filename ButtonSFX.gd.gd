@@ -5,6 +5,7 @@ var _player : AudioStreamPlayer
 
 func _ready() -> void:
 	_player = AudioStreamPlayer.new()
+	_player.bus = "SFX"
 	add_child(_player)
 	click_sound = preload("res://Assets/sounds/computer-mouse-click-352734.mp3")
 	get_tree().node_added.connect(_on_node_added)

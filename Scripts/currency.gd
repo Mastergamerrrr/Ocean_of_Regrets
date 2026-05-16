@@ -7,9 +7,9 @@ var force_hidden: bool = false
 const ALLOWED_SCENES = [
 	"res://Scenes/game.tscn",
 	"res://Scenes/pond_land.tscn",
-	"res://Scenes/Pond.tscn",
+	"res://Scenes/pond.tscn",
 	"res://Scenes/ocean_land.tscn",
-	"res://Scenes/Ocean.tscn",
+	"res://Scenes/ocean.tscn",
 	"res://Scenes/lake_land.tscn",
 	"res://Scenes/Lake.tscn"
 ]

@@ -1244,6 +1244,8 @@ position = Vector2(1043, 564)
 
 [node name="GrassZone" parent="." unique_id=610625576 instance=ExtResource("9_iq2ns")]
 position = Vector2(11, 587)
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=1955339585]
 position = Vector2(316.5, 0)
@@ -1251,6 +1253,8 @@ shape = SubResource("RectangleShape2D_xd1vu")
 
 [node name="StoneZone" parent="." unique_id=1375319520 instance=ExtResource("10_apc7o")]
 position = Vector2(-159, 12)
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StoneZone" unique_id=1152663293]
 z_index = 2

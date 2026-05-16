@@ -624,6 +624,8 @@ autoplay = true
 bus = &"Music"
 
 [node name="GrassZone" parent="." unique_id=610625576 instance=ExtResource("11_o5yvi")]
+audio_bus_override = true
+audio_bus_name = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassZone" unique_id=152614920]
 position = Vector2(570, 282)

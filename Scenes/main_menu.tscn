@@ -40,8 +40,10 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_cp0ys")
+volume_db = 6.0499997
 autoplay = true
 loop = true
+bus = &"Music"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=581576673]
 material = SubResource("ShaderMaterial_fu7sn")

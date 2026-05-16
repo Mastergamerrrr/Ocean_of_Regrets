@@ -603,6 +603,7 @@ texture = ExtResource("1_duh1u")
 
 [node name="Streetsound" type="AudioStreamPlayer2D" parent="." unique_id=2056378802]
 stream = ExtResource("3_hwjxs")
+bus = &"Music"
 
 [node name="Label" type="Label" parent="." unique_id=635565861]
 offset_left = -110.0
@@ -623,6 +624,7 @@ autowrap_mode = 3
 [node name="OFffice" type="AudioStreamPlayer2D" parent="." unique_id=1415292747]
 stream = ExtResource("5_3bmuq")
 pitch_scale = 1.34
+bus = &"Music"
 
 [node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=409614366]
 stream = ExtResource("6_rsiac")
@@ -645,6 +647,7 @@ texture = ExtResource("8_b26wi")
 stream = ExtResource("9_b26wi")
 volume_db = -21.518
 autoplay = true
+bus = &"Music"
 
 [node name="Car" type="Sprite2D" parent="." unique_id=850249755]
 z_index = -19

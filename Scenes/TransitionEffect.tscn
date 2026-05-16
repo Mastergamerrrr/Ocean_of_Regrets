@@ -22,6 +22,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="TransitionSound" type="AudioStreamPlayer" parent="." unique_id=540487661]
 stream = ExtResource("2_2wxqi")
+bus = &"SFX"
 
 [node name="TravelLabel" type="Label" parent="." unique_id=1110644001]
 anchors_preset = 8

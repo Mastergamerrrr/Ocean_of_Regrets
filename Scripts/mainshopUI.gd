@@ -25,6 +25,8 @@ signal shop_closed
 @onready var rod_upgrade_cost: Label = $Control/RodUpgradeCost
 @onready var hook_upgrade_cost: Label = $Control/HookUpgradeCost
 @onready var permit_upgrade_cost: Label = $Control/PermitUpgradeCost
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $AudioStreamPlayer2D2
 
 # ---- Gold label ----
 @onready var gold_amount: Label = $Control/Coins/amount
@@ -90,6 +92,7 @@ func show_shop():
 # ---------------------
 func handle_rod_upgrade():
 	if GameManager.upgrade("rod"):
+		audio_stream_player_2d.play()
 		var lvl = GameManager.owned_upgrades["rod"]
 		_update_indicator(rod_indicator, lvl)
 		rod_icon.texture = _get_icon("rod", lvl)
@@ -100,6 +103,7 @@ func handle_rod_upgrade():
 
 func handle_hook_upgrade():
 	if GameManager.upgrade("hook"):
+		audio_stream_player_2d.play()
 		var lvl = GameManager.owned_upgrades["hook"]
 		_update_indicator(hook_indicator, lvl)
 		hook_icon.texture = _get_icon("hook", lvl)
@@ -111,6 +115,7 @@ func handle_hook_upgrade():
 func handle_permit_upgrade():
 	print("Permit upgrade button pressed!")
 	if GameManager.upgrade("area"):
+		audio_stream_player_2d_2.play()
 		var lvl = GameManager.owned_upgrades["area"]
 		print("New level: ", lvl)
 		_update_indicator(permit_indicator, lvl)

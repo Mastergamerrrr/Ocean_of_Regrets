@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://csm6rhieya8pq" path="res://Scenes/tutorial_entry_dock.tscn" id="3_cfwh2"]
 [ext_resource type="PackedScene" uid="uid://howgh4ym7x2t" path="res://Scenes/player.tscn" id="3_fr34y"]
 [ext_resource type="FontFile" uid="uid://c43wba6vy7i73" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="5_a5wdr"]
-[ext_resource type="Script" uid="uid://tutorial1gd" path="res://Scenes/tutorial_1.gd" id="6_tutorial1"]
+[ext_resource type="Script" uid="uid://dw0e2ked0rhhe" path="res://Scenes/tutorial_1.gd" id="6_tutorial1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfwh2"]
 texture = ExtResource("2_fr34y")
