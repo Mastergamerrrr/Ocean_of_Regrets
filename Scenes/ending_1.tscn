@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8pngjqwyx2qu"]
 
 [ext_resource type="Texture2D" uid="uid://cbc401w1u5bo7" path="res://ending 1/1.png" id="1_m1wad"]
+[ext_resource type="Script" uid="uid://cfr0sayq6jnpg" path="res://Scenes/ending_1.gd" id="1_ougmk"]
 [ext_resource type="Shader" uid="uid://jijfhalfrr6l" path="res://Scenes/ending_1.gdshader" id="1_wsaq5"]
 [ext_resource type="PackedScene" uid="uid://cj2lkqkygdqg8" path="res://Scenes/animatablecharacter.tscn" id="1_wwtvk"]
 [ext_resource type="Texture2D" uid="uid://dr04ccpo0xgpf" path="res://ending 1/5.png" id="1_xnt1y"]
@@ -513,6 +514,7 @@ _data = {
 }
 
 [node name="Ending1" type="Node2D" unique_id=1591099184]
+script = ExtResource("1_ougmk")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=482441273]
 position = Vector2(593, 267)

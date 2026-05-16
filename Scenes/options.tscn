@@ -15,6 +15,28 @@ shader_parameter/accent_color = Vector3(0.2, 0.8, 0.9)
 
 [sub_resource type="Theme" id="Theme_options"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kftxf"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_663nc"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 4
+
 [node name="Options" type="Control" unique_id=87645217]
 layout_mode = 3
 anchors_preset = 15
@@ -30,9 +52,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -3.0
-offset_right = 5.0
+offset_left = -37.0
+offset_top = -23.0
+offset_right = 22.0
+offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1, 0.1, 0.1, 1)
@@ -125,10 +148,20 @@ stream = ExtResource("5_kftxf")
 autoplay = true
 bus = &"Music"
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1077725962]
+[node name="ColorRect2" type="Panel" parent="." unique_id=1750179456]
 layout_mode = 0
 offset_left = 344.0
 offset_top = 102.0
 offset_right = 809.0
-offset_bottom = 541.0
-color = Color(0, 0, 0, 0.3764706)
+offset_bottom = 553.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kftxf")
+
+[node name="ColorRect3" type="Panel" parent="." unique_id=1311952761]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 509.0
+offset_right = 809.0
+offset_bottom = 553.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_663nc")

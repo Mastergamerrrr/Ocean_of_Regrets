@@ -11,4 +11,3 @@ position = Vector2(-1.0000049, 4.000001)
 sprite_frames = ExtResource("2_psrlv")
 animation = &"0"
 frame = 3
-frame_progress = 0.41431412

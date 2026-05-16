@@ -63,7 +63,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_qumfl")
 
-[node name="StoreButton" type="TextureButton" parent="MapContainer" unique_id=2018258797]
+[node name="StoreButton" type="TextureButton" parent="MapContainer" unique_id=2018258797 groups=["no_sfx"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.094000004
@@ -75,7 +75,7 @@ texture_normal = ExtResource("3_r08cw")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="PondButton" type="TextureButton" parent="MapContainer" unique_id=1743501364]
+[node name="PondButton" type="TextureButton" parent="MapContainer" unique_id=1743501364 groups=["no_sfx"]]
 layout_mode = 0
 offset_left = 582.0
 offset_top = 91.0
@@ -85,7 +85,7 @@ texture_normal = ExtResource("3_r08cw")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="LakeButton" type="TextureButton" parent="MapContainer" unique_id=934027805]
+[node name="LakeButton" type="TextureButton" parent="MapContainer" unique_id=934027805 groups=["no_sfx"]]
 layout_mode = 0
 offset_left = 172.0
 offset_top = 71.0
@@ -95,7 +95,7 @@ texture_normal = ExtResource("3_r08cw")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="OceanButton" type="TextureButton" parent="MapContainer" unique_id=604344457]
+[node name="OceanButton" type="TextureButton" parent="MapContainer" unique_id=604344457 groups=["no_sfx"]]
 layout_mode = 0
 offset_left = 354.0
 offset_top = 405.0

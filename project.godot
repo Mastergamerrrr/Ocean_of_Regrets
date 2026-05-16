@@ -25,6 +25,7 @@ Global="*uid://dbl8dqc2mvpqw"
 Transition="*uid://dg030vdpa3p7j"
 GameManager="*uid://cso5f301gg6i3"
 Currency="*uid://cf8qxhabytbgq"
+ButtonSfx="*uid://12bk3vmr0pxx"
 
 [input]
 

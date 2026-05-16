@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://rwvfm4mb13xp"]
 
+[ext_resource type="Script" uid="uid://mxcvnj4vlix5" path="res://Scenes/ending_2.gd" id="1_i5ffm"]
 [ext_resource type="PackedScene" uid="uid://crv35wpmhtint" path="res://Scenes/paralax_mountain.tscn" id="1_mu2r4"]
 [ext_resource type="Shader" uid="uid://b5vk2kx8y3qch" path="res://Scenes/mermaid_talk.gdshader" id="2_ruqw8"]
 [ext_resource type="Texture2D" uid="uid://cqgf0wby2wi3f" path="res://Assets/sprites/OceanAssets/GandalfHardcore_Water_Tiles_sheet.png" id="3_vj1kt"]
@@ -477,10 +478,22 @@ tracks/30/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Label:self_modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_vj1kt"]
 resource_name = "ending2"
-length = 72.7
+length = 87.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -866,7 +879,19 @@ tracks/31/keys = {
 "times": PackedFloat32Array(27.966667, 32.466667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-80.0, -11.299000000000007]
+"values": [-80.0, -11.299000000000008]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Label:self_modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(71.833336, 75.86667, 78.73333, 79.333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gf17q"]
@@ -882,6 +907,7 @@ shader_parameter/wave_strength = 0.0050000002375
 shader_parameter/wave_frequency = 10.7430005102925
 
 [node name="Ending2" type="Node2D" unique_id=1036825165]
+script = ExtResource("1_i5ffm")
 
 [node name="Paralax Mountain" parent="." unique_id=431490010 instance=ExtResource("1_mu2r4")]
 z_index = -9
@@ -987,6 +1013,7 @@ position = Vector2(1266.1099, 717.4505)
 texture = ExtResource("14_1vxwr")
 
 [node name="Label" type="Label" parent="Node2D" unique_id=947419098]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 468.1319
 offset_top = 1219.7802
 offset_right = 2096.7031
@@ -1021,3 +1048,16 @@ volume_db = -1.331
 [node name="sfx3" type="AudioStreamPlayer2D" parent="Music" unique_id=489145067]
 stream = ExtResource("20_b0dui")
 volume_db = -1.331
+
+[node name="Label" type="Label" parent="." unique_id=1378529745]
+offset_left = 16.0
+offset_top = 224.0
+offset_right = 1146.0
+offset_bottom = 430.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_2ru1m")
+theme_override_font_sizes/font_size = 48
+text = "“Some spend their whole lives avoiding the storm,
+only to realize they never truly sailed at all.”"
+horizontal_alignment = 1
+autowrap_mode = 2

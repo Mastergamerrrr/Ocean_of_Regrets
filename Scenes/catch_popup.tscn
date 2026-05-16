@@ -21,6 +21,20 @@ shader_parameter/color_teal = Vector3(1.655, 4.4, 13.785)
 shader_parameter/color_deep = Vector3(-0.31, 0.99, 3.11)
 shader_parameter/color_sparkle = Vector3(20.315, -1.385, -202.785)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oyc3a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tl56"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
+corner_detail = 7
+
 [node name="CatchPopup" type="CanvasLayer" unique_id=67204988]
 script = ExtResource("1_bunjf")
 
@@ -47,23 +61,28 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Panel/FishDisplay" unique_id=1191171492]
+material = SubResource("ShaderMaterial_oyc3a")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -1.0
+offset_left = -420.0
+offset_top = -143.0
+offset_right = 400.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.32915825, 0.32915843, 0.3291583, 0.5882353)
 
 [node name="Panel" type="Panel" parent="Panel/FishDisplay" unique_id=948619749]
 self_modulate = Color(1, 1, 1, 0.78039217)
 layout_mode = 0
 offset_left = 41.0
-offset_top = 24.0
+offset_top = 18.0
 offset_right = 360.0
-offset_bottom = 187.0
+offset_bottom = 190.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6tl56")
 
 [node name="PondFishes" parent="Panel/FishDisplay" unique_id=14584365 instance=ExtResource("1_ykbkj")]
 position = Vector2(200, 100)
