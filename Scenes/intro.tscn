@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://1803nw2rexjt" path="res://Assets/sprites/BUILDING RIL.png" id="1_duh1u"]
 [ext_resource type="Script" uid="uid://yff5ch25d6do" path="res://Scenes/intro.gd" id="1_g8dlr"]
 [ext_resource type="Texture2D" uid="uid://dubq6huehq7qd" path="res://Assets/sprites/OFFICEREAL.png" id="2_alxvg"]
+[ext_resource type="Shader" uid="uid://ty15lubn05it" path="res://Scenes/intro.gdshader" id="3_33jql"]
 [ext_resource type="AudioStream" uid="uid://fi8hqsksodf2" path="res://Assets/sounds/yuk1to-street-ambience-traffic-410714.mp3" id="3_hwjxs"]
 [ext_resource type="FontFile" uid="uid://d0mqeyemnnpab" path="res://Assets/fonts/Minecraft.ttf" id="4_rsiac"]
 [ext_resource type="AudioStream" uid="uid://b8i7y5peyfl7l" path="res://Assets/sounds/freesound_community-office-ambience-6322.mp3" id="5_3bmuq"]
@@ -544,6 +545,11 @@ _data = {
 &"RESET": SubResource("Animation_duh1u")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b6uv1"]
+shader = ExtResource("3_33jql")
+shader_parameter/glow_intensity = 0.0
+shader_parameter/contrast_boost = 1.07000002474593
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_itfcf"]
 shader = ExtResource("8_itfcf")
 shader_parameter/wave_speed = 0.5
@@ -590,13 +596,13 @@ scale = Vector2(1.2050781, 1.7930107)
 texture = ExtResource("2_alxvg")
 
 [node name="BUILDING" type="Sprite2D" parent="." unique_id=1827548861]
+material = SubResource("ShaderMaterial_b6uv1")
 position = Vector2(604.00006, 332)
 scale = Vector2(1.2226563, 1.1701388)
 texture = ExtResource("1_duh1u")
 
 [node name="Streetsound" type="AudioStreamPlayer2D" parent="." unique_id=2056378802]
 stream = ExtResource("3_hwjxs")
-stream_paused = true
 
 [node name="Label" type="Label" parent="." unique_id=635565861]
 offset_left = -110.0
@@ -664,4 +670,3 @@ offset_top = 10.0
 offset_right = 110.0
 offset_bottom = 50.0
 text = "Skip"
-

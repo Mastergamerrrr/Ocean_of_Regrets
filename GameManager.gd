@@ -1,7 +1,7 @@
 extends Node
 
 # Player data
-var coins: int = 0
+var coins: int = 2000
 
 signal coins_changed
 

@@ -1049,6 +1049,19 @@ volume_db = -1.331
 stream = ExtResource("20_b0dui")
 volume_db = -1.331
 
+[node name="Label2" type="Label" parent="." unique_id=552606425]
+z_index = 20
+offset_left = 29.0
+offset_top = 14.0
+offset_right = 345.0
+offset_bottom = 32.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_2ru1m")
+theme_override_font_sizes/font_size = 16
+text = "Press Esc To Skip/Return to Main Menu"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Label" type="Label" parent="." unique_id=1378529745]
 offset_left = 16.0
 offset_top = 224.0

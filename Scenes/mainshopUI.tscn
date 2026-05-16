@@ -126,7 +126,7 @@ text = "Leave Shop
 "
 flat = true
 
-[node name="RodUpgrade" type="Button" parent="Control" unique_id=687847428]
+[node name="RodUpgrade" type="Button" parent="Control" unique_id=687847428 groups=["no_sfx"]]
 layout_mode = 0
 offset_left = 717.0
 offset_top = 217.0
@@ -137,7 +137,7 @@ theme_override_constants/outline_size = 1
 text = "UPGRADE"
 flat = true
 
-[node name="HookUpgrade" type="Button" parent="Control" unique_id=610129653]
+[node name="HookUpgrade" type="Button" parent="Control" unique_id=610129653 groups=["no_sfx"]]
 layout_mode = 0
 offset_left = 716.0
 offset_top = 324.0
@@ -148,7 +148,7 @@ theme_override_constants/outline_size = 1
 text = "UPGRADE"
 flat = true
 
-[node name="PermitUpgrade" type="Button" parent="Control" unique_id=595046124]
+[node name="PermitUpgrade" type="Button" parent="Control" unique_id=595046124 groups=["no_sfx"]]
 layout_mode = 0
 offset_left = 716.0
 offset_top = 430.0
