@@ -17,6 +17,17 @@ const MAX_LEVELS = {
 	"area": 3
 }
 
+const SELL_SOUND = preload("res://Assets/sounds/sell.mp3")
+
+func play_sell_sound() -> void:
+	var sound = AudioStreamPlayer.new()
+	sound.stream = SELL_SOUND
+	sound.bus = "SFX"
+	sound.volume_db = -9.0
+	add_child(sound)
+	sound.play()
+	sound.finished.connect(sound.queue_free)
+
 func get_wait_time() -> float:
 	match owned_upgrades["hook"]:
 		1: return randf_range(8.0, 12.0)

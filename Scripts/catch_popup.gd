@@ -10,7 +10,6 @@ extends CanvasLayer
 @onready var close_button: Button = $Panel/CloseButton
 @onready var catch_sound: AudioStreamPlayer2D = $CatchSound 
 var current_fish_data: Dictionary = {}
-@onready var sell: AudioStreamPlayer2D = $sell
 
 func _ready() -> void:
 	var material = $Panel.material
@@ -54,10 +53,9 @@ func show_result(fish_data: Dictionary, water_type: String) -> void:
 	value_label.text = "Value:  $%.2f" % value
 
 func _on_close_pressed() -> void:
-	sell.play()
 	GameManager.sell_fish(current_fish_data)
+	GameManager.play_sell_sound()
 	var currency = get_tree().current_scene.get_node_or_null("CanvasLayer/Currency")
 	if currency:
 		currency.update_display()
-	await sell.finished  # ← this line is required
 	queue_free()
